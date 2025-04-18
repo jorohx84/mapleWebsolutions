@@ -61,9 +61,97 @@ h1 {
 border-width: 0.5px;
 border-color: var(--main-color); */
     border-radius: 30px;
-    
+
 }
 
-.projectCard:active{
+.projectCard:active {
     transform: scale(0.95);
+}
+
+.projectsOverlay {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.811); */
+    background-color: rgba(255, 255, 255, 0.789);
+    z-index: 11;
+}
+
+.projectsOverlay button {
+    position: absolute;
+    top: 56px;
+    right: 56px;
+    width: 50px;
+    height: 50px;
+}
+
+.dnone {
+    display: none;
+}
+
+.viewContainer {
+    width: 1200px;
+    height: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.viewContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.795);
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 56px;
+}
+
+.projectImage {
+    min-width: 700px;
+    max-width: 700px;
+    max-height: 500px;
+    min-height: 500px;
+    border-radius: 30px;
+
+}
+
+.projectDetails {
+    width: 300px;
+
+    padding: 25px 56px;
+    border-radius: 30px;
+    color: white;
+}
+
+.stack img {
+    width: 40px !important;
+
+}
+
+.btnContainer {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 224px;
+    background-color: rgba(0, 0, 0, 0.795);
+    box-sizing: border-box;
+    padding: 25px 56px;
+    border-radius: 30px;
+}
+
+.btnContainer button {
+    position: static;
 }

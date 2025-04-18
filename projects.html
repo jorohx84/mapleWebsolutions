@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projects</title>
+    <link rel="icon" href="/logos/mapleIcon-bg.png">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/standards.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -12,17 +14,19 @@
     <script src="scripts/script.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
+
 <body onload="renderprojects()" onscroll="fixHeader()">
+    <div onclick="closeOverlay()" class="projectsOverlay dnone" id="projectsOverlay"></div>
     <header w3-include-html="/html/header.html"></header>
     <div class="projectsContent">
-<div class="projectsHeadlineContainer">
-    <div class="projectsHeadline">
-        <p class="space">MEINE</p>
-        <h1 class="space">PROJEKTE</h1>
-        <P class="space">WILLKOMMEN IM SHOWROOM</P>
-    </div>
-  
-</div>
+        <div class="projectsHeadlineContainer">
+            <div class="projectsHeadline">
+                <p class="space">MEINE</p>
+                <h1 class="space">PROJEKTE</h1>
+                <P class="space">WILLKOMMEN IM SHOWROOM</P>
+            </div>
+
+        </div>
 
         <div class="projects">
             <div>
@@ -33,7 +37,7 @@
                 <h2>Websites</h2>
                 <div class="projectList" id="websites"></div>
             </div>
-            
+
         </div>
 
 
@@ -44,4 +48,5 @@
     <footer w3-include-html="/html/footer.html"></footer>
     <script>w3.includeHTML();</script>
 </body>
+
 </html>
