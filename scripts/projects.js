@@ -1,18 +1,20 @@
 const apps = [
     {
-        title: 'Join',
+        title: 'JOIN Business',
         imagePath: 'img/join.png',
         stack: ['icons/html.svg', 'icons/css.svg', 'icons/javascript.svg', 'icons/firebase.svg',],
-        description: '',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
+        duration:'3 Wochen',
         show: true,
     },
     {
         title: 'DABubble',
         imagePath: '/img/dabubble.png',
-        stack: [],
-        description: '',
+        stack: ['icons/html.svg', 'icons/css.svg', 'icons/typescript.svg', 'icons/angular.svg', 'icons/firebase.svg',],
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
+        duration:'5 Wochen',
         show: true,
     },
 ];
@@ -22,24 +24,27 @@ const websites = [
         title: 'RaysGarden',
         imagePath: 'img/raysgarden.png',
         stack: [],
-        description: '',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
+        duration:'',
         show: true,
     },
     {
         title: 'Natalie Schlindwein',
         imagePath: 'img/natalie.png',
         stack: [],
-        description: '',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
+        duration:'',
         show: true,
     },
     {
         title: 'Johannes Roth',
         imagePath: 'img/johannes.png',
         stack: [],
-        description: '',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
+        duration:'',
         show: true,
     },
 ];
@@ -92,22 +97,30 @@ function renderOverlayView(index, divID, overlay) {
     overlay.innerHTML = '';
     const project = projectArray[index];
     console.log(project);
-    overlay.innerHTML += `<button class="closeButton">X</button>
+    overlay.innerHTML += `
                         <div class="viewContainer">
+                        <button class="closeButton">X</button>
+                        <h1>Projektdetails</h1>
                         <div class="viewContent">
                         <img class="projectImage" src="${project.imagePath}" alt="">
                         
                            <div class="projectDetails">
-                             <span>${project.title}</span>
+                           <div class="detailsHeadline">
+                             <h2>${project.title}</h2>
+                             <div class="underline"></div>
+                           </div>
+                           
                             <span>${project.description}</span>
+                            <span>Dauer: ${project.duration}</span>
+                         
                              <div class="stack">${renderStack(index, divID)}</div>
                          </div>
                         
-                        
+                         <button class="detailsBtn">zum Projekt </button>
                         
                         </div>
        
-    
+      
                          <div class="btnContainer">
                         <button onclick="step(${index}, '${divID}','back', event)"><</button>
                         <button onclick="step(${index}, '${divID}','forward', event)">></button>
