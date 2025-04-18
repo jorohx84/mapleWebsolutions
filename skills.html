@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Erfahren Sie mehr über meine Fähigkeiten als Webentwickler. Ich biete maßgeschneiderte Weblösungen in den Bereichen Webdesign, Programmierung, SEO, Performance-Optimierung und mehr. Gestalten Sie mit mir eine funktionale, benutzerfreundliche und schnelle Website.">
+    <title> Meine Fähigkeiten als Webentwickler</title>
+    <link rel="icon" href="/logos/mapleIcon-bg.png">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/standards.css">
+    <link rel="stylesheet" href="/styles/skills.css">
+    <link rel="preload" href="/fonts/Nunito/Nunito-VariableFont_wght.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/img/skills.webp" as="image">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <script src="scripts/script.js"></script>
+
+</head>
+
+<body id="body" onload="renderSkillIcons()" onscroll="fixHeader()">
+    <header w3-include-html="/html/header.html"></header>
+
+    <section class="skills">
+        <div class="skillContent">
+            <div class="content">
+                <div class="skill-headline">
+                    <p class="space">MEINE</p>
+                    <h1 class="space">FÄHIGKEITEN</h1>
+                    <p class="space">AUF EINEN BLICK</p>
+                </div>
+
+                <div class="headtext">
+
+
+                    <h2 class="space">MEIN VERSPRECHEN AN SIE</h2>
+
+
+                    <p>Als Webentwickler biete ich maßgeschneiderte Lösungen für die Gestaltung und Entwicklung
+                        von
+                        Websites und Webanwendungen, die nicht nur optisch ansprechend, sondern auch funktional
+                        und benutzerfreundlich
+                        sind.
+                        Mit
+                        meiner Expertise in Webdesign, Programmierung, SEO und Performance-Optimierung sorge ich
+                        dafür,
+                        dass
+                        Ihre Website sowohl technisch einwandfrei als auch für Suchmaschinen gut platziert ist.
+                    </p>
+
+
+
+                </div>
+                <div class="skillIcons">
+                    <div class="iconContainer" id="skillIcons"></div>
+                </div>
+            </div>
+            <div class="imageContainer"></div>
+
+        </div>
+
+    </section>
+
+    <footer w3-include-html="/html/footer.html"></footer>
+    <script src="scripts/data.js"></script>
+    <script src="/scripts/script.js"></script>
+
+
+    <script>w3.includeHTML();</script>
+</body>
+
+</html>

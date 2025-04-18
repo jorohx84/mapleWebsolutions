@@ -1,0 +1,333 @@
+.curriculum-container {
+    width: 100%;
+    max-width: 1920px;
+box-sizing: border-box;
+    padding: 56px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    animation: show-content 3s ease;
+    opacity: 1;
+}
+
+@keyframes show-content {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.curriculum-headlineContainer {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.textContainer {
+    margin-top: 112px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePhoto {
+    width: 100%;
+    height: 100%;
+    background-image: url(./../img/2025-04-14_11-48-45_06-removebg.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.curriculum-headline {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-block: 56px;
+
+}
+
+.divider {
+    width: 600px;
+    height: 1px;
+    background-color: black;
+}
+
+.curriculum-headline h1 {
+    font-size: 72px;
+    font-weight: 500;
+    margin-block: 0;
+}
+
+.curriculum-headline p {
+    font-size: 28px;
+    margin-block: 0;
+}
+
+.header-text {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.header-text p {
+    width: 100%;
+    max-width: 800px;
+    font-size: 18px;
+}
+
+
+
+
+.curriculum-content {
+
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 356px;
+    width: 100%;
+    gap: 20px;
+}
+
+.vertical-bar {
+    position: absolute;
+
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    background-color: rgba(0, 0, 0, 0.154);
+}
+
+.vertical-bar-inner {
+    background-color: var(--main-color);
+    width: 3px;
+    z-index: 100;
+
+}
+
+.timestep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    gap: 40px;
+
+}
+
+.timestep-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    border-color: var(--border-color);
+    border-radius: 12px;
+    color: black;
+    box-shadow: 4px 4px 10px 1px var(--border-color);
+}
+
+.hideBorder {
+    border: none;
+    box-shadow: none;
+}
+
+.timestep-content-head {
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+.timestep-content p {
+    padding: 0 29px;
+}
+
+.middleline-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.middleline {
+    width: 75%;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+
+
+.timestep-row {
+    flex-direction: row-reverse;
+
+}
+
+
+.timestep-content-head img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+.year {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: gray;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.year-img {
+    width: 35px;
+}
+
+.year-img-color {
+    filter: invert(100%);
+}
+
+.year-inner {
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+.year-bg {
+    background-color: var(--main-color);
+}
+
+.heigth {
+
+    top: 50%;
+}
+
+
+
+.curriculum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    width: 100%;
+    max-width: 1220px;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.stations {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.147);
+    transition: opacity 1s, transform 1s ease-in-out;
+}
+
+
+.studies {
+    background-image: url(/img/science.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+.pharma {
+    background-image: url(/img/pharma.jpg);
+
+}
+
+.software {
+    background-image: url(/img/AdobeStock_1091946234_Preview.jpeg);
+}
+
+
+.process {
+    background-image: url(/img/AdobeStock_856011044_Preview.jpeg);
+}
+
+.chemical {
+    background-image: url(/img/chemical.jpg);
+}
+
+@media(max-width: 500px) {
+    .year {
+        width: 35px;
+        height: 35px;
+    }
+
+    .year-img {
+        width: 25px;
+    }
+
+    .timestep {
+        gap: 20px;
+
+    }
+
+    .timestep-content {
+
+        width: 260px;
+    }
+}
+
+@media(max-width: 900px) {
+    .curriculum-headline h1 {
+        font-size: 32px;
+    }
+
+    .curriculum-headline p {
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width: 450px) {
+    .curriculum-headline h1 {
+        font-size: 24px;
+    }
+
+    .curriculum-headline p {
+        font-size: 12px;
+    }
+
+    .curriculum-headline span {
+        font-size: 12px;
+    }
+
+    .curriculum-container {
+        padding: 56px 20px;
+        width: calc(100% - 40px);
+    }
+}

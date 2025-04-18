@@ -1,0 +1,135 @@
+.burger-landingpage {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.burger-landingpage div {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.burger-landingpage.open div:nth-child(1) {
+
+    transform: rotate(45deg) translate(2px, 9px);
+}
+
+.burger-landingpage.open div:nth-child(2) {
+
+    opacity: 0;
+}
+
+.burger-landingpage.open div:nth-child(3) {
+
+    transform: rotate(-45deg) translate(2px, -9px);
+}
+
+.menu-resp-landingpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    position: fixed;
+    top: 101px;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    scroll-behavior: smooth;
+
+}
+
+.menu-resp-landingpage a {
+    text-decoration: none;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.menu-resp-landingpage a:hover {
+    color: #0c7b26;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+
+
+
+.hideheadline {
+    animation: hideHeadline 1s ease;
+    opacity: 0;
+}
+
+@keyframes hideHeadline {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.showheadline {
+    animation: showHeadline 1s ease;
+    opacity: 1;
+}
+
+@keyframes showHeadline {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .burger-landingpage {
+
+        display: none;
+
+    }
+
+    .menu-resp-landingpage {
+
+        display: none;
+    }
+
+}
+
+@media(max-width: 550px) {
+    .menu-resp-landingpage {
+        width: 100vw;
+        align-items: center;
+    }
+}
+
+@media (max-height: 450px) {
+
+    .menu-resp-landingpage{
+        height: unset;
+    }
+    .menu-resp-landingpage a {
+        font-size: 16px;
+        padding: 0;
+    }
+    
+    .front-header{
+        min-height: 60px;
+    }
+
+
+
+}

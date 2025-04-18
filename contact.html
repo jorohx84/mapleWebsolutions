@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktieren Sie mapel Websolution, um mehr über Webentwicklung und E-Commerce-Dienstleistungen zu erfahren und wie ich Ihnen helfen kann.">
+    <title>Kontakt</title>
+    <link rel="icon" href="/logos/mapleIcon-bg.png">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/standards.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <script src="/scripts/validation.js"></script>
+    <script src="scripts/message.js"></script>
+    <link rel="preload" href="/fonts/Nunito/Nunito-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/img/contact-head-small.webp" as="image">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="contactbody" id="body" onscroll="fixHeader()">
+
+    <header w3-include-html="/html/header.html"></header>
+
+    <section class="contact" id="center">
+        <div class="contact-headline">
+            <div class="headline-content">
+                <h1 class="space">KONTAKTIEREN SIE MICH GERNE</h1>
+            </div>
+        </div>
+
+        <div class="contactform-container">
+
+            <div class="contact-content">
+                <div class="contact-data">
+                    <h3>KONTAKT</h3>
+                    <div class="adress">
+                        <span>maple Websolutions</span>
+                        <span>Max-Seither-Ring 32</span>
+                        <span>76863 Herxheim</span>
+                    </div>
+                    <div class="contact-numbers">
+                        <div class="number">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#5f6368">
+                                <path
+                                    d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z" />
+                            </svg>
+                            <a href="tel: 015141292919">0151-41292919</a>
+                        </div>
+                        <div class="number">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#5f6368">
+                                <path
+                                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                            </svg>
+                            <a href="mailto: info@maple-websolutions.de">info@maple-websolutions.de</a>
+                        </div>
+                    </div>
+
+                    <div class="socialmedia">
+                        <h3>Folgen Sie mir auf Social Media</h3>
+                        <div class="socialmedialinks">
+                            <a href="https://www.linkedin.com/in/maple-websolutions-b0833334b"><img class="border" src="/icons/linkedin-svgrepo-com.svg" loading="lazy" alt=""></a>
+                            <a href="https://www.xing.com/profile/Johannes_Roth31"><img class="border" src="/icons/xing.svg" loading="lazy" alt=""></a>
+                            <a href="https://www.facebook.com/share/15dtUyyNRZ/?mibextid=wwXIfr"><img src="/icons/facebook_schwarz2.svg" loading="lazy" alt=""></a>
+                            <a href="https://www.instagram.com/maple.websolutions/"><img src="/icons/instagram.svg" loading="lazy" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="middleline"></div>
+                <div class="contactform">
+                    <h3>NACHRICHT</h3>
+                    <div class="inputfield">
+                        <p>Name</p>
+                        <input class="required" type="text" name="Name" id="name" placeholder="">
+                        <div class="validation" id="Name"></div>
+                    </div>
+                    <div class="inputfield">
+                        <p>E-Mail</p>
+                        <input class="required" type="email" name="E-Mail" id="email" placeholder="">
+                        <div class="validation" id="E-Mail"></div>
+                    </div>
+                    <div class="inputfield">
+                        <p>Telefon (optional)</p>
+                        <input type="text" name="Telefonnummer" id="phone" placeholder="">
+                    </div>
+                    <div class="inputfield">
+                        <p>Nachricht</p>
+                        <Textarea id="message" class="required" name="Nachricht"
+                            placeholder="Schreibe mir..."></Textarea>
+                        <div class="validation" id="Nachricht"></div>
+                    </div>
+
+                    <div class="privacy-policy">
+                        <div onclick="changePrivacy()" class="checkbox" id="checkbox"><svg class="d_none" id="check"
+                                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#5f6368">
+                                <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                            </svg></div>
+                        <p>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme dieser zu
+                        </p>
+                    </div>
+                    <div class="validation" id="privacy-error"></div>
+                    <div class="sendbutton-container">
+                        <button onclick="validateInputfields()">Nachricht senden</button>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+    <div class="confirm " id="confirm">
+        <h2>Nachricht versendet</h2>
+        <span>Herzlichen Dank für Ihre Nachricht! <br>Ich freue mich über Ihr Interesse und melde mich in Kürze bei
+            Ihnen.</span>
+    </div>
+
+    <footer w3-include-html="/html/footer.html"></footer>
+
+    <script src="/scripts/script.js"></script>
+    <script>w3.includeHTML();</script>
+</body>
+
+</html>
