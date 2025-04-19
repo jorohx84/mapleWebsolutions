@@ -5,7 +5,7 @@ const apps = [
         stack: ['icons/html.svg', 'icons/css.svg', 'icons/javascript.svg', 'icons/firebase.svg',],
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: 'https://www.johannes-roth.de/join',
-        duration:'3 Wochen',
+        duration: '3 Wochen',
         show: true,
     },
     {
@@ -14,7 +14,7 @@ const apps = [
         stack: ['icons/html.svg', 'icons/css.svg', 'icons/typescript.svg', 'icons/angular.svg', 'icons/firebase.svg',],
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
-        duration:'5 Wochen',
+        duration: '5 Wochen',
         show: true,
     },
 ];
@@ -26,7 +26,7 @@ const websites = [
         stack: [],
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
-        duration:'',
+        duration: '',
         show: true,
     },
     {
@@ -35,7 +35,7 @@ const websites = [
         stack: [],
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: '',
-        duration:'',
+        duration: '',
         show: true,
     },
     {
@@ -44,7 +44,7 @@ const websites = [
         stack: [],
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
         link: 'https://www.johannes-roth.de',
-        duration:'',
+        duration: '',
         show: true,
     },
 ];
@@ -81,12 +81,10 @@ function renderProjectList(divID) {
 }
 
 function openOverlay(index, divID) {
-    console.log(index);
-    console.log(divID);
     const overlay = document.getElementById('projectsOverlay');
     overlay.classList.remove('dnone');
     renderOverlayView(index, divID, overlay);
-
+    document.getElementById('body').style.overflowY = "hidden";
 
 }
 
@@ -165,4 +163,5 @@ function step(index, divID, step, event) {
 function closeOverlay() {
     const overlay = document.getElementById('projectsOverlay');
     overlay.classList.add('dnone');
+    document.getElementById('body').style.overflowY = "unset";
 }
