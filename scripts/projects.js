@@ -4,7 +4,7 @@ const apps = [
         imagePath: 'img/join.png',
         stack: ['icons/html.svg', 'icons/css.svg', 'icons/javascript.svg', 'icons/firebase.svg',],
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
-        link: '',
+        link: 'https://www.johannes-roth.de/join',
         duration:'3 Wochen',
         show: true,
     },
@@ -43,7 +43,7 @@ const websites = [
         imagePath: 'img/johannes.png',
         stack: [],
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
-        link: '',
+        link: 'https://www.johannes-roth.de',
         duration:'',
         show: true,
     },
@@ -55,11 +55,11 @@ const projects = {
 }
 
 function renderprojects() {
-    renderApps('apps');
-    renderApps('websites');
+    renderProjectList('apps');
+    renderProjectList('websites');
 }
 
-function renderApps(divID) {
+function renderProjectList(divID) {
 
     const projectArray = projects[divID];
     console.log(projectArray);
@@ -99,7 +99,7 @@ function renderOverlayView(index, divID, overlay) {
     console.log(project);
     overlay.innerHTML += `
                         <div class="viewContainer">
-                        <button class="closeButton">X</button>
+                        <button class="closeBtn">X</button>
                         <h1>Projektdetails</h1>
                         <div class="viewContent">
                         <img class="projectImage" src="${project.imagePath}" alt="">
@@ -116,13 +116,14 @@ function renderOverlayView(index, divID, overlay) {
                              <div class="stack">${renderStack(index, divID)}</div>
                          </div>
                         
-                         <button class="detailsBtn">zum Projekt </button>
+                     
                         
                         </div>
        
       
                          <div class="btnContainer">
                         <button onclick="step(${index}, '${divID}','back', event)"><</button>
+                        <button onclick="window.open('${project.link}', '_blank')" class="detailsBtn respBtn">zum Projekt </button>
                         <button onclick="step(${index}, '${divID}','forward', event)">></button>
                         </div>
                         </div>
