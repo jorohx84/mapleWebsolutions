@@ -279,6 +279,12 @@ header {
 
 }
 
+
+.startBtnContainer button{
+    background-color: rgba(255, 255, 255, 0.276);
+
+}
+
 .portrait {
     width: 50%;
     height: 100%;

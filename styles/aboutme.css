@@ -138,6 +138,7 @@
 
 
     .btnContainer button {
+        font-size: 16px;
         width: 200px;
     }
     .headerlineText p{
@@ -206,10 +207,13 @@
     }
 
     .btnContainer button {
-        width: 140px;
+        width: 200px;
         font-size: 16px;
-        height: 40px;
+        height: 60px;
+        content: "Kontakt";
     }
+
+
 }
 
 @media(min-width: 1025px) {
@@ -230,7 +234,9 @@
     .aboutmeHeadline span {
         font-size: 12px;
     }
-
+    .btnContainer{
+        flex-direction: column;
+    }
 }
 
 
