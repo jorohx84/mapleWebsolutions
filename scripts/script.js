@@ -274,13 +274,13 @@ function serviceAnimation() {
         button.classList.remove('btnHighlight');
         footerDivider.style.backgroundColor = 'var(--main-color)';
         if (window.innerWidth < 800) {
-            footerDivider.style.height = '2px';
+            footerDivider.style.height = '6px';
             footerDivider.style.width = '0%';
         }else{
 
   
         footerDivider.style.height = '0%';
-        footerDivider.style.width = '2px'
+        footerDivider.style.width = '6px'
     }
     }
 }

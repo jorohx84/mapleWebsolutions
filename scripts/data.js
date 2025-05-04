@@ -217,7 +217,7 @@ const serviceList = [
       text: 'Ob Hosting, Authentifizierung oder Echtzeit-Datenbanken – ich integriere Firebase, um Ihre Webanwendung flexibel, sicher und performant zu gestalten.'
     },
     {
-      path: 'icons/mySQL.svg',
+      path: 'icons/mysql.svg',
       title: 'Anbindung von APIs & Backends',
       text: 'Ich verbinde das Frontend mit bestehenden Systemen, APIs oder Headless CMS – reibungslos, sicher und perfekt abgestimmt auf Ihre Architektur.'
     },

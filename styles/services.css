@@ -264,6 +264,7 @@
 
     .btnContainer {
         flex-direction: column;
+        transform: translateX(0);
     }
 
     .btnContainer button {
