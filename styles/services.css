@@ -185,7 +185,7 @@
     gap: 20px;
     padding: 24px;
     border-radius: 30px;
-    transition: box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out;
+    /* transition: box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out; */
     border: solid;
     border-width: 0.3px;
     border-color: var(--main-color);
@@ -222,7 +222,7 @@
     }
 
     .serviceCard {
-        width: 240px;
+        width: 300px;
         height: 260px;
     }
 

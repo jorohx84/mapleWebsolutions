@@ -4,7 +4,7 @@ const apps = [
         imagePath: 'img/join.webp',
         stack: ['icons/html.svg', 'icons/css.svg', 'icons/javascript.svg', 'icons/firebase.svg',],
         description: 'Join ist eine intuitive Multi-Device-Anwendung zur Aufgabenverwaltung im Stil eines Kanban-Boards. Aufgaben lassen sich per Drag & Drop zwischen den Bearbeitungsphasen verschieben. Jeder Task kann gezielt einzelnen Nutzern zugewiesen werden – ideal für Teamarbeit und strukturierte Workflows.',
-        link: 'https://www.johannes-roth.de/join',
+        link: 'https://www.maple-websolutions.de/join',
         duration: '3 Wochen',
         show: true,
     },
@@ -29,24 +29,24 @@ const apps = [
 ];
 
 const websites = [
-    {
-        title: 'RaysGarden',
-        imagePath: 'img/raysgarden.webp',
-        stack: [],
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
-        link: '',
-        duration: '',
-        show: false,
-    },
-    {
-        title: 'Natalie Schlindwein',
-        imagePath: 'img/natalie.png',
-        stack: [],
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
-        link: '',
-        duration: '',
-        show: false,
-    },
+    // {
+    //     title: 'RaysGarden',
+    //     imagePath: 'img/raysgarden.webp',
+    //     stack: [],
+    //     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
+    //     link: '',
+    //     duration: '',
+    //     show: false,
+    // },
+    // {
+    //     title: 'Natalie Schlindwein',
+    //     imagePath: 'img/natalie.png',
+    //     stack: [],
+    //     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus harum blanditiis voluptatum itaque eos molestiae, doloribus minima commodi fugit impedit, et eveniet hic, illum vero provident pariatur porro distinctio?',
+    //     link: '',
+    //     duration: '',
+    //     show: false,
+    // },
     {
         title: 'Johannes Roth',
         imagePath: 'img/johannes.webp',
