@@ -26,6 +26,15 @@ const apps = [
         duration: '3 Tage',
         show: true,
     },
+      {
+        title: 'Bewerbungsmanager',
+        imagePath: 'img/bewerbung_titelphoto.webp',
+        stack: ['icons/html.svg', 'icons/css.svg', 'icons/typescript.svg', 'icons/react.svg','icons/firebase.svg'],
+        description: 'Mit dem Bewerbungsmanager kannst du Bewerbungen erfassen, Stellenanzeigen auf eine Merkliste setzen und jederzeit den aktuellen Status deiner Bewerbungen und Termine im Blick behalten. Einfach, übersichtlich und ideal für deine Jobsuche.',
+        link: 'https://www.maple-websolutions.de/applications',
+        duration: '2 Wochen',
+        show: true,
+    },
 ];
 
 const websites = [
