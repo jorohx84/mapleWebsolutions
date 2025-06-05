@@ -196,47 +196,65 @@ const skillIcons = [
 ];
 
 const serviceList = [
+    // {
+    //   path: 'icons/design.svg',
+    //   title: 'Pixelgenaue Umsetzung von Designs',
+    //   text: 'Ihre Figma-, XD- oder Sketch-Layouts setze ich 1:1 in sauberen, responsiven Code um – exakt so, wie Sie es sich vorgestellt haben. Keine Kompromisse zwischen Design und Technik.'
+    // },
+    // {
+    //   path: 'icons/document.svg',
+    //   title: 'Entwicklung moderner Single-Page-Applications',
+    //   text: 'Komplexe Webanwendungen mit Angular und TypeScript – schnell, dynamisch und zukunftssicher. Ideal für Projekte mit hohen Ansprüchen an Usability und Skalierbarkeit.'
+    // },
+    // {
+    //   path: 'icons/technical.svg',
+    //   title: 'Technische Umsetzung von UI/UX-Konzepten',
+    //   text: 'Mikrointeraktionen, Animationen und moderne Webstandards bringen Ihre Gestaltungsideen zum Leben. Ich denke mit – auch bei responsivem Verhalten und Benutzerführung.'
+    // },
+    // {
+    //   path: 'icons/firebase.svg',
+    //   title: 'Firebase-Integration für smarte Weblösungen',
+    //   text: 'Ob Hosting, Authentifizierung oder Echtzeit-Datenbanken – ich integriere Firebase, um Ihre Webanwendung flexibel, sicher und performant zu gestalten.'
+    // },
+    // {
+    //   path: 'icons/mysql.svg',
+    //   title: 'Anbindung von APIs & Backends',
+    //   text: 'Ich verbinde das Frontend mit bestehenden Systemen, APIs oder Headless CMS – reibungslos, sicher und perfekt abgestimmt auf Ihre Architektur.'
+    // },
+    // {
+    //   path: 'icons/performance.svg',
+    //   title: 'Beratung zu Performance & Webstandards',
+    //   text: 'Ich optimiere Ladezeiten, Struktur und Barrierefreiheit – damit Ihre Website nicht nur gut aussieht, sondern auch messbar besser performt.'
+    // },
+    // {
+    //   path: 'icons/develop.svg',
+    //   title: 'Komponentenbasierte Entwicklung',
+    //   text: 'Wiederverwendbare, modulare UI-Komponenten nach aktuellen Standards – ideal für Designsysteme oder modulare Projekte mit vielen Unterseiten.'
+    // },
+    // {
+    //   path: 'icons/quality.svg',
+    //   title: 'Qualitätssicherung & Testing',
+    //   text: 'Ich teste, bevor Ihre Nutzer es tun. Durch gezielte Tests und automatisierte Checks sorge ich für stabile, fehlerfreie Releases.'
+    // }
     {
-      path: 'icons/design.svg',
-      title: 'Pixelgenaue Umsetzung von Designs',
-      text: 'Ihre Figma-, XD- oder Sketch-Layouts setze ich 1:1 in sauberen, responsiven Code um – exakt so, wie Sie es sich vorgestellt haben. Keine Kompromisse zwischen Design und Technik.'
+        path: 'icons/design.svg',
+        target: 'Für Agenturen und Designer',
+        title: 'Designs zum Leben erwecken',
+        text: '',
     },
     {
-      path: 'icons/document.svg',
-      title: 'Entwicklung moderner Single-Page-Applications',
-      text: 'Komplexe Webanwendungen mit Angular und TypeScript – schnell, dynamisch und zukunftssicher. Ideal für Projekte mit hohen Ansprüchen an Usability und Skalierbarkeit.'
+        path: 'icons/develop.svg',
+        target: 'Für Unternehmen',
+        title: 'Frontend-Entwicklung auf Freelancer-Basis',
+        text: '',
     },
     {
-      path: 'icons/technical.svg',
-      title: 'Technische Umsetzung von UI/UX-Konzepten',
-      text: 'Mikrointeraktionen, Animationen und moderne Webstandards bringen Ihre Gestaltungsideen zum Leben. Ich denke mit – auch bei responsivem Verhalten und Benutzerführung.'
+        path: 'icons/imac.svg',
+        target: 'Eigene Softwarelösungen',
+        title: 'Von der Idee zur Anwendung',
+        text: '',
     },
-    {
-      path: 'icons/firebase.svg',
-      title: 'Firebase-Integration für smarte Weblösungen',
-      text: 'Ob Hosting, Authentifizierung oder Echtzeit-Datenbanken – ich integriere Firebase, um Ihre Webanwendung flexibel, sicher und performant zu gestalten.'
-    },
-    {
-      path: 'icons/mysql.svg',
-      title: 'Anbindung von APIs & Backends',
-      text: 'Ich verbinde das Frontend mit bestehenden Systemen, APIs oder Headless CMS – reibungslos, sicher und perfekt abgestimmt auf Ihre Architektur.'
-    },
-    {
-      path: 'icons/performance.svg',
-      title: 'Beratung zu Performance & Webstandards',
-      text: 'Ich optimiere Ladezeiten, Struktur und Barrierefreiheit – damit Ihre Website nicht nur gut aussieht, sondern auch messbar besser performt.'
-    },
-    {
-      path: 'icons/develop.svg',
-      title: 'Komponentenbasierte Entwicklung',
-      text: 'Wiederverwendbare, modulare UI-Komponenten nach aktuellen Standards – ideal für Designsysteme oder modulare Projekte mit vielen Unterseiten.'
-    },
-    {
-      path: 'icons/quality.svg',
-      title: 'Qualitätssicherung & Testing',
-      text: 'Ich teste, bevor Ihre Nutzer es tun. Durch gezielte Tests und automatisierte Checks sorge ich für stabile, fehlerfreie Releases.'
-    }
-  ];
+];
 
 // Leistungen für Agenturen & Designstudios
 // Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei, aus starken Designs ebenso starke digitale Erlebnisse zu machen – präzise, schnell und zuverlässig. Hier ein Auszug meiner Leistungen:

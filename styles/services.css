@@ -22,7 +22,7 @@
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
     border-radius: 30px;
     box-sizing: border-box;
-    padding:  0 56px;
+    padding: 0 56px;
 }
 
 .service-headline h1 {
@@ -43,7 +43,7 @@
     /* box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2); */
     border-radius: 30px;
     box-sizing: border-box;
-    padding:  56px;
+    padding: 56px;
     transition: box-shadow 0.5s ease-in-out;
     gap: 56px;
     position: relative;
@@ -112,8 +112,24 @@
     /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); */
     transform: translateX(200%);
     background-color: rgba(255, 255, 255, 0.701);
-    transition: transform 1s ease-in-out;
+    /* transition: transform 1s ease-in-out; */
+ animation: btnSlide 2s ease-in-out forwards;
+}
+.btnContainer button{
+    animation-delay: 2s;
+animation: btnPuls 4s ease-in-out infinite;;
+}
 
+@keyframes btnPuls{
+    0%{
+        transform: scale(1);
+    }
+       50%{
+        transform: scale(1.05);
+    }
+       100%{
+        transform: scale(1);
+    }
 }
 
 .btnHighlight {
@@ -125,8 +141,19 @@
 
 .btnContainer span {
     font-size: 20px;
-
+   
 }
+
+@keyframes btnSlide {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 
 .dividerContainer {
     width: 100%;
@@ -137,24 +164,68 @@
     margin-top: 20px;
 }
 
+
+
 .divider {
-    width: 90%;
+    width: 25%;
     height: 2px;
     background-color: var(--main-color);
     border-radius: 30px;
     transition: background-color 0.8s ease-in-out, height 0.8s ease-in-out, width 0.8s ease-in-out;
+    animation: divide 0.8s ease-in-out forwards;
 }
 
+@keyframes divide {
+    0% {
+        height: 2px;
+        width: 25x;
+        background-color: var(--main-color);
+    }
+
+    100% {
+        height: 6px;
+        width: 90%;
+        background-color: var(--secondary-color);
+    }
+}
 
 .footerDivider {
 
     border-radius: 30px;
-    transition: background-color 0.8s ease-in-out, height 0.8s ease-in-out, width 0.8s ease-in-out;
+    animation: footerdivide 0.8s ease-in-out forwards;
+}
+
+@keyframes footerdivide {
+    0% {
+       min-width: 2px;
+        height: 0%;
+        background-color: var(--main-color);
+    }
+
+    100% {
+        min-width: 6px;
+        height: 100%;
+        background-color: var(--secondary-color);
+    }
+}
+
+@keyframes footerdivideResp {
+    0% {
+       min-width: 0%;
+        height: 2px;
+        background-color: var(--main-color);
+    }
+
+    100% {
+        min-width: 60%;
+        height: 6px;
+        background-color: var(--secondary-color);
+    }
 }
 
 .services-content {
     width: 100%;
-    max-width: 1440px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,7 +237,6 @@
 .serviceContainer {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
 
@@ -177,22 +247,38 @@
 
 .serviceCard {
 
-    width: 280px;
+    width: 100%;
     height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 20px;
+    box-sizing: border-box;
     padding: 24px;
     border-radius: 30px;
-    /* transition: box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out; */
+    transition: transform 0.3s ease-in-out;
     border: solid;
     border-width: 0.3px;
     border-color: var(--main-color);
+    cursor: pointer;
+/* animation: puls 4s ease-in-out infinite; */
+}
+
+@keyframes puls{
+    0%{
+        box-shadow: 0px 0px 0px 0px var(--secondary-color);
+    }
+    50%{
+        box-shadow: 0px 0px 4px 4px var(--secondary-color);
+    }
+        100%{
+        box-shadow: 0px 0px 0px 0px var(--secondary-color);
+    }
 }
 
 .serviceCard:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 
 }
 
@@ -221,27 +307,7 @@
         font-size: 16px;
     }
 
-    .serviceCard {
-        width: 300px;
-        height: 260px;
-    }
-
-    .serviceCard img {
-        width: 50px;
-    }
-
-    .serviceCard h3 {
-        font-size: 16px;
-    }
-
-    .serviceCard span {
-        font-size: 14px;
-    }
-
-    .textContainer span {
-        font-size: 18px;
-    }
-
+   
 
     .btnContainer button {
         font-size: 16px;
@@ -274,6 +340,11 @@
     .services {
         padding: 30px;
     }
+    .serviceContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    
 
 }
 
@@ -281,56 +352,66 @@
     .mainContentFooter {
         flex-direction: column;
     }
-.footerDivider{
-   width: 100%;
-   height: 6px;
-}
+
+    .footerDivider {
+        animation: footerdivideResp 2s ease-in-out forwards;
+    }
 
 }
+
+
 
 @media(max-width: 660px) {
-    .service-headline{
+    .service-headline {
         padding: 10px;
     }
-    .service-headline h1{
+
+    .service-headline h1 {
         font-size: 40px;
     }
 
-    .service-headline p{
+    .service-headline p {
         font-size: 14px;
     }
-    .mainContentFooter{
+
+    .mainContentFooter {
         gap: 20px;
     }
+
     .textContainer {
         padding: 10px;
     }
-.btnContainer{
-    padding: 10px;
-}
-.btnContainer button{
-    width: 200px;
-}
-.btnContainer span{
-    font-size: 16px;
-}
+
+    .btnContainer {
+        padding: 10px;
+    }
+
+    .btnContainer button {
+        width: 200px;
+    }
+
+    .btnContainer span {
+        font-size: 16px;
+    }
 
 }
 
 @media(max-width: 440px) {
-    .service-headline h1{
+    .service-headline h1 {
         font-size: 32px;
     }
-    .service-headline p{
+
+    .service-headline p {
         font-size: 14px;
     }
 }
 
 @media(max-width: 370px) {
-    .service-headline h1{
+    .service-headline h1 {
         font-size: 28px;
     }
-    .service-headline p{
+
+    .service-headline p {
         font-size: 12px;
     }
 }

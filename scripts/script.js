@@ -221,9 +221,9 @@ function renderServices() {
     serviceRef.innerHTML = '';
     for (let index = 0; index < serviceList.length; index++) {
         const SERVICE = serviceList[index];
-        console.log(SERVICE.title);
-        serviceRef.innerHTML += `<div class="serviceCard">
+        serviceRef.innerHTML += `<div class="serviceCard" id="serviceCard${index}">
         <img src="${SERVICE.path}" alt="">
+         <h2>${SERVICE.target}</h2>
         <h3>${SERVICE.title}</h3>
         <span>${SERVICE.text}</span>
         
@@ -232,57 +232,58 @@ function renderServices() {
 }
 
 
-function serviceAnimation() {
-    const divider = document.getElementById('divider');
-    const dividerTrigger = window.innerHeight * 0.25;
-    const buttonTrigger = window.innerHeight * 0.85;
-    console.log(buttonTrigger);
+// function serviceAnimation() {
+    
+//     const divider = document.getElementById('divider');
+//     const dividerTrigger = window.innerHeight * 0.25;
+//     const buttonTrigger = window.innerHeight * 0.85;
+//     console.log(buttonTrigger);
 
-    const dividerRect = divider.getBoundingClientRect().top;
-    const button = document.getElementById('btnContainer');
-    const footerDivider = document.getElementById('footerDivider')
-    const footerDividerRect = footerDivider.getBoundingClientRect().top;
-    console.log(footerDividerRect);
+//     const dividerRect = divider.getBoundingClientRect().top;
+//     const button = document.getElementById('btnContainer');
+//     const footerDivider = document.getElementById('footerDivider')
+//     const footerDividerRect = footerDivider.getBoundingClientRect().top;
+//     console.log(footerDividerRect);
 
-    if (dividerRect < dividerTrigger) {
-        divider.style.backgroundColor = 'var(--secondary-color)';
-        divider.style.height = '6px';
-        divider.style.width = '25%'
+//     if (dividerRect < dividerTrigger) {
+//         divider.style.backgroundColor = 'var(--secondary-color)';
+//         divider.style.height = '6px';
+//         divider.style.width = '25%'
 
 
 
-    } else {
-        divider.style.backgroundColor = 'var(--main-color)';
-        divider.style.height = '2px';
-        divider.style.width = '90%';
+//     } else {
+//         divider.style.backgroundColor = 'var(--main-color)';
+//         divider.style.height = '2px';
+//         divider.style.width = '90%';
 
-    }
+//     }
 
-    if (footerDividerRect < buttonTrigger) {
-        button.classList.add('btnHighlight');
-        footerDivider.style.backgroundColor = 'var(--secondary-color)';
-        if (window.innerWidth < 800) {
-            footerDivider.style.height = '6px';
-            footerDivider.style.width = '100%'
-        } else {
-            footerDivider.style.height = '100%';
-            footerDivider.style.width = '6px'
+//     if (footerDivider < buttonTrigger) {
+//         button.classList.add('btnHighlight');
+//         footerDivider.style.backgroundColor = 'var(--secondary-color)';
+//         if (window.innerWidth < 800) {
+//             footerDivider.style.height = '6px';
+//             footerDivider.style.width = '100%'
+//         } else {
+//             footerDivider.style.height = '100%';
+//             footerDivider.style.width = '6px'
 
-        }
+//         }
 
-    } else {
-        button.classList.remove('btnHighlight');
-        footerDivider.style.backgroundColor = 'var(--main-color)';
-        if (window.innerWidth < 800) {
-            footerDivider.style.height = '6px';
-            footerDivider.style.width = '0%';
-        }else{
+//     } else {
+//         button.classList.remove('btnHighlight');
+//         footerDivider.style.backgroundColor = 'var(--main-color)';
+//         if (window.innerWidth < 800) {
+//             footerDivider.style.height = '6px';
+//             footerDivider.style.width = '0%';
+//         }else{
 
-  
-        footerDivider.style.height = '0%';
-        footerDivider.style.width = '6px'
-    }
-    }
-}
+
+//         footerDivider.style.height = '0%';
+//         footerDivider.style.width = '6px'
+//     }
+//     }
+// }
 
 
