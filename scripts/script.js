@@ -226,10 +226,41 @@ function renderServices() {
          <h2>${SERVICE.target}</h2>
         <h3>${SERVICE.title}</h3>
         <span>${SERVICE.text}</span>
-        
                                 </div>`;
     }
 }
+
+
+// function renderServiceText(index){
+// const ref=document.getElementById(`text${index}`);
+
+// const text=serviceList[index].text;
+// const card=document.getElementById(`serviceCard${index}`);
+// card.style.height="400px"
+// setTimeout(() => {
+//               ref.innerHTML='';
+// ref.innerHTML+=` <span>${text}</span>`; 
+// ref.style.opacity="1";
+// }, 300);
+// setTimeout(() => {
+//    hideText(index); 
+// }, 300);
+
+// }
+
+// function hideText(currentIndex){
+//     for (let index = 0; index < serviceList.length; index++) {
+//         if (index !== currentIndex) {
+//                     const ref=document.getElementById(`text${index}`);
+        
+//         ref.innerHTML='';
+//         ref.style.opacity="0";
+//         const card=document.getElementById(`serviceCard${index}`);
+// card.style.height="300px"
+//         }
+
+//     }
+// }
 
 
 // function serviceAnimation() {

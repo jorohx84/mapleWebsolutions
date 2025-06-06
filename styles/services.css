@@ -1,7 +1,6 @@
 .services {
     width: 100%;
     max-width: 1920px;
-    height: fit-content;
 
     display: flex;
     flex-direction: column;
@@ -113,24 +112,12 @@
     transform: translateX(200%);
     background-color: rgba(255, 255, 255, 0.701);
     /* transition: transform 1s ease-in-out; */
- animation: btnSlide 2s ease-in-out forwards;
-}
-.btnContainer button{
-    animation-delay: 2s;
-animation: btnPuls 4s ease-in-out infinite;;
+    animation: btnSlide 2s ease-in-out forwards;
 }
 
-@keyframes btnPuls{
-    0%{
-        transform: scale(1);
-    }
-       50%{
-        transform: scale(1.05);
-    }
-       100%{
-        transform: scale(1);
-    }
-}
+
+
+
 
 .btnHighlight {
 
@@ -141,7 +128,7 @@ animation: btnPuls 4s ease-in-out infinite;;
 
 .btnContainer span {
     font-size: 20px;
-   
+
 }
 
 @keyframes btnSlide {
@@ -197,7 +184,7 @@ animation: btnPuls 4s ease-in-out infinite;;
 
 @keyframes footerdivide {
     0% {
-       min-width: 2px;
+        min-width: 2px;
         height: 0%;
         background-color: var(--main-color);
     }
@@ -211,7 +198,7 @@ animation: btnPuls 4s ease-in-out infinite;;
 
 @keyframes footerdivideResp {
     0% {
-       min-width: 0%;
+        min-width: 0%;
         height: 2px;
         background-color: var(--main-color);
     }
@@ -229,7 +216,7 @@ animation: btnPuls 4s ease-in-out infinite;;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 150px;
 
 
 }
@@ -247,39 +234,59 @@ animation: btnPuls 4s ease-in-out infinite;;
 
 .serviceCard {
 
-    width: 100%;
-    height: 300px;
+    width: 50%;
+    min-height: 400px;
+
     display: flex;
     flex-direction: column;
+
     align-items: center;
     text-align: center;
     gap: 20px;
     box-sizing: border-box;
     padding: 24px;
-    border-radius: 30px;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
     border: solid;
     border-width: 0.3px;
     border-color: var(--main-color);
-    cursor: pointer;
-/* animation: puls 4s ease-in-out infinite; */
+    background-color: white;
+
+position: relative;
+    /* animation: puls 4s ease-in-out infinite; */
 }
 
-@keyframes puls{
-    0%{
+@keyframes puls {
+    0% {
         box-shadow: 0px 0px 0px 0px var(--secondary-color);
     }
-    50%{
-        box-shadow: 0px 0px 4px 4px var(--secondary-color);
+
+    50% {
+        box-shadow: 0px 0px 8px 0px var(--secondary-color);
     }
-        100%{
+
+    100% {
         box-shadow: 0px 0px 0px 0px var(--secondary-color);
     }
 }
 
-.serviceCard:hover {
-    transform: scale(1.02);
 
+
+.cardBtn {
+ position: absolute;
+ bottom: 24px;
+ box-sizing: border-box;
+ padding: 0 56px;
+ width: 100%;
+ height: 50px;
+ display: flex;
+ justify-content: flex-start;
+}
+
+.cardBtn button{
+   
+  width: 300px;
+    border-radius: 12px ;
 }
 
 .serviceCard h3 {
@@ -297,6 +304,25 @@ animation: btnPuls 4s ease-in-out infinite;;
     height: 60px;
 }
 
+.serviceText {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.servieList{
+    width: 100%;
+    
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  box-sizing: border-box;
+  padding: 16px 56px;
+  margin-bottom: 100px;
+
+}
+
 
 @media(max-width: 1390px) {
     .service-headline h1 {
@@ -307,15 +333,13 @@ animation: btnPuls 4s ease-in-out infinite;;
         font-size: 16px;
     }
 
-   
+
 
     .btnContainer button {
         font-size: 16px;
     }
 
-    .mainContent {
-        padding: 20px 0px;
-    }
+
 }
 
 @media(max-width: 1050px) {
@@ -340,11 +364,23 @@ animation: btnPuls 4s ease-in-out infinite;;
     .services {
         padding: 30px;
     }
-    .serviceContainer{
+
+    .serviceContainer {
         flex-direction: column;
         align-items: center;
     }
-    
+
+    .serviceCard {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .serviceCard h2 {
+        margin: 0;
+    }
+.cardBtn{
+    justify-content: center;
+}
 
 }
 
@@ -394,15 +430,26 @@ animation: btnPuls 4s ease-in-out infinite;;
         font-size: 16px;
     }
 
+    .mainContent {
+        padding: 10px;
+    }
+    .servieList{
+        
+        padding: 24px;
+    }
 }
 
-@media(max-width: 440px) {
+@media(max-width: 470px) {
     .service-headline h1 {
         font-size: 32px;
     }
 
     .service-headline p {
         font-size: 14px;
+    }
+
+    .services {
+        padding: 24px 10px;
     }
 }
 
@@ -414,6 +461,7 @@ animation: btnPuls 4s ease-in-out infinite;;
     .service-headline p {
         font-size: 12px;
     }
+
 }
 
 

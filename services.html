@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Entdecken Sie meine Dienstleistungen im Bereich Webentwicklung, Domain-Management und Support. Ich biete maßgeschneiderte Lösungen, um Ihre Website zu erstellen, zu hosten und zu betreuen, damit Ihr Online-Auftritt stets optimal funktioniert.">
     <title>Leistungen</title>
     <link rel="icon" href="/logos/mapleIcon-bg.png">
     <link rel="stylesheet" href="/styles/style.css">
@@ -19,7 +17,7 @@
     <script src="scripts/data.js"></script>
 </head>
 
-<body id="body" onscroll="fixHeader()" onload="renderServices()"><!--serviceAnimation() -->
+<body id="body" onscroll="fixHeader()" onload=""><!--serviceAnimation() -->
 
     <header w3-include-html="/html/header.html"></header>
 
@@ -38,12 +36,55 @@
         <div class="mainContent">
             <div class="services-content">
 
-                <div class="serviceContainer" id="services"></div>
+                <div class="serviceContainer" id="services">
+                    <div class="serviceCard" id="serviceCard${index}">
+                      
+                        <img src="icons/design.svg" alt="">
+                        <h2>Für Agenturen und Designer</h2>
+                        <h3>Designs zum Leben erwecken</h3>
+                        <span>
+                            Ob Figma, Adobe XD oder Sketch: Ich verwandle Ihre Entwürfe in sauberen, responsiven und
+                            pixelgenauen Code. Mit Liebe zum Detail, einem Blick für UI/UX und absoluter Verlässlichkeit
+                            bin ich Ihr Partner für moderne Frontend-Umsetzung.
+                        </span>
+                        <ul class="servieList">
+                            <li>Umsetzung von Figma, Adobe XD, Sketch & Co.</li>
+                            <li>Pixelgenaue Entwicklung responsiver Layouts</li>
+                            <li>Breiter Techstack mit HTML5, CSS3, JavaScript, TypeScript, React und Angular</li>
+                            <li>Kompatibel mit modernen Browsern & Devices</li>
+                            <li>Fokus auf Performance, Semantik & Accessibility</li>
+                            <li>Saubere Übergabe & Dokumentation für Teams</li>
+                        </ul>
+                        <div class="cardBtn">
+                            <button onclick="window.location.href='contact.html'">Design fertig? Dann kann's losgehen</button>
+                        </div>
+                    </div>
+                    <div class="serviceCard" id="serviceCard${index}">
+                        <img src="icons/develop.svg" alt="">
+                        <h2>Für Unternehmen</h2>
+                        <h3>Frontend-Entwicklung auf Freelancer-Basis</h3>
+                        <span>Als freiberuflicher Frontend-Entwickler steige ich flexibel in bestehende Projekte ein –
+                            ob kurzfristig oder langfristig. Ich arbeite selbstständig, strukturiert und bin schnell
+                            produktiv – remote oder hybrid, stundenbasiert oder projektgebunden.
+                        </span>
 
 
+                        <ul class="servieList">
+                            <li>Schnelle Einarbeitung in bestehende Codebases</li>
+                            <li>Moderne Frontend-Technologien (Typescript, React und Angular)</li>
+                            <li>Remote, hybrid oder vor Ort je nach Bedarf</li>
+                            <li>Agile Projektstrukturen (Scrum, Kanban)</li>
+                            <li>Enge Zusammenarbeit mit Devs, PM & Design</li>
+                            <li>Fokus auf sauberen, wartbaren Code</li>
+                        </ul>
+                        <div class="cardBtn">
+                         <button onclick="window.location.href='contact.html'">Projekt starten</button>
+                        </div>
 
+                    </div>
+                </div>
 
-                <div class="mainContentFooter">
+                <!-- <div class="mainContentFooter">
                     <div class="textContainer" id="textContainer">
                         <span>
                             Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei,
@@ -52,25 +93,16 @@
                             Designs ebenso starke digitale Erlebnisse zu machen – präzise, schnell und
                             zuverlässig.</span>
 
+
+
                     </div>
                     <div class="footerDivider" id="footerDivider"></div>
                     <div class="btnContainer" id="btnContainer">
                         <span>Konnte ich Sie überzeugen?</span>
                         <button onclick="window.location.href='/contact.html'">Sprechen Sie mich an</button>
                     </div>
-                </div>
+                </div> -->
 
-                <!-- <div class="service-row">
-                <a id="web" href="web.html" class="type-of-services web">
-                    <h3>Webentwicklung</h3>
-                </a>
-                <a id="host" href="hosting.html" class="type-of-services domain">
-                    <h3>Domain</h3>
-                </a>
-                <a id="support" href="support.html" class="type-of-services support">
-                    <h3>Support</h3>
-                </a>
-            </div> -->
 
             </div>
         </div>

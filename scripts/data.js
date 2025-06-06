@@ -240,20 +240,20 @@ const serviceList = [
         path: 'icons/design.svg',
         target: 'Für Agenturen und Designer',
         title: 'Designs zum Leben erwecken',
-        text: '',
+        text: 'Ob Figma, Adobe XD oder Sketch: Ich verwandle Ihre Entwürfe in sauberen, responsiven und pixelgenauen Code. Mit Liebe zum Detail, einem Blick für UI/UX und absoluter Verlässlichkeit bin ich Ihr Partner für moderne Frontend-Umsetzung.',
     },
     {
         path: 'icons/develop.svg',
         target: 'Für Unternehmen',
         title: 'Frontend-Entwicklung auf Freelancer-Basis',
-        text: '',
+        text: 'Als freiberuflicher Frontend-Entwickler steige ich flexibel in bestehende Projekte ein – ob kurzfristig oder langfristig. Ich arbeite selbstständig, strukturiert und bin schnell produktiv – remote oder hybrid, stundenbasiert oder projektgebunden.',
     },
-    {
-        path: 'icons/imac.svg',
-        target: 'Eigene Softwarelösungen',
-        title: 'Von der Idee zur Anwendung',
-        text: '',
-    },
+    // {
+    //     path: 'icons/imac.svg',
+    //     target: 'Eigene Softwarelösungen',
+    //     title: 'Von der Idee zur Anwendung',
+    //     text: 'Ich entwickle eigene Tools und SaaS-Lösungen, die reale Anforderungen lösen – von der ersten Idee bis zum Launch. Modern, skalierbar, nutzerfreundlich.',
+    // },
 ];
 
 // Leistungen für Agenturen & Designstudios
