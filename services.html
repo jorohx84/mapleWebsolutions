@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leistungen</title>
-    <link rel="icon" href="/logos/mapleIcon-bg.png">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/standards.css">
-    <link rel="stylesheet" href="/styles/services.css">
-    <link rel="preload" href="/fonts/Nunito/Nunito-VariableFont_wght.woff2" as="font" type="font/woff2"
-        crossorigin="anonymous">
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2"
-        crossorigin="anonymous">
+    <link rel="icon" href="/logos/mapleIcon-bg.png" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/standards.css" />
+    <link rel="stylesheet" href="/styles/services.css" />
+    <link
+      rel="preload"
+      href="/fonts/Nunito/Nunito-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="scripts/data.js"></script>
-</head>
+  </head>
 
-<body id="body" onscroll="fixHeader(); checkBoxCheck(); rotateLogos()" onload="renderContent()">
+  <body id="body" onscroll="fixHeader()" onload="renderContent()">
     <!--serviceAnimation() -->
 
     <header w3-include-html="/html/header.html"></header>
 
     <div class="services">
-        <div class="service-headline">
-            <p class="space">M E I N E</p>
-            <h1 class="space" id="headline">LEISTUNGEN</h1>
-            <p class="space"> FÜR AGENTUREN & DESIGNER</p>
-            <div class="dividerContainer">
-                <div class="divider" id="divider"></div>
-
-            </div>
+      <div class="service-headline">
+        <p class="space">M E I N E</p>
+        <h1 class="space" id="headline">LEISTUNGEN</h1>
+        <p class="space">FÜR AGENTUREN & DESIGNER</p>
+        <div class="dividerContainer">
+          <div class="divider" id="divider"></div>
         </div>
+      </div>
 
+      <div class="mainContent">
+        <div class="services-content">
+          <div class="textContainer">
+            <h2>Frontend-Umsetzung für Designagenturen und Kreativstudios</h2>
+            <span>
+              Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen
+              und kreative Teams dabei, aus starken Designs ebenso starke
+              digitale Erlebnisse zu machen – präzise, schnell und zuverlässig.
+            </span>
+          </div>
 
-        <div class="mainContent">
-            <div class="services-content">
-                <div class="textContainer">
-                    <h2> Frontend-Umsetzung für Designagenturen und Kreativstudios</h2>
-                    <span>
-                        Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei,
-                        aus
-                        starken
-                        Designs ebenso starke digitale Erlebnisse zu machen – präzise, schnell und
-                        zuverlässig.</span>
-                </div>
+          <div class="serviceCard">
+            <h2>Umsetzung</h2>
+            <h3>
+              Ich setze Ihre UI/UX-Designs in performanten, responsiven
+              Frontend-Code um.
+            </h3>
+            <div class="serviceList" id="services"></div>
+          </div>
 
-                <div class="serviceCard">
-                    <!-- <img src="icons/design.svg" alt=""> -->
-                    <h2>Umsetzung</h2>
-                    <h3>Ich setze Ihre UI/UX-Designs in performanten, responsiven Frontend-Code um.</h3>
-                    <div class="serviceList" id="services"></div>
-                </div>
-                <!-- <div class="iconContainer">
-                        <img src="logos/mapleIcon.png" alt="">
-                    </div> -->
+          <div class="serviceCard">
+            <h2>Warum maple Websolutions?</h2>
+            <div class="serviceList" id="advantages"></div>
+          </div>
 
+          <div class="serviceCard" id="serviceCard">
+            <h2>So läuft die Zusammenarbeit</h2>
+            <div class="serviceList" id="process"></div>
+            <div class="verticalBar" id="verticalBar">
+              <div class="barInner" id="barInner"></div>
+            </div>
+          </div>
 
-                <div class="serviceCard">
-                    <h2>Warum maple Websolutions?</h2>
-                    <div class="serviceList" id="advantages"></div>
-                </div>
-                <div class="serviceCard" id="serviceCard">
-                    <h2>So läuft die Zusammenarbeit</h2>
-                    <div class="serviceList" id="process"></div>
-                    <div class="verticalBar" id="verticalBar">
-                        <div class="barInner" id="barInner"></div>
-                    </div>
-                </div>
-
-                <!-- <div class="mainContentFooter">
+          <!-- <div class="mainContentFooter">
                     <div class="textContainer" id="textContainer">
                         <span>
                             Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei,
@@ -87,15 +92,14 @@
                         <button onclick="window.location.href='/contact.html'">Sprechen Sie mich an</button>
                     </div>
                 </div> -->
-
-
-            </div>
         </div>
+      </div>
     </div>
     <footer w3-include-html="/html/footer.html"></footer>
 
     <script src="/scripts/script.js"></script>
-    <script>w3.includeHTML();</script>
-</body>
-
+    <script>
+      w3.includeHTML();
+    </script>
+  </body>
 </html>
