@@ -153,138 +153,70 @@
   }
 }
 
-.footerDivider {
-  border-radius: 30px;
-  animation: footerdivide 0.8s ease-in-out forwards;
-}
-
-@keyframes footerdivide {
-  0% {
-    min-width: 2px;
-    height: 0%;
-    background-color: var(--main-color);
-  }
-
-  100% {
-    min-width: 6px;
-    height: 100%;
-    background-color: var(--secondary-color);
-  }
-}
-
-@keyframes footerdivideResp {
-  0% {
-    min-width: 0%;
-    height: 2px;
-    background-color: var(--main-color);
-  }
-
-  100% {
-    min-width: 60%;
-    height: 6px;
-    background-color: var(--secondary-color);
-  }
-}
-
 .services-content {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 112px;
 }
 
-/* .iconContainer img{
-    width: 500px;
-    animation:switchImage 5s ease-in-out infinite ;
-}
+.serviceCards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-@keyframes switchImage{
-    0%{
-    transform: scale(1);
-    }
-    50%{
-transform: scale(1.05);
-    }
-     000%{
-    transform: scale(1);
-    }
-} */
+  gap: 32px;
+}
 
 .serviceCard {
-  width: 100%;
-  min-height: 400px;
+  width: 350px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: 16px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
-  gap: 20px;
   box-sizing: border-box;
   padding: 24px 56px;
   border-radius: 12px;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
-
   background-color: white;
 
-  position: relative;
-  /* animation: puls 4s ease-in-out infinite; */
 }
 
-@keyframes puls {
-  0% {
-    box-shadow: 0px 0px 0px 0px var(--secondary-color);
-  }
-
-  50% {
-    box-shadow: 0px 0px 8px 0px var(--secondary-color);
-  }
-
-  100% {
-    box-shadow: 0px 0px 0px 0px var(--secondary-color);
-  }
+.cardImage {
+  width: 70px;
 }
 
-.cardBtn {
-  position: absolute;
-  bottom: 24px;
-  box-sizing: border-box;
-  padding: 0 56px;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.cardBtn button {
-  width: 300px;
-  border-radius: 12px;
-}
 
 .serviceCard h3 {
   width: 100%;
+  text-align: center;
   font-weight: 400;
 }
 
-.serviceCard span {
+
+.serviceText {
   text-align: center;
 }
 
-.serviceText {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+.serviceContainer{
+      position: relative;
+    width: 100%;
+
 }
 
 .serviceList {
-  width: 50%;
+  width: 100%;
   text-align: start;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
   box-sizing: border-box;
-
-  margin-bottom: 100px;
+  padding: 32px;
 }
 
 .serviceListHeadline {
@@ -304,7 +236,6 @@ transform: scale(1.05);
 }
 
 .blueCheckbox {
-
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -323,25 +254,30 @@ transform: scale(1.05);
   transform: scaleX(1);
   transform-origin: right;
   transition: transform 0.4s ease-in-out;
-
 }
 
 .checkImg {
   width: 30px;
   height: 30px;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .advantagesListRow {
+  width: 300px;
+
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 8px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 32px;
 }
 
 .advantagesListImage {
   width: 40px;
- 
+
   transition: transform 1s ease-in-out;
 }
 
@@ -395,7 +331,7 @@ transform: scale(1.05);
   position: absolute;
   width: 3px;
   border-radius: 100px;
-  background-color:var(--main-color);
+  background-color: var(--main-color);
 }
 
 .barInner {

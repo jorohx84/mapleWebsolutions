@@ -189,6 +189,17 @@ function renderSkills() {
   }
 }
 
+function renderServiceCards() {
+  const serviceRef = document.getElementById("serviceCards");
+
+  for (let index = 0; index < services.length; index++) {
+    const card = services[index];
+    const indexRef = services.length / 2;
+
+    serviceRef.innerHTML += getServiceCardsTemplate(card, index);
+  }
+}
+
 function renderServices() {
   const serviceRef = document.getElementById("services");
   serviceRef.innerHTML = "";
@@ -205,7 +216,7 @@ function renderServices() {
 }
 
 function checkBoxCheck() {
-  const images = document.getElementsByClassName("checkboxOverlay");
+  const images = document.getElementsByClassName("checkImg");
   const trigger = window.innerHeight * 0.5;
 
   for (let index = 0; index < images.length; index++) {
@@ -214,10 +225,10 @@ function checkBoxCheck() {
 
     if (imageRect.top < trigger) {
       // IMAGE.style.opacity="1";
-      IMAGE.style.transform = "scaleX(0)";
+      IMAGE.style.transform = "scale(1.3)";
     } else {
       // IMAGE.style.opacity="0";
-      IMAGE.style.transform = "scaleX(1)";
+      IMAGE.style.transform = "scale(1)";
     }
   }
 }
@@ -255,6 +266,7 @@ function renderProcess() {
 }
 
 function renderContent() {
+  renderServiceCards();
   renderServices();
   renderAdvantages();
   renderProcess();
@@ -296,7 +308,7 @@ function getRects() {
   const dots = document.getElementsByClassName("dot");
   const firstDot = dots[0];
   const lastDot = dots[dots.length - 1];
-  const card = document.getElementById("serviceCard");
+  const card = document.getElementById("serviceContainer");
   const barParent = document.getElementById("verticalBar");
   const barParentRect = barParent.getBoundingClientRect();
   const cardRect = card.getBoundingClientRect();
@@ -338,11 +350,11 @@ function giveDotsHighlights() {
     const dotRect = dot.getBoundingClientRect();
     if (dotRect.top < barChildRect.bottom) {
       console.log(index);
-dot.style.borderColor='var(--secondary-color)';
+      dot.style.borderColor = "var(--secondary-color)";
       overlay.style.transform = "scaleX(0)";
     } else {
       overlay.style.transform = "scaleX(1)";
-      dot.style.borderColor='var(--main-color)';
+      dot.style.borderColor = "var(--main-color)";
     }
   }
 }

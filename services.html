@@ -8,21 +8,9 @@
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/standards.css" />
     <link rel="stylesheet" href="/styles/services.css" />
-    <link
-      rel="preload"
-      href="/fonts/Nunito/Nunito-VariableFont_wght.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
+
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="scripts/templates.js"></script>
     <script src="scripts/data.js"></script>
   </head>
 
@@ -52,7 +40,9 @@
             </span>
           </div>
 
-          <div class="serviceCard">
+          <div class="serviceCards" id="serviceCards"></div>
+
+          <div class="serviceContainer">
             <h2>Umsetzung</h2>
             <h3>
               Ich setze Ihre UI/UX-Designs in performanten, responsiven
@@ -61,12 +51,14 @@
             <div class="serviceList" id="services"></div>
           </div>
 
-          <div class="serviceCard">
+
+
+          <div class="serviceContainer">
             <h2>Warum maple Websolutions?</h2>
             <div class="serviceList" id="advantages"></div>
           </div>
 
-          <div class="serviceCard" id="serviceCard">
+          <div class="serviceContainer" id="serviceContainer">
             <h2>So läuft die Zusammenarbeit</h2>
             <div class="serviceList" id="process"></div>
             <div class="verticalBar" id="verticalBar">
