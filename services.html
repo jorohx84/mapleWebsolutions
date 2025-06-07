@@ -17,7 +17,8 @@
     <script src="scripts/data.js"></script>
 </head>
 
-<body id="body" onscroll="fixHeader()" onload=""><!--serviceAnimation() -->
+<body id="body" onscroll="fixHeader(); checkBoxCheck(); rotateLogos()" onload="renderContent()">
+    <!--serviceAnimation() -->
 
     <header w3-include-html="/html/header.html"></header>
 
@@ -25,7 +26,7 @@
         <div class="service-headline">
             <p class="space">M E I N E</p>
             <h1 class="space" id="headline">LEISTUNGEN</h1>
-            <p class="space"> FÜR AGENTUREN, DESIGNER & UNTERNEHMEN</p>
+            <p class="space"> FÜR AGENTUREN & DESIGNER</p>
             <div class="dividerContainer">
                 <div class="divider" id="divider"></div>
 
@@ -35,52 +36,36 @@
 
         <div class="mainContent">
             <div class="services-content">
+                <div class="textContainer">
+                    <h2> Frontend-Umsetzung für Designagenturen und Kreativstudios</h2>
+                    <span>
+                        Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei,
+                        aus
+                        starken
+                        Designs ebenso starke digitale Erlebnisse zu machen – präzise, schnell und
+                        zuverlässig.</span>
+                </div>
 
-                <div class="serviceContainer" id="services">
-                    <div class="serviceCard" id="serviceCard${index}">
-                      
-                        <img src="icons/design.svg" alt="">
-                        <h2>Für Agenturen und Designer</h2>
-                        <h3>Designs zum Leben erwecken</h3>
-                        <span>
-                            Ob Figma, Adobe XD oder Sketch: Ich verwandle Ihre Entwürfe in sauberen, responsiven und
-                            pixelgenauen Code. Mit Liebe zum Detail, einem Blick für UI/UX und absoluter Verlässlichkeit
-                            bin ich Ihr Partner für moderne Frontend-Umsetzung.
-                        </span>
-                        <ul class="servieList">
-                            <li>Umsetzung von Figma, Adobe XD, Sketch & Co.</li>
-                            <li>Pixelgenaue Entwicklung responsiver Layouts</li>
-                            <li>Breiter Techstack mit HTML5, CSS3, JavaScript, TypeScript, React und Angular</li>
-                            <li>Kompatibel mit modernen Browsern & Devices</li>
-                            <li>Fokus auf Performance, Semantik & Accessibility</li>
-                            <li>Saubere Übergabe & Dokumentation für Teams</li>
-                        </ul>
-                        <div class="cardBtn">
-                            <button onclick="window.location.href='contact.html'">Design fertig? Dann kann's losgehen</button>
-                        </div>
-                    </div>
-                    <div class="serviceCard" id="serviceCard${index}">
-                        <img src="icons/develop.svg" alt="">
-                        <h2>Für Unternehmen</h2>
-                        <h3>Frontend-Entwicklung auf Freelancer-Basis</h3>
-                        <span>Als freiberuflicher Frontend-Entwickler steige ich flexibel in bestehende Projekte ein –
-                            ob kurzfristig oder langfristig. Ich arbeite selbstständig, strukturiert und bin schnell
-                            produktiv – remote oder hybrid, stundenbasiert oder projektgebunden.
-                        </span>
+                <div class="serviceCard">
+                    <!-- <img src="icons/design.svg" alt=""> -->
+                    <h2>Umsetzung</h2>
+                    <h3>Ich setze Ihre UI/UX-Designs in performanten, responsiven Frontend-Code um.</h3>
+                    <div class="serviceList" id="services"></div>
+                </div>
+                <!-- <div class="iconContainer">
+                        <img src="logos/mapleIcon.png" alt="">
+                    </div> -->
 
 
-                        <ul class="servieList">
-                            <li>Schnelle Einarbeitung in bestehende Codebases</li>
-                            <li>Moderne Frontend-Technologien (Typescript, React und Angular)</li>
-                            <li>Remote, hybrid oder vor Ort je nach Bedarf</li>
-                            <li>Agile Projektstrukturen (Scrum, Kanban)</li>
-                            <li>Enge Zusammenarbeit mit Devs, PM & Design</li>
-                            <li>Fokus auf sauberen, wartbaren Code</li>
-                        </ul>
-                        <div class="cardBtn">
-                         <button onclick="window.location.href='contact.html'">Projekt starten</button>
-                        </div>
-
+                <div class="serviceCard">
+                    <h2>Warum maple Websolutions?</h2>
+                    <div class="serviceList" id="advantages"></div>
+                </div>
+                <div class="serviceCard" id="serviceCard">
+                    <h2>So läuft die Zusammenarbeit</h2>
+                    <div class="serviceList" id="process"></div>
+                    <div class="verticalBar" id="verticalBar">
+                        <div class="barInner" id="barInner"></div>
                     </div>
                 </div>
 

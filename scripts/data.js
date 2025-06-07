@@ -70,33 +70,33 @@ const services = [
 
 ];
 
-const advantages = [
-    {
-        title: "REICHWEITE",
-        description: "Mit einer professionellen Website können Sie sicherstellen, dass Ihr Unternehmen rund um die Uhr online sichtbar ist. Durch gezielte SEO-Optimierung steigern Sie Ihre Sichtbarkeit in den Suchergebnissen von Google, was zu mehr organischem Traffic und einer höheren Conversion-Rate führt."
-    },
-    {
-        title: "MARKENIMAGE STÄRKEN",
-        description: "Eine gut gestaltete Website vermittelt Vertrauen und Professionalität. Wenn Ihre Kunden eine benutzerfreundliche und optisch ansprechende Seite besuchen, wird ihre Bereitschaft, mit Ihnen Geschäfte zu machen, erheblich steigen. Eine markenkonforme Gestaltung stärkt zudem Ihre Wiedererkennbarkeit."
-    },
-    {
-        title: "CONVERSION OPTIMIERUNG",
-        description: "Eine gut optimierte Website ermöglicht es Ihnen, gezielt Leads zu generieren. Mit Call-to-Actions (CTAs), Kontaktformularen und gezielten Landing Pages können Sie die Conversion-Rate deutlich steigern und potenzielle Kunden in treue Käufer verwandeln."
-    },
-    {
-        title: "BESSERE KUNDENBINDUNG",
-        description: "Moderne Websites bieten Ihnen die Möglichkeit, Ihren Besuchern eine maßgeschneiderte Erfahrung zu bieten. Mit interaktiven Elementen, personalisierten Angeboten oder einem Blog können Sie eine langfristige Kundenbindung aufbauen und Ihre Kunden regelmäßig auf dem Laufenden halten."
-    },
-    {
-        title: "EFFIZIENTES MARKETING",
-        description: "Im Vergleich zu traditionellen Werbemaßnahmen wie Printanzeigen oder TV-Spots ist eine professionelle Website eine kostengünstige und effektive Plattform, um Ihre Produkte und Dienstleistungen zu bewerben. Mit gezieltem Online-Marketing (z. B. Google Ads, Social Media) steigern Sie Ihre Reichweite in kürzester Zeit."
-    },
-    {
-        title: "MARKTANALYSEN IN ECHTZEIT",
-        description: "Durch den Einsatz von Tools wie Google Analytics und anderen Tracking-Tools können Sie das Verhalten Ihrer Website-Besucher in Echtzeit überwachen und schnell Anpassungen vornehmen. So können Sie Ihre Marketingstrategien optimieren und die Nutzererfahrung (UX) weiter verbessern."
-    },
+// const advantages = [
+//     {
+//         title: "REICHWEITE",
+//         description: "Mit einer professionellen Website können Sie sicherstellen, dass Ihr Unternehmen rund um die Uhr online sichtbar ist. Durch gezielte SEO-Optimierung steigern Sie Ihre Sichtbarkeit in den Suchergebnissen von Google, was zu mehr organischem Traffic und einer höheren Conversion-Rate führt."
+//     },
+//     {
+//         title: "MARKENIMAGE STÄRKEN",
+//         description: "Eine gut gestaltete Website vermittelt Vertrauen und Professionalität. Wenn Ihre Kunden eine benutzerfreundliche und optisch ansprechende Seite besuchen, wird ihre Bereitschaft, mit Ihnen Geschäfte zu machen, erheblich steigen. Eine markenkonforme Gestaltung stärkt zudem Ihre Wiedererkennbarkeit."
+//     },
+//     {
+//         title: "CONVERSION OPTIMIERUNG",
+//         description: "Eine gut optimierte Website ermöglicht es Ihnen, gezielt Leads zu generieren. Mit Call-to-Actions (CTAs), Kontaktformularen und gezielten Landing Pages können Sie die Conversion-Rate deutlich steigern und potenzielle Kunden in treue Käufer verwandeln."
+//     },
+//     {
+//         title: "BESSERE KUNDENBINDUNG",
+//         description: "Moderne Websites bieten Ihnen die Möglichkeit, Ihren Besuchern eine maßgeschneiderte Erfahrung zu bieten. Mit interaktiven Elementen, personalisierten Angeboten oder einem Blog können Sie eine langfristige Kundenbindung aufbauen und Ihre Kunden regelmäßig auf dem Laufenden halten."
+//     },
+//     {
+//         title: "EFFIZIENTES MARKETING",
+//         description: "Im Vergleich zu traditionellen Werbemaßnahmen wie Printanzeigen oder TV-Spots ist eine professionelle Website eine kostengünstige und effektive Plattform, um Ihre Produkte und Dienstleistungen zu bewerben. Mit gezieltem Online-Marketing (z. B. Google Ads, Social Media) steigern Sie Ihre Reichweite in kürzester Zeit."
+//     },
+//     {
+//         title: "MARKTANALYSEN IN ECHTZEIT",
+//         description: "Durch den Einsatz von Tools wie Google Analytics und anderen Tracking-Tools können Sie das Verhalten Ihrer Website-Besucher in Echtzeit überwachen und schnell Anpassungen vornehmen. So können Sie Ihre Marketingstrategien optimieren und die Nutzererfahrung (UX) weiter verbessern."
+//     },
 
-];
+// ];
 
 const images = [
     'icons/pin-location.svg',
@@ -196,64 +196,71 @@ const skillIcons = [
 ];
 
 const serviceList = [
-    // {
-    //   path: 'icons/design.svg',
-    //   title: 'Pixelgenaue Umsetzung von Designs',
-    //   text: 'Ihre Figma-, XD- oder Sketch-Layouts setze ich 1:1 in sauberen, responsiven Code um – exakt so, wie Sie es sich vorgestellt haben. Keine Kompromisse zwischen Design und Technik.'
-    // },
-    // {
-    //   path: 'icons/document.svg',
-    //   title: 'Entwicklung moderner Single-Page-Applications',
-    //   text: 'Komplexe Webanwendungen mit Angular und TypeScript – schnell, dynamisch und zukunftssicher. Ideal für Projekte mit hohen Ansprüchen an Usability und Skalierbarkeit.'
-    // },
-    // {
-    //   path: 'icons/technical.svg',
-    //   title: 'Technische Umsetzung von UI/UX-Konzepten',
-    //   text: 'Mikrointeraktionen, Animationen und moderne Webstandards bringen Ihre Gestaltungsideen zum Leben. Ich denke mit – auch bei responsivem Verhalten und Benutzerführung.'
-    // },
-    // {
-    //   path: 'icons/firebase.svg',
-    //   title: 'Firebase-Integration für smarte Weblösungen',
-    //   text: 'Ob Hosting, Authentifizierung oder Echtzeit-Datenbanken – ich integriere Firebase, um Ihre Webanwendung flexibel, sicher und performant zu gestalten.'
-    // },
-    // {
-    //   path: 'icons/mysql.svg',
-    //   title: 'Anbindung von APIs & Backends',
-    //   text: 'Ich verbinde das Frontend mit bestehenden Systemen, APIs oder Headless CMS – reibungslos, sicher und perfekt abgestimmt auf Ihre Architektur.'
-    // },
-    // {
-    //   path: 'icons/performance.svg',
-    //   title: 'Beratung zu Performance & Webstandards',
-    //   text: 'Ich optimiere Ladezeiten, Struktur und Barrierefreiheit – damit Ihre Website nicht nur gut aussieht, sondern auch messbar besser performt.'
-    // },
-    // {
-    //   path: 'icons/develop.svg',
-    //   title: 'Komponentenbasierte Entwicklung',
-    //   text: 'Wiederverwendbare, modulare UI-Komponenten nach aktuellen Standards – ideal für Designsysteme oder modulare Projekte mit vielen Unterseiten.'
-    // },
-    // {
-    //   path: 'icons/quality.svg',
-    //   title: 'Qualitätssicherung & Testing',
-    //   text: 'Ich teste, bevor Ihre Nutzer es tun. Durch gezielte Tests und automatisierte Checks sorge ich für stabile, fehlerfreie Releases.'
-    // }
     {
-        path: 'icons/design.svg',
-        target: 'Für Agenturen und Designer',
-        title: 'Designs zum Leben erwecken',
-        text: 'Ob Figma, Adobe XD oder Sketch: Ich verwandle Ihre Entwürfe in sauberen, responsiven und pixelgenauen Code. Mit Liebe zum Detail, einem Blick für UI/UX und absoluter Verlässlichkeit bin ich Ihr Partner für moderne Frontend-Umsetzung.',
+        text: 'Landingpages, Websites, Web-Apps'
     },
     {
-        path: 'icons/develop.svg',
-        target: 'Für Unternehmen',
-        title: 'Frontend-Entwicklung auf Freelancer-Basis',
-        text: 'Als freiberuflicher Frontend-Entwickler steige ich flexibel in bestehende Projekte ein – ob kurzfristig oder langfristig. Ich arbeite selbstständig, strukturiert und bin schnell produktiv – remote oder hybrid, stundenbasiert oder projektgebunden.',
+        text: 'Figma -> Code. Schnell, responsiv, wartbar.'
     },
-    // {
-    //     path: 'icons/imac.svg',
-    //     target: 'Eigene Softwarelösungen',
-    //     title: 'Von der Idee zur Anwendung',
-    //     text: 'Ich entwickle eigene Tools und SaaS-Lösungen, die reale Anforderungen lösen – von der ersten Idee bis zum Launch. Modern, skalierbar, nutzerfreundlich.',
-    // },
+    {
+        text: 'Umsetzung direkt aus Figma, XD oder Sketch'
+    },
+    {
+        text: 'Pixelgenau, responsiv, komponentenbasiert'
+    },
+    {
+        text: 'breiter Techstack: HTML, CSS, JavaScript, TypeScript, React und Angular'
+    },
+    {
+        text: 'Saubere Übergabe & Dokumentation'
+    },
+    {
+        text: 'Zuverlässige Kommunikation & Projektabwicklung'
+    },
+    {
+        text: 'Zusammenarbeit auf Augenhöhe'
+    },
+    {
+        text: 'White-Label möglich'
+    }
+
+
+
+];
+
+const advantages = [
+    {
+        text:'Technisches Know-how trifft Designverständnis',
+    },
+      {
+        text:'Keine Einarbeitung nötig – wir kennen Agenturprozesse',
+    },
+      {
+        text:'Flexibel einsetzbar (auch langfristig oder als White-Label-Partner)',
+    },
+      {
+        text:'Projekte skalierbar – vom Onepager bis zur Komponentensammlung',
+    },
+
+];
+
+const process=[
+    {
+        text:'Design übergeben (Figma, Sketch etc.)',
+    },
+    {
+        text:'Technische Einschätzung & Aufwandsschätzung',
+    },
+    {
+        text:'Entwicklung & Testing',
+    },
+    {
+        text:'Übergabe oder Livegang',
+    },
+    {
+        text:'Betreuung (optional)',
+    },
+
 ];
 
 // Leistungen für Agenturen & Designstudios

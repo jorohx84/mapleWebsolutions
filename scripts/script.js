@@ -170,15 +170,15 @@ function hideWelcome() {
 }
 
 
-function renderAdvantages() {
-    let advanceRef = document.getElementById('advantages');
-    for (let advanceIndex = 0; advanceIndex < advantages.length; advanceIndex++) {
-        const ADVANCE = advantages[advanceIndex];
-        const Image = images[advanceIndex];
-        console.log(Image);
-        advanceRef.innerHTML += getAdvantagesTemplate(advanceIndex, ADVANCE, Image);
-    }
-}
+// function renderAdvantages() {
+//     let advanceRef = document.getElementById('advantages');
+//     for (let advanceIndex = 0; advanceIndex < advantages.length; advanceIndex++) {
+//         const ADVANCE = advantages[advanceIndex];
+//         const Image = images[advanceIndex];
+//         console.log(Image);
+//         advanceRef.innerHTML += getAdvantagesTemplate(advanceIndex, ADVANCE, Image);
+//     }
+// }
 
 function renderSkillIcons() {
     let skillIcon = document.getElementById('skillIcons');
@@ -221,15 +221,148 @@ function renderServices() {
     serviceRef.innerHTML = '';
     for (let index = 0; index < serviceList.length; index++) {
         const SERVICE = serviceList[index];
-        serviceRef.innerHTML += `<div class="serviceCard" id="serviceCard${index}">
-        <img src="${SERVICE.path}" alt="">
-         <h2>${SERVICE.target}</h2>
-        <h3>${SERVICE.title}</h3>
-        <span>${SERVICE.text}</span>
-                                </div>`;
+        serviceRef.innerHTML += `   <div class="serviceListRow">
+                                <div class="blueCheckbox" id="blueCheckbox">
+                                <div class="checkboxOverlay" id="checkboxOverlay"></div>
+                                    <img class="checkImg" src="icons/check_blue.svg" alt="">
+                                </div>
+                                <span>${SERVICE.text}</span>
+                            </div>`;
     }
 }
 
+
+
+function checkBoxCheck(){
+
+    const images=document.getElementsByClassName('checkboxOverlay');
+    const trigger=window.innerHeight*0.5;
+   
+    for (let index = 0; index < images.length; index++) {
+        const IMAGE = images[index];
+         const imageRect=IMAGE.getBoundingClientRect();
+  
+    if (imageRect.top<trigger) {
+        // IMAGE.style.opacity="1";
+        IMAGE.style.transform="scaleX(0)"
+    }else{
+        // IMAGE.style.opacity="0";
+         IMAGE.style.transform="scaleX(1)"
+    }
+      }
+}
+
+function renderAdvantages(){
+    const advantagesRef=document.getElementById('advantages');
+    advantagesRef.innerHTML='';
+    for (let index = 0; index < advantages.length; index++) {
+        const ADVANCE = advantages[index];
+        advantagesRef.innerHTML+=` <div class="advantagesListRow">
+
+                            <img class="advantagesListImage" id="advantagesListImage" src="logos/mapleIcon-bg.png"
+                                alt="">
+                            <span>${ADVANCE.text}</span>
+                        </div>`
+    }
+}
+
+function renderProcess(){
+    const processRef=document.getElementById('process');
+    processRef.innerHTML='';
+    for (let index = 0; index < process.length; index++) {
+        const step = process[index];
+        processRef.innerHTML+=` <div class="processRow">
+                             <div class="dot" id="dot">
+                                <div class="dotOverlay"></div>
+                                <img src="icons/check_blue.svg" alt="">
+                             </div>
+                            <span>${step.text}</span>
+                        </div>`;
+    }
+}
+
+function renderContent(){
+    renderServices();
+    renderAdvantages();
+    renderProcess();
+}
+
+function rotateLogos(){
+  
+    const logos=document.getElementsByClassName('advantagesListImage');
+        const trigger=window.innerHeight*0.5;
+        for (let index = 0; index < logos.length; index++) {
+            const LOGO = logos[index];
+            const logoRect=LOGO.getBoundingClientRect();
+            if (logoRect.top<trigger) { 
+                LOGO.classList.add('logoanimation');
+            }else{
+               
+                 LOGO.classList.remove('logoanimation');
+    
+            }
+        }
+}
+
+
+function getVerticalBarPosition(){
+const {barParent,barParentRect, cardRect, firstDotRect, lastDotRect}=getRects();
+
+const top=firstDotRect.top - cardRect.top;
+const bottom=lastDotRect.bottom - cardRect.top;
+const currentParentHeight=getParentBarHeight(firstDotRect, lastDotRect);
+const left = (firstDotRect.left+(firstDotRect.width/2)-cardRect.left)-(barParentRect.width/2);
+    barParent.style.top=`${top}px`;
+    barParent.style.bottom=`${bottom}px`
+        barParent.style.left=`${left}px`
+ barParent.style.height=`${currentParentHeight}px`
+    getVerticalHeight(currentParentHeight, barParentRect);
+}
+
+function getRects(){
+    const dots=document.getElementsByClassName('dot');
+    const firstDot=dots[0];
+    const lastDot=dots[dots.length-1];
+    const card=document.getElementById('serviceCard')
+    const barParent=document.getElementById('verticalBar');
+    const barParentRect=barParent.getBoundingClientRect();
+    const cardRect=card.getBoundingClientRect();
+    const firstDotRect=firstDot.getBoundingClientRect();
+    const lastDotRect=lastDot.getBoundingClientRect();
+    return {barParent, barParentRect, cardRect, firstDotRect, lastDotRect}
+}
+
+function getParentBarHeight(firstDotRect, lastDotRect){
+    const height=lastDotRect.bottom-firstDotRect.top;
+    return height
+
+}
+
+function getVerticalHeight(currentParentHeight, barParentRect){
+
+const barChild=document.getElementById('barInner');
+ 
+ const barChildRect=barChild.getBoundingClientRect();
+const trigger=window.innerHeight*0.5;
+if (barParentRect.top>trigger) {
+   barChild.style.height=`0%` 
+}
+if (barParentRect.top<trigger && barParentRect.bottom >= trigger) {
+    const innerhHeight=trigger-barParentRect.top;
+const dynamicHeight=(innerhHeight/currentParentHeight)*100;
+barChild.style.height=`${dynamicHeight}%`
+   
+}
+if (barParentRect.bottom<trigger) {
+   barChild.style.height=`100%` 
+}
+}
+
+window.addEventListener('resize', getVerticalBarPosition);
+window.addEventListener('scroll',()=>{
+getVerticalBarPosition();
+
+}  );
 
 // function renderServiceText(index){
 // const ref=document.getElementById(`text${index}`);
