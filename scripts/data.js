@@ -175,76 +175,115 @@ const icons = [
 // ];
 
 const serviceList = [
-  {
-    text: "Landingpages, Websites, Web-Apps",
+    {
+    title: "Landingpages, Websites, Webshops & Web-Apps",
+    description: "Ich entwickle moderne Webprojekte jeder Art – vom Onepager über klassische Websites bis hin zu komplexen Web-Anwendungen."
   },
   {
-    text: "Design -> Code. Schnell, responsiv, wartbar.",
+    title: "Design -> Code. Schnell, responsiv, wartbar.",
+    description: "Ich überführe Ihre Designvorlagen zügig und zuverlässig in sauberen, responsiven und modular aufgebauten Frontend-Code."
   },
   {
-    text: "Umsetzung direkt aus Figma, XD oder Sketch",
+    title: "Umsetzung direkt aus Figma, XD oder Sketch",
+    description: "Ich arbeite direkt mit Ihren gelieferten Dateien aus Figma, Adobe XD oder Sketch – ohne Umwege oder verlustreiche Exporte."
   },
   {
-    text: "Pixelgenau, responsiv, komponentenbasiert",
+    title: "Pixelgenau, responsiv, komponentenbasiert",
+    description: "Ich entwickle nach Ihren Vorgaben – präzise, mobiloptimiert und strukturiert in wiederverwendbaren Komponenten."
   },
   {
-    text: "breiter Techstack: HTML, CSS, JavaScript, TypeScript, React und Angular",
+    title: "Breiter Techstack: HTML, CSS, JavaScript, TypeScript, React und Angular",
+    description: "Ich beherrsche aktuelle Webtechnologien und Frameworks – flexibel einsetzbar je nach Projektanforderung und Teamstruktur."
   },
   {
-    text: "Saubere Übergabe & Dokumentation",
+    title: "Saubere Übergabe & Dokumentation",
+    description: "Sie erhalten eine durchdachte Codebasis mit klarer Struktur, Kommentaren und Übergabedokumentation – bereit zur Weiterverarbeitung im Team."
   },
   {
-    text: "Zuverlässige Kommunikation & Projektabwicklung",
+    title: "Zuverlässige Kommunikation & Projektabwicklung",
+    description: "Ich arbeite transparent, kommuniziere klar und halte Deadlines ein – damit Ihr Projekt reibungslos und effizient umgesetzt wird."
   },
+//   {
+//     title: "Zusammenarbeit auf Augenhöhe",
+//     description: "Ich verstehe mich als Partner – mit technischem Know-how, aber auch dem Blick fürs große Ganze und die Bedürfnisse Ihres Teams."
+//   },
   {
-    text: "Zusammenarbeit auf Augenhöhe",
-  },
-  {
-    text: "White-Label möglich",
-  },
+    title: "White-Label möglich",
+    description: "Gerne arbeite ich im Hintergrund unter Ihrem Namen – ideal für Agenturen, die ihre Kapazitäten flexibel erweitern möchten."
+  }
 ];
+
+
 
 const services = [
   {
     path: "icons/design.svg",
-    title: "Pixelgenaue Umsetzung von Designvorlagen",
-    text: "Ich überführe Figma-, Adobe XD- oder Sketch-Designs 1:1 in semantisches HTML/CSS – exakt wie entworfen.",
+    title: "Design zu Code",
+    text: "Ich setze Ihre Designvorlagen präzise und responsiv in sauberen, wartbaren Code um – pixelgenau und browserübergreifend.",
+  },
+  {
+    path: "logos/mapleIcon-bg.png",
+    title: "Moderne Frontend-Entwicklung",
+    text: "Entwicklung moderner Benutzeroberflächen mit HTML, CSS, JavaScript und Frameworks wie React oder Angular – stets performant und barrierefrei.",
+  },
+  {
+    path: "icons/responsive.svg",
+    title: "Responsives Webdesign",
+    text: "Ihre Website funktioniert und sieht auf allen Geräten optimal aus – vom Smartphone bis zum 4K-Monitor.",
+  },
+  {
+    path: "icons/maintenance.svg",
+    title: "Sauberer & wartbarer Code",
+    text: "Ich schreibe strukturierten, gut dokumentierten Code, der langfristig wartbar und erweiterbar bleibt.",
   },
 
   {
-    path: "",
+    path: "icons/performance.svg",
+    title: "Optimierung für Performance",
+    text: "Ich achte auf schnelle Ladezeiten, optimierte Assets und Best Practices – für eine bessere User Experience und SEO.",
+  },
+  {
+    path: "icons/teamwork.svg",
+    title: "Effiziente Zusammenarbeit",
+    text: "Klare Kommunikation, transparente Abläufe und reibungslose Übergabe – ich integriere mich nahtlos in bestehende Workflows.",
+  },
+  {
+    path: "icons/component.svg",
     title: "Komponentenbasierte Entwicklung",
-    text: "Wiederverwendbare UI-Komponenten mit React, Vue oder Vanilla JS – ideal für moderne Web-Architekturen.",
+    text: "Ich entwickle UI-Komponenten strukturiert und wiederverwendbar – z. B. für Design-Systeme mit Storybook oder Frameworks.",
   },
   {
-    path: "",
-    title: "Responsives Design für alle Bildschirmgrößen",
-    text: "Mobile First, flexibles Layout und Designtreue auf allen Devices – ohne visuelle Kompromisse.",
+    path: "icons/shuffle.svg",
+    title: "Cross-Browser-Kompatibilität",
+    text: "Ich stelle sicher, dass Ihre Website in allen gängigen Browsern einheitlich funktioniert und professionell aussieht – inklusive sauberer Fallbacks bei Bedarf.",
   },
-  {
-    path: "",
-    title: "Cross-Browser- & Cross-Device-Kompatibilität",
-    text: "Verlässliche Darstellung in allen gängigen Browsern und auf verschiedenen Endgeräten.",
-  },
- 
-
-
-
 ];
 
 const advantages = [
   {
-    text: "Technisches Know-how trifft Designverständnis",
+    title: "Technisches Know-how trifft Designverständnis",
+    description: "Ich spreche die Sprache von Entwickler:innen und Designer:innen – für reibungslose Übergaben, präzise Umsetzung und überzeugende Ergebnisse im Frontend."
   },
   {
-    text: "Keine Einarbeitung nötig – wir kennen Agenturprozesse",
+    title: "Keine Einarbeitung nötig – wir kennen Agenturprozesse",
+    description: "Dank Erfahrung in der Zusammenarbeit mit Agenturen bin ich sofort einsatzbereit – mit klaren Abläufen, Versionskontrolle und Ticket-Systemen vertraut."
   },
   {
-    text: "Flexibel einsetzbar (auch langfristig oder als White-Label-Partner)",
+    title: "Flexibel einsetzbar (auch langfristig oder als White-Label-Partner)",
+    description: "Ob für einzelne Projekte, als Teil Ihres Teams oder unsichtbar im Hintergrund – ich passe mich Ihrem Bedarf an und arbeite flexibel & zuverlässig mit."
   },
   {
-    text: "Projekte skalierbar – vom Onepager bis zur Komponentensammlung",
+    title: "Projekte skalierbar – vom Onepager bis zur Komponentensammlung",
+    description: "Ich setze kleine und große Frontend-Projekte effizient um – von schnellen Landingpages bis zu skalierbaren Komponentenbibliotheken für komplexe Anwendungen."
   },
+  {
+    title: "Verlässliche Deadlines & transparente Kommunikation",
+    description: "Ich halte, was ich zusage – mit klaren Timings, realistischen Einschätzungen und offener Kommunikation auf Augenhöhe."
+  },
+  {
+    title: "State-of-the-Art Frontend-Technologien",
+    description: "Ich arbeite mit modernen Tools und Frameworks wie TypeScript, React, Angular und Headless CMS – für zukunftssichere und performante Ergebnisse."
+  }
 ];
 
 const process = [

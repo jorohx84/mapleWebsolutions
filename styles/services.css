@@ -158,38 +158,37 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 112px;
+  gap: 56px;
 }
 
 .serviceCards {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 32px;
 }
 
 .serviceCard {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  max-width: 400px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
-  padding: 24px 56px;
+  padding: 24px;
   border-radius: 12px;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
   background-color: white;
-
 }
 
 .cardImage {
-  width: 70px;
+  width: 60px;
 }
-
 
 .serviceCard h3 {
   width: 100%;
@@ -197,26 +196,35 @@
   font-weight: 400;
 }
 
-
 .serviceText {
   text-align: center;
 }
 
-.serviceContainer{
-      position: relative;
-    width: 100%;
+.serviceContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
+.serviceContainer h2 {
+  font-size: 48px;
+}
+.serviceContainer h3 {
+  font-size: 24px;
 }
 
 .serviceList {
   width: 100%;
+  max-width: 1200px;
   text-align: start;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   box-sizing: border-box;
-  padding: 32px;
+  padding: 32px 0;
 }
 
 .serviceListHeadline {
@@ -230,9 +238,21 @@
 }
 
 .serviceListRow {
+  width: 500px;
+  max-width: 800px;
+height: 180px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
+}
+
+.serviceTextContainer {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
 }
 
 .blueCheckbox {
@@ -257,22 +277,68 @@
 }
 
 .checkImg {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: var(--secondary-color);
   opacity: 1;
-  transition: transform 1s ease-in-out;
+
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
+    height 0.5s ease-in-out, top 0.3s ease-in-out;
 }
 
-.advantagesListRow {
-  width: 300px;
+.checkImg img {
+  width: 20px;
+  transform: rotate(45deg);
+}
 
+.stretchImage {
+  top: 0px;
+  transform: rotate(-45deg) scale(0.75);
+}
+.advantagesContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 32px;
+   
+}
+.advantagesContainer h2{
+font-size: 48px;
+
+
+}
+.advantages {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+}
+
+
+.advantagesListCard {
+  width: 300px;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
+  text-align: center;
   border-radius: 12px;
   padding: 32px;
+  
 }
 
 .advantagesListImage {
@@ -331,7 +397,6 @@
   position: absolute;
   width: 3px;
   border-radius: 100px;
-  background-color: var(--main-color);
 }
 
 .barInner {
@@ -365,6 +430,12 @@
   .btnContainer button {
     font-size: 16px;
   }
+}
+
+@media (max-width: 1390px) {
+    .serviceTextContainer{
+        height: fit-content;
+    }
 }
 
 @media (max-width: 1050px) {

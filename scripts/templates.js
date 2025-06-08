@@ -1,5 +1,5 @@
 function getPackagesTemplate(packIndex, PACK) {
-    return `<div>
+  return `<div>
                                     <div onclick="addToCart(${packIndex})" class="pack" id="pack${packIndex}">
                                         <div class="pack-description">
                                         <h2>${PACK.category}</h2>
@@ -12,47 +12,44 @@ function getPackagesTemplate(packIndex, PACK) {
                                          <p id="packages-error${packIndex}"></p>
                                     </div>
                                 </div>
-                        `
+                        `;
 }
 
 function getProductHeadlineTemplate() {
-    return `<div><h2>WÄHLEN SIE IHR GEWÜNSCHTES PRODUKT AUS</h2>
+  return `<div><h2>WÄHLEN SIE IHR GEWÜNSCHTES PRODUKT AUS</h2>
                 <div class="validation" id="validChoose"></div>
-            </div>`
+            </div>`;
 }
 
 function getServiceHeadlineTemplate() {
-    return `<h2>WÄHLEN SIE IHR GEWÜNSCHTES ZUSATZPRODUKT AUS (OPTIONAL)</h2>`
+  return `<h2>WÄHLEN SIE IHR GEWÜNSCHTES ZUSATZPRODUKT AUS (OPTIONAL)</h2>`;
 }
 
 function getOverlayButtonsTemplate() {
-
-    return ` <button class="forwardButton" onclick="checkChoice('choice'); scrollToHeader()">Weiter</button>`
+  return ` <button class="forwardButton" onclick="checkChoice('choice'); scrollToHeader()">Weiter</button>`;
 }
 
 function getOverlayButtonsTemplateExtra() {
-    return ` <button onclick="renderPackages(); scrollToHeader()">Zurück</button>
-             <button onclick="renderCartContainer(); scrollToHeader()">Weiter</button>`      
+  return ` <button onclick="renderPackages(); scrollToHeader()">Zurück</button>
+             <button onclick="renderCartContainer(); scrollToHeader()">Weiter</button>`;
 }
 
-function getOverlayButtonsChoiceTemplate(){
-    return ` <button onclick="renderExtras(); scrollToHeader()">Zurück</button>
-    <button onclick="checkChoice('request'); scrollToHeader()">Weiter</button>`      
-
+function getOverlayButtonsChoiceTemplate() {
+  return ` <button onclick="renderExtras(); scrollToHeader()">Zurück</button>
+    <button onclick="checkChoice('request'); scrollToHeader()">Weiter</button>`;
 }
-
 
 function getExtrasTemplate(extraIndex, EXTRA) {
-    return `
+  return `
                     <div onclick="addToCart(${extraIndex}, 'extra')" class="services" id="services${extraIndex}"> 
                             <h3>${EXTRA.category}</h3>
                             <p>${EXTRA.description}</p>          
                     </div>
-                            `
+                            `;
 }
 
 function getCartTemplate(cartIndex, CHOICE) {
-    return `                <div class="choice-content">
+  return `                <div class="choice-content">
                                 
                                     <div class="choice-content-text">
                                         <h4>${CHOICE.category}</h4>
@@ -61,11 +58,11 @@ function getCartTemplate(cartIndex, CHOICE) {
                                     <div class="deletebuttonContainer">
                                     <button onclick="deleteChoiseFromCart(${cartIndex})" class="deletebutton"><img src="/icons/delete.svg" alt=""></button>
                                  </div>
-                            </div>`
+                            </div>`;
 }
 
 function getCartContainerTemplate() {
-    return `      <div class="cart-content">
+  return `      <div class="cart-content">
                          <div class="cart-choice">
                          
                           <div class="choice" id="cart">
@@ -74,21 +71,20 @@ function getCartContainerTemplate() {
 
                       </div>
                     
-                      `
+                      `;
 }
 
 function getServicelistTemplate(SERVICE) {
-    return `<div>
+  return `<div>
                 <div class="servicelist-row">
                 <img src="/icons/arrow-list.svg" alt="">
                 <p>${SERVICE}</p>
                 </div>
-            </div>`
-
+            </div>`;
 }
 
-function getContactFormTemplate(){
-return `  <div class="section-headline">
+function getContactFormTemplate() {
+  return `  <div class="section-headline">
                         <h2>BITTE GEBEN SIE IHRE KONTAKTDATEN EIN</h2>
                     </div>
                     <div class="lead-information-container">
@@ -129,12 +125,11 @@ return `  <div class="section-headline">
                           <button onclick="validateInputfields('offer')">Anfrage senden</button>
                     </div>
                    
-                   `
+                   `;
 }
 
-
-function getAdvantagesTemplate(advanceIndex, ADVANCE, Image){
-    return `<div onclick="renderDescription(${advanceIndex})" class="advance">
+function getAdvantagesTemplate(advanceIndex, ADVANCE, Image) {
+  return `<div onclick="renderDescription(${advanceIndex})" class="advance">
              <img src="${Image}" alt="">
                 <div class="advance-content" id="advance-content${advanceIndex}">
                     <h4 class="space">${ADVANCE.title}</h4>
@@ -143,13 +138,30 @@ function getAdvantagesTemplate(advanceIndex, ADVANCE, Image){
                     <p>${ADVANCE.description}</p>
                     </div>
                  
-            </div>`
+            </div>`;
 }
 
-function getServiceCardsTemplate(card, index){
-    return`    <div class="serviceCard">
+function getServicesTemplate(SERVICE) {
+  return `   <div class="serviceListRow">
+                                <div class="blueCheckbox" id="blueCheckbox">
+                               <div class="checkImg">
+                                 <img src="icons/arrow_white.svg" alt="">
+                               </div>
+                                  
+                                </div>
+                                <div class="serviceTextContainer">
+                                <h4>${SERVICE.title}</h4>
+                                     <span>${SERVICE.description}</span>
+                                </div>
+                           
+                            </div>`;
+}
+
+
+function getServiceCardsTemplate(card, index) {
+  return `    <div class="serviceCard">
        <img class="cardImage" src="${card.path}" alt="">
        <h3>${card.title}</h3>
        <p class="serviceText">${card.text}</p>
-    </div>`
+    </div>`;
 }

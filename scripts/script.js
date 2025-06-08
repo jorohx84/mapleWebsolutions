@@ -175,19 +175,21 @@ function renderSkillIcons() {
   }
 }
 
-function renderSkills() {
-  let skillRef = document.getElementById("skills");
-  skillRef.innerHTML = "";
-  for (let index = 0; index < skills.length; index++) {
-    const SKILL = skills[index];
-    skillRef.innerHTML += `<div class="row">
-                    <img class="icon${index}" src="${skillIcons[index]}" loading="lazy" alt="">
-                    <div class="row-text">
-                        <h4 class="space">${SKILL.title}</h4>
-                        <p>${SKILL.text}</p>
-                    </div>`;
-  }
-}
+// function renderSkills() {
+//   let skillRef = document.getElementById("skills");
+//   skillRef.innerHTML = "";
+//   for (let index = 0; index < skills.length; index++) {
+//     const SKILL = skills[index];
+//     skillRef.innerHTML += `<div class="row">
+//                     <img class="icon${index}" src="${skillIcons[index]}" loading="lazy" alt="">
+//                     <div class="row-text">
+//                         <h4 class="space">${SKILL.title}</h4>
+//                         <p>${SKILL.text}</p>
+//                     </div>`;
+//   }
+// }
+
+
 
 function renderServiceCards() {
   const serviceRef = document.getElementById("serviceCards");
@@ -205,13 +207,7 @@ function renderServices() {
   serviceRef.innerHTML = "";
   for (let index = 0; index < serviceList.length; index++) {
     const SERVICE = serviceList[index];
-    serviceRef.innerHTML += `   <div class="serviceListRow">
-                                <div class="blueCheckbox" id="blueCheckbox">
-                               
-                                    <img class="checkImg" src="icons/arrow_blue.svg" alt="">
-                                </div>
-                                <span>${SERVICE.text}</span>
-                            </div>`;
+    serviceRef.innerHTML += getServicesTemplate(SERVICE);
   }
 }
 
@@ -224,11 +220,11 @@ function checkBoxCheck() {
     const imageRect = IMAGE.getBoundingClientRect();
 
     if (imageRect.top < trigger) {
-      // IMAGE.style.opacity="1";
-      IMAGE.style.transform = "scale(1.3)";
+    
+      IMAGE.classList.add('stretchImage');
     } else {
-      // IMAGE.style.opacity="0";
-      IMAGE.style.transform = "scale(1)";
+      
+    IMAGE.classList.remove('stretchImage');
     }
   }
 }
@@ -238,11 +234,12 @@ function renderAdvantages() {
   advantagesRef.innerHTML = "";
   for (let index = 0; index < advantages.length; index++) {
     const ADVANCE = advantages[index];
-    advantagesRef.innerHTML += ` <div class="advantagesListRow">
+    advantagesRef.innerHTML += ` <div class="advantagesListCard">
 
                             <img class="advantagesListImage" id="advantagesListImage" src="logos/mapleIcon-bg.png"
                                 alt="">
-                            <span>${ADVANCE.text}</span>
+                                <h4>${ADVANCE.title}</h4>
+                            <span>${ADVANCE.description}</span>
                         </div>`;
   }
 }
@@ -363,6 +360,7 @@ window.addEventListener("resize", getVerticalBarPosition);
 window.addEventListener("scroll", () => {
   getVerticalBarPosition();
   giveDotsHighlights();
+  checkBoxCheck();
 });
 
 // function renderServiceText(index){
