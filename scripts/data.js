@@ -203,10 +203,6 @@ const serviceList = [
     title: "Zuverlässige Kommunikation & Projektabwicklung",
     description: "Ich arbeite transparent, kommuniziere klar und halte Deadlines ein – damit Ihr Projekt reibungslos und effizient umgesetzt wird."
   },
-//   {
-//     title: "Zusammenarbeit auf Augenhöhe",
-//     description: "Ich verstehe mich als Partner – mit technischem Know-how, aber auch dem Blick fürs große Ganze und die Bedürfnisse Ihres Teams."
-//   },
   {
     title: "White-Label möglich",
     description: "Gerne arbeite ich im Hintergrund unter Ihrem Namen – ideal für Agenturen, die ihre Kapazitäten flexibel erweitern möchten."
@@ -285,24 +281,27 @@ const advantages = [
     description: "Ich arbeite mit modernen Tools und Frameworks wie TypeScript, React, Angular und Headless CMS – für zukunftssichere und performante Ergebnisse."
   }
 ];
-
 const process = [
   {
-    text: "Design übergeben (Figma, Sketch etc.)",
+    title: "Design übergeben (Figma, Sketch etc.)",
+    description: "Sie senden mir das fertige Design, zum Beispiel aus Figma, Sketch oder Adobe XD. Ich sehe mir alle Ansichten, Komponenten und Layouts genau an, um ein vollständiges Bild vom Umfang und Aufbau zu bekommen. Falls notwendig, klären wir noch offene Punkte zur Struktur oder zum Verhalten einzelner Elemente."
   },
   {
-    text: "Technische Einschätzung & Aufwandsschätzung",
+    title: "Technische Einschätzung & Aufwandsschätzung",
+    description: "Ich prüfe, wie sich das Design technisch umsetzen lässt – etwa in Bezug auf Responsive-Verhalten, Animationen oder Wiederverwendbarkeit. Daraus ergibt sich eine realistische Einschätzung des zeitlichen Aufwands sowie Hinweise zu möglichen Herausforderungen oder Unklarheiten."
   },
   {
-    text: "Entwicklung & Testing",
+    title: "Entwicklung & Testing",
+    description: "Ich entwickle das Frontend auf Basis des Designs. Dabei achte ich auf sauberen, wartbaren Code, responsives Verhalten und sinnvolle Strukturierung mit Komponenten. Währenddessen wird regelmäßig getestet – in verschiedenen Browsern und auf gängigen Geräten – um Darstellungsfehler oder Probleme frühzeitig zu erkennen."
   },
   {
-    text: "Übergabe oder Livegang",
+    title: "Übergabe oder Livegang",
+    description: "Der fertige Code wird strukturiert übergeben – inklusive aller benötigten Dateien, optional mit Dokumentation oder Hinweisen zur Einbindung. Wenn gewünscht, begleite ich auch den Livegang und übernehme die letzten technischen Schritte zur Veröffentlichung."
   },
   {
-    text: "Betreuung (optional)",
-  },
+    title: "Betreuung (optional)",
+    description: "Auch nach der Umsetzung kann ich das Projekt weiter begleiten – etwa bei kleineren Anpassungen, Fehlerbehebungen oder Erweiterungen. So bleibt das Frontend aktuell und kann bei Bedarf flexibel weiterentwickelt werden."
+  }
 ];
 
-// Leistungen für Agenturen & Designstudios
-// Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei, aus starken Designs ebenso starke digitale Erlebnisse zu machen – präzise, schnell und zuverlässig. Hier ein Auszug meiner Leistungen:
+

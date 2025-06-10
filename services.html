@@ -15,11 +15,14 @@
   </head>
 
   <body id="body" onscroll="fixHeader()" onload="renderContent()">
-    <!--serviceAnimation() -->
-
     <header w3-include-html="/html/header.html"></header>
 
-    <div class="services">
+    <div class="services" id="servicesContainer">
+      <div class="contactBar" id="contactBar">
+        <button><img src="icons/phone_white.svg" alt="" /></button>
+        <button><img src="icons/mail_white.svg" alt="" /></button>
+        <button><img src="icons/arrowup_white.svg" alt="" /></button>
+      </div>
       <div class="service-headline">
         <p class="space">M E I N E</p>
         <h1 class="space" id="headline">LEISTUNGEN</h1>
@@ -37,25 +40,21 @@
               Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen
               und kreative Teams dabei, aus starken Designs ebenso starke
               digitale Erlebnisse zu machen – präzise, schnell und zuverlässig.
+             
             </span>
           </div>
-
 
           <div class="serviceCards" id="serviceCards"></div>
 
           <div class="serviceContainer">
-            <h2>Umsetzung</h2>
-            <h3>
-              Ich setze Ihre UI/UX-Designs in performanten, responsiven
-              Frontend-Code um.
-            </h3>
+            <h2>Warum maple Websolutions?</h2>
             <div class="serviceList" id="services"></div>
           </div>
 
-          <div class="advantagesContainer">
+          <!-- <div class="advantagesContainer">
             <h2>Warum maple Websolutions?</h2>
             <div class="advantages" id="advantages"></div>
-          </div>
+          </div> -->
 
           <div class="serviceContainer" id="serviceContainer">
             <h2>So läuft die Zusammenarbeit</h2>
@@ -64,28 +63,22 @@
               <div class="barInner" id="barInner"></div>
             </div>
           </div>
-
-          <!-- <div class="mainContentFooter">
-                    <div class="textContainer" id="textContainer">
-                        <span>
-                            Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei,
-                            aus
-                            starken
-                            Designs ebenso starke digitale Erlebnisse zu machen – präzise, schnell und
-                            zuverlässig.</span>
-
-
-
-                    </div>
-                    <div class="footerDivider" id="footerDivider"></div>
-                    <div class="btnContainer" id="btnContainer">
-                        <span>Konnte ich Sie überzeugen?</span>
-                        <button onclick="window.location.href='/contact.html'">Sprechen Sie mich an</button>
-                    </div>
-                </div> -->
+          <div class="ctaContainer" id="ctaContainer">
+            <div class="ctaTextContainer">
+              <h2>Konnte ich Sie überzeugen?</h2>
+              <h3>Dann rufen Sie mich an!</h3>
+            </div>
+            <div class="btnContainer" id="btnContainer">
+              <button onclick="window.location.href='contact.html'">
+                <img src="icons/mail_white.svg" alt="" />
+                <span>Kontakt</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <footer w3-include-html="/html/footer.html"></footer>
 
     <script src="/scripts/script.js"></script>

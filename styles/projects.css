@@ -15,12 +15,16 @@
     position: absolute;
     top: 56px;
     right: 56px;
-    width: 30px;
-    height: 30px;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     color: var(--main-color);
     border: solid;
     border-color: var(--secondary-color);
+    border-radius: 100px;
 }
 
 
@@ -76,7 +80,7 @@ h1 {
     /* border: solid;
 border-width: 0.5px;
 border-color: var(--main-color); */
-    border-radius: 30px;
+    border-radius: 12px;
 
 }
 

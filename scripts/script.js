@@ -1,6 +1,6 @@
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
 
 function reloadWebsite() {
   if (performance.getEntriesByType("navigation")[0].type === "reload") {
@@ -189,8 +189,6 @@ function renderSkillIcons() {
 //   }
 // }
 
-
-
 function renderServiceCards() {
   const serviceRef = document.getElementById("serviceCards");
 
@@ -205,8 +203,8 @@ function renderServiceCards() {
 function renderServices() {
   const serviceRef = document.getElementById("services");
   serviceRef.innerHTML = "";
-  for (let index = 0; index < serviceList.length; index++) {
-    const SERVICE = serviceList[index];
+  for (let index = 0; index < advantages.length; index++) {
+    const SERVICE = advantages[index];
     serviceRef.innerHTML += getServicesTemplate(SERVICE);
   }
 }
@@ -220,11 +218,9 @@ function checkBoxCheck() {
     const imageRect = IMAGE.getBoundingClientRect();
 
     if (imageRect.top < trigger) {
-    
-      IMAGE.classList.add('stretchImage');
+      IMAGE.classList.add("stretchImage");
     } else {
-      
-    IMAGE.classList.remove('stretchImage');
+      IMAGE.classList.remove("stretchImage");
     }
   }
 }
@@ -255,7 +251,8 @@ function renderProcess() {
                                 <img src="icons/check_blue.svg" alt="">
                              </div>
                              <div class="stepCard">
-                              <span>${step.text}</span>
+                             <h4>${step.title}</h4>
+                              <span>${step.description}</span>
                               </div>
                            
                         </div>`;
@@ -265,7 +262,7 @@ function renderProcess() {
 function renderContent() {
   renderServiceCards();
   renderServices();
-  renderAdvantages();
+  //   renderAdvantages();
   renderProcess();
 }
 
@@ -346,7 +343,6 @@ function giveDotsHighlights() {
     const overlay = overlays[index];
     const dotRect = dot.getBoundingClientRect();
     if (dotRect.top < barChildRect.bottom) {
-      console.log(index);
       dot.style.borderColor = "var(--secondary-color)";
       overlay.style.transform = "scaleX(0)";
     } else {
@@ -356,91 +352,43 @@ function giveDotsHighlights() {
   }
 }
 
-window.addEventListener("resize", getVerticalBarPosition);
+function moveContactbar() {
+  if (window.innerWidth > 1280) {
+    const contactBar = document.getElementById("contactBar");
+    if (window.scrollY > 150) {
+      contactBar.classList.add("contactBarScrolled");
+    } else {
+      contactBar.classList.remove("contactBarScrolled");
+    }
+  }
+}
+function setContectBarPosition() {
+  const contactBar = document.getElementById("contactBar");
+  const servicesContainer = document.getElementById("servicesContainer");
+  const servicesContainerRect = servicesContainer.getBoundingClientRect();
+  let padding;
+  if (window.scrollY < 150 && window.innerWidth>800) {
+    padding = 56;
+  } else {
+    padding = 4;
+  }
+  const position = window.innerWidth - servicesContainerRect.right + padding;
+  contactBar.style.right = `${position}px`;
+}
+
+window.addEventListener("resize", () => {
+  getVerticalBarPosition();
+  setContectBarPosition();
+});
+
+window.addEventListener("load", () => {
+  setContectBarPosition();
+});
+
 window.addEventListener("scroll", () => {
   getVerticalBarPosition();
   giveDotsHighlights();
   checkBoxCheck();
+  setContectBarPosition();
+  moveContactbar();
 });
-
-// function renderServiceText(index){
-// const ref=document.getElementById(`text${index}`);
-
-// const text=serviceList[index].text;
-// const card=document.getElementById(`serviceCard${index}`);
-// card.style.height="400px"
-// setTimeout(() => {
-//               ref.innerHTML='';
-// ref.innerHTML+=` <span>${text}</span>`;
-// ref.style.opacity="1";
-// }, 300);
-// setTimeout(() => {
-//    hideText(index);
-// }, 300);
-
-// }
-
-// function hideText(currentIndex){
-//     for (let index = 0; index < serviceList.length; index++) {
-//         if (index !== currentIndex) {
-//                     const ref=document.getElementById(`text${index}`);
-
-//         ref.innerHTML='';
-//         ref.style.opacity="0";
-//         const card=document.getElementById(`serviceCard${index}`);
-// card.style.height="300px"
-//         }
-
-//     }
-// }
-
-// function serviceAnimation() {
-
-//     const divider = document.getElementById('divider');
-//     const dividerTrigger = window.innerHeight * 0.25;
-//     const buttonTrigger = window.innerHeight * 0.85;
-//     console.log(buttonTrigger);
-
-//     const dividerRect = divider.getBoundingClientRect().top;
-//     const button = document.getElementById('btnContainer');
-//     const footerDivider = document.getElementById('footerDivider')
-//     const footerDividerRect = footerDivider.getBoundingClientRect().top;
-//     console.log(footerDividerRect);
-
-//     if (dividerRect < dividerTrigger) {
-//         divider.style.backgroundColor = 'var(--secondary-color)';
-//         divider.style.height = '6px';
-//         divider.style.width = '25%'
-
-//     } else {
-//         divider.style.backgroundColor = 'var(--main-color)';
-//         divider.style.height = '2px';
-//         divider.style.width = '90%';
-
-//     }
-
-//     if (footerDivider < buttonTrigger) {
-//         button.classList.add('btnHighlight');
-//         footerDivider.style.backgroundColor = 'var(--secondary-color)';
-//         if (window.innerWidth < 800) {
-//             footerDivider.style.height = '6px';
-//             footerDivider.style.width = '100%'
-//         } else {
-//             footerDivider.style.height = '100%';
-//             footerDivider.style.width = '6px'
-
-//         }
-
-//     } else {
-//         button.classList.remove('btnHighlight');
-//         footerDivider.style.backgroundColor = 'var(--main-color)';
-//         if (window.innerWidth < 800) {
-//             footerDivider.style.height = '6px';
-//             footerDivider.style.width = '0%';
-//         }else{
-
-//         footerDivider.style.height = '0%';
-//         footerDivider.style.width = '6px'
-//     }
-//     }
-// }
