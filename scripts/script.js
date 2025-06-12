@@ -49,8 +49,6 @@ function burgerAnimation() {
 }
 
 function fixHeader() {
-  //changeHeaderColor('burger-line', 'burger-color');
-  //changeHeaderColor('nav', 'navcolor');
   const header = document.getElementById("header");
   const headerScroll = document.getElementById("header-scroll");
   if (window.scrollY > 100) {
@@ -76,49 +74,49 @@ function changeHeaderColor(idKey, classKey) {
   }
 }
 
-function slideOutBoxes(idKey) {
-  let container = document.getElementsByClassName(`${idKey}`);
-  for (let index = 0; index < container.length; index++) {
-    const cont = container[index];
-    if (index % 2 === 0) {
-      cont.classList.add("right");
-    } else {
-      cont.classList.add("left");
-    }
-  }
-}
+// function slideOutBoxes(idKey) {
+//   let container = document.getElementsByClassName(`${idKey}`);
+//   for (let index = 0; index < container.length; index++) {
+//     const cont = container[index];
+//     if (index % 2 === 0) {
+//       cont.classList.add("right");
+//     } else {
+//       cont.classList.add("left");
+//     }
+//   }
+// }
 
-function handleScroll(idKey) {
-  const childBoxes = document.querySelectorAll(`${idKey}`);
-  const parent = document.getElementById("advantages");
-  const windowHeight = window.innerHeight;
-  const triggerPoint = windowHeight * 0.4;
-  let boxTop;
-  childBoxes.forEach((box) => {
-    if (window.innerWidth < 1062) {
-      boxTop = box.getBoundingClientRect().top;
-    } else {
-      boxTop = parent.getBoundingClientRect().top;
-    }
-    if (boxTop <= triggerPoint) {
-      if (!box.classList.contains("hover")) {
-        setTimeout(() => {
-          box.classList.remove("nohover");
-          box.classList.add("hover");
-        }, 100);
-      }
-    } else if (box.classList.contains("hover")) {
-      box.classList.remove("hover");
-      box.classList.add("nohover");
-    }
-  });
-}
+// function handleScroll(idKey) {
+//   const childBoxes = document.querySelectorAll(`${idKey}`);
+//   const parent = document.getElementById("advantages");
+//   const windowHeight = window.innerHeight;
+//   const triggerPoint = windowHeight * 0.4;
+//   let boxTop;
+//   childBoxes.forEach((box) => {
+//     if (window.innerWidth < 1062) {
+//       boxTop = box.getBoundingClientRect().top;
+//     } else {
+//       boxTop = parent.getBoundingClientRect().top;
+//     }
+//     if (boxTop <= triggerPoint) {
+//       if (!box.classList.contains("hover")) {
+//         setTimeout(() => {
+//           box.classList.remove("nohover");
+//           box.classList.add("hover");
+//         }, 100);
+//       }
+//     } else if (box.classList.contains("hover")) {
+//       box.classList.remove("hover");
+//       box.classList.add("nohover");
+//     }
+//   });
+// }
 
-function slideInOffer() {
-  let offer = document.getElementById("offer");
-  offer.classList.remove("offerslideout");
-  offer.classList.add("offerslide");
-}
+// function slideInOffer() {
+//   let offer = document.getElementById("offer");
+//   offer.classList.remove("offerslideout");
+//   offer.classList.add("offerslide");
+// }
 
 function changeBodySize() {
   landingpageHeight();
@@ -147,15 +145,7 @@ function hideWelcome() {
   }, 7000);
 }
 
-// function renderAdvantages() {
-//     let advanceRef = document.getElementById('advantages');
-//     for (let advanceIndex = 0; advanceIndex < advantages.length; advanceIndex++) {
-//         const ADVANCE = advantages[advanceIndex];
-//         const Image = images[advanceIndex];
-//         console.log(Image);
-//         advanceRef.innerHTML += getAdvantagesTemplate(advanceIndex, ADVANCE, Image);
-//     }
-// }
+
 
 function renderSkillIcons() {
   let skillIcon = document.getElementById("skillIcons");
@@ -165,7 +155,7 @@ function renderSkillIcons() {
     skillIcon.innerHTML += ` <div class="flipCard" id="skillIcon${index}">
         <div class="flipCardInner">
         <div class="flipCardFront">
-          <img src="${ICON.path}" alt="">
+          <img src="${ICON.path}" loading="lazy" alt="">
         </div>
          <div class="flipCardBack">
          <span>${ICON.name}</span>
@@ -175,19 +165,9 @@ function renderSkillIcons() {
   }
 }
 
-// function renderSkills() {
-//   let skillRef = document.getElementById("skills");
-//   skillRef.innerHTML = "";
-//   for (let index = 0; index < skills.length; index++) {
-//     const SKILL = skills[index];
-//     skillRef.innerHTML += `<div class="row">
-//                     <img class="icon${index}" src="${skillIcons[index]}" loading="lazy" alt="">
-//                     <div class="row-text">
-//                         <h4 class="space">${SKILL.title}</h4>
-//                         <p>${SKILL.text}</p>
-//                     </div>`;
-//   }
-// }
+
+
+
 
 function renderServiceCards() {
   const serviceRef = document.getElementById("serviceCards");
@@ -200,195 +180,88 @@ function renderServiceCards() {
   }
 }
 
-function renderServices() {
-  const serviceRef = document.getElementById("services");
-  serviceRef.innerHTML = "";
-  for (let index = 0; index < advantages.length; index++) {
-    const SERVICE = advantages[index];
-    serviceRef.innerHTML += getServicesTemplate(SERVICE);
-  }
-}
+// function renderServices() {
+//   const serviceRef = document.getElementById("services");
+//   serviceRef.innerHTML = "";
+//   for (let index = 0; index < advantages.length; index++) {
+//     const SERVICE = advantages[index];
+//     serviceRef.innerHTML += getServicesTemplate(SERVICE);
+//   }
+// }
 
-function checkBoxCheck() {
-  const images = document.getElementsByClassName("checkImg");
-  const trigger = window.innerHeight * 0.5;
+// function checkBoxCheck() {
+//   const images = document.getElementsByClassName("checkImg");
+//   const trigger = window.innerHeight * 0.5;
 
-  for (let index = 0; index < images.length; index++) {
-    const IMAGE = images[index];
-    const imageRect = IMAGE.getBoundingClientRect();
+//   for (let index = 0; index < images.length; index++) {
+//     const IMAGE = images[index];
+//     const imageRect = IMAGE.getBoundingClientRect();
 
-    if (imageRect.top < trigger) {
-      IMAGE.classList.add("stretchImage");
-    } else {
-      IMAGE.classList.remove("stretchImage");
-    }
-  }
-}
+//     if (imageRect.top < trigger) {
+//       IMAGE.classList.add("stretchImage");
+//     } else {
+//       IMAGE.classList.remove("stretchImage");
+//     }
+//   }
+// }
 
-function renderAdvantages() {
-  const advantagesRef = document.getElementById("advantages");
-  advantagesRef.innerHTML = "";
-  for (let index = 0; index < advantages.length; index++) {
-    const ADVANCE = advantages[index];
-    advantagesRef.innerHTML += ` <div class="advantagesListCard">
+// function renderAdvantages() {
+//   const advantagesRef = document.getElementById("advantages");
+//   advantagesRef.innerHTML = "";
+//   for (let index = 0; index < advantages.length; index++) {
+//     const ADVANCE = advantages[index];
+//     advantagesRef.innerHTML += ` <div class="advantagesListCard">
 
-                            <img class="advantagesListImage" id="advantagesListImage" src="logos/mapleIcon-bg.png"
-                                alt="">
-                                <h4>${ADVANCE.title}</h4>
-                            <span>${ADVANCE.description}</span>
-                        </div>`;
-  }
-}
+//                             <img class="advantagesListImage" id="advantagesListImage" src="logos/mapleIcon-bg.png"
+//                                 alt="">
+//                                 <h4>${ADVANCE.title}</h4>
+//                             <span>${ADVANCE.description}</span>
+//                         </div>`;
+//   }
+// }
 
-function renderProcess() {
-  const processRef = document.getElementById("process");
-  processRef.innerHTML = "";
-  for (let index = 0; index < process.length; index++) {
-    const step = process[index];
-    processRef.innerHTML += ` <div class="processRow">
-                             <div class="dot" id="dot">
-                                <div class="dotOverlay" id="dotOverlay"></div>
-                                <img src="icons/check_blue.svg" alt="">
-                             </div>
-                             <div class="stepCard">
-                             <h4>${step.title}</h4>
-                              <span>${step.description}</span>
-                              </div>
+// function renderProcess() {
+//   const processRef = document.getElementById("process");
+//   processRef.innerHTML = "";
+//   for (let index = 0; index < process.length; index++) {
+//     const step = process[index];
+//     processRef.innerHTML += ` <div class="processRow">
+//                              <div class="dot" id="dot">
+//                                 <div class="dotOverlay" id="dotOverlay"></div>
+//                                 <img src="icons/check_blue.svg" alt="">
+//                              </div>
+//                              <div class="stepCard">
+//                              <h4>${step.title}</h4>
+//                               <span>${step.description}</span>
+//                               </div>
                            
-                        </div>`;
-  }
-}
+//                         </div>`;
+//   }
+// }
 
 function renderContent() {
   renderServiceCards();
-  renderServices();
+  //   renderServices();
   //   renderAdvantages();
-  renderProcess();
+  //   renderProcess();
 }
 
-function rotateLogos() {
-  const logos = document.getElementsByClassName("advantagesListImage");
-  const trigger = window.innerHeight * 0.5;
-  for (let index = 0; index < logos.length; index++) {
-    const LOGO = logos[index];
-    const logoRect = LOGO.getBoundingClientRect();
-    if (logoRect.top < trigger) {
-      LOGO.classList.add("logoanimation");
-    } else {
-      LOGO.classList.remove("logoanimation");
-    }
-  }
-}
+// function rotateLogos() {
+//   const logos = document.getElementsByClassName("advantagesListImage");
+//   const trigger = window.innerHeight * 0.5;
+//   for (let index = 0; index < logos.length; index++) {
+//     const LOGO = logos[index];
+//     const logoRect = LOGO.getBoundingClientRect();
+//     if (logoRect.top < trigger) {
+//       LOGO.classList.add("logoanimation");
+//     } else {
+//       LOGO.classList.remove("logoanimation");
+//     }
+//   }
+// }
 
-function getVerticalBarPosition() {
-  const { barParent, barParentRect, cardRect, firstDotRect, lastDotRect } =
-    getRects();
-  const top = firstDotRect.top - cardRect.top;
-  const bottom = lastDotRect.bottom - cardRect.top;
-  const currentParentHeight = getParentBarHeight(firstDotRect, lastDotRect);
-  const left =
-    firstDotRect.left +
-    firstDotRect.width / 2 -
-    cardRect.left -
-    barParentRect.width / 2;
-  barParent.style.top = `${top}px`;
-  barParent.style.bottom = `${bottom}px`;
-  barParent.style.left = `${left}px`;
-  barParent.style.height = `${currentParentHeight}px`;
-  getVerticalHeight(currentParentHeight, barParentRect);
-}
 
-function getRects() {
-  const dots = document.getElementsByClassName("dot");
-  const firstDot = dots[0];
-  const lastDot = dots[dots.length - 1];
-  const card = document.getElementById("serviceContainer");
-  const barParent = document.getElementById("verticalBar");
-  const barParentRect = barParent.getBoundingClientRect();
-  const cardRect = card.getBoundingClientRect();
-  const firstDotRect = firstDot.getBoundingClientRect();
-  const lastDotRect = lastDot.getBoundingClientRect();
-  return { barParent, barParentRect, cardRect, firstDotRect, lastDotRect };
-}
 
-function getParentBarHeight(firstDotRect, lastDotRect) {
-  const height = lastDotRect.bottom - firstDotRect.top;
-  return height;
-}
-
-function getVerticalHeight(currentParentHeight, barParentRect) {
-  const barChild = document.getElementById("barInner");
-  const barChildRect = barChild.getBoundingClientRect();
-  const trigger = window.innerHeight * 0.5;
-  if (barParentRect.top > trigger) {
-    barChild.style.height = `0%`;
-  }
-  if (barParentRect.top < trigger && barParentRect.bottom >= trigger) {
-    const innerhHeight = trigger - barParentRect.top;
-    const dynamicHeight = (innerhHeight / currentParentHeight) * 100;
-    barChild.style.height = `${dynamicHeight}%`;
-  }
-  if (barParentRect.bottom < trigger) {
-    barChild.style.height = `100%`;
-  }
-}
-
-function giveDotsHighlights() {
-  const barChild = document.getElementById("barInner");
-  const barChildRect = barChild.getBoundingClientRect();
-  const dots = document.getElementsByClassName("dot");
-  const overlays = document.getElementsByClassName("dotOverlay");
-  for (let index = 0; index < dots.length; index++) {
-    const dot = dots[index];
-    const overlay = overlays[index];
-    const dotRect = dot.getBoundingClientRect();
-    if (dotRect.top < barChildRect.bottom) {
-      dot.style.borderColor = "var(--secondary-color)";
-      overlay.style.transform = "scaleX(0)";
-    } else {
-      overlay.style.transform = "scaleX(1)";
-      dot.style.borderColor = "var(--main-color)";
-    }
-  }
-}
-
-function moveContactbar() {
-  if (window.innerWidth > 1280) {
-    const contactBar = document.getElementById("contactBar");
-    if (window.scrollY > 150) {
-      contactBar.classList.add("contactBarScrolled");
-    } else {
-      contactBar.classList.remove("contactBarScrolled");
-    }
-  }
-}
-function setContectBarPosition() {
-  const contactBar = document.getElementById("contactBar");
-  const servicesContainer = document.getElementById("servicesContainer");
-  const servicesContainerRect = servicesContainer.getBoundingClientRect();
-  let padding;
-  if (window.scrollY < 150 && window.innerWidth>800) {
-    padding = 56;
-  } else {
-    padding = 4;
-  }
-  const position = window.innerWidth - servicesContainerRect.right + padding;
-  contactBar.style.right = `${position}px`;
-}
-
-window.addEventListener("resize", () => {
-  getVerticalBarPosition();
-  setContectBarPosition();
-});
-
-window.addEventListener("load", () => {
-  setContectBarPosition();
-});
-
-window.addEventListener("scroll", () => {
-  getVerticalBarPosition();
-  giveDotsHighlights();
-  checkBoxCheck();
-  setContectBarPosition();
-  moveContactbar();
-});
+// window.addEventListener("scroll", () => {
+//   checkBoxCheck();
+// });

@@ -13,57 +13,6 @@
   position: relative;
 }
 
-.contactBar {
-  position: fixed;
-  width: fit-content;
-  height: fit-content;
-  top: 156px;
-  right: 56px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2px;
-  transition: top 0.5s ease-in-out, right 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.contactBar button {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  padding: 0;
-  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
-  transform-origin: right;
-}
-.contactBar button:hover {
-  height: 120px;
-}
-
-.contactBar button img {
-  width: 30px;
-}
-
-.contactBarScrolled {
-  flex-direction: column;
-  align-items: flex-end;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 4px;
-}
-
-.contactBarScrolled button {
-  width: 50px;
-  height: 50px;
-}
-
-.contactBarScrolled button:hover {
-  width: 70px !important;
-  height: 50px;
-}
-
 .service-headline {
   width: fit-content;
   border-radius: 30px;
@@ -122,7 +71,6 @@
   font-size: 20px;
 }
 
-
 .dividerContainer {
   width: 100%;
   height: 10px;
@@ -166,12 +114,13 @@
 
 .serviceCards {
   width: 100%;
-
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   flex-wrap: wrap;
   gap: 32px;
+  margin-top: 48px;
+  margin-bottom: 150px;
 }
 
 .serviceCard {
@@ -188,6 +137,16 @@
   border-radius: 12px;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
   background-color: white;
+  animation: scaleCards 1s ease;
+}
+
+@keyframes scaleCards{
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .cardImage {
@@ -221,10 +180,10 @@
 }
 
 .serviceList {
-  width: 100%;
+  
   text-align: start;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -244,7 +203,7 @@ flex-direction: column;
 
 .serviceListRow {
   width: 100%;
-  
+  max-width: 700px;
   height: 180px;
   display: flex;
   align-items: flex-start;
@@ -261,13 +220,13 @@ flex-direction: column;
 
   border-radius: 12px;
   box-sizing: border-box;
-  padding: 16px;
+  padding: 16px 32px;
   width: 100%;
   height: 100%;
 }
 
 .blueCheckbox {
-    height: 100%;
+  height: 100%;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -289,8 +248,8 @@ flex-direction: column;
 }
 
 .checkImg {
-  width: 35px;
-  height: 100%;
+  width: 40px;
+  height: 40px;
 
   display: flex;
   justify-content: center;
@@ -304,15 +263,9 @@ flex-direction: column;
 }
 
 .checkImg img {
-  width: 20px;
-
+  width: 15px;
 }
 
-.stretchImage {
-    width: 35px;
-  height: 35px;
-  border-radius: 100px;
-}
 .advantagesContainer {
   width: 100%;
   display: flex;
@@ -400,6 +353,7 @@ flex-direction: column;
 
 .stepCard {
   width: 100%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   min-height: 180px;
@@ -441,14 +395,17 @@ flex-direction: column;
 }
 .ctaContainer {
   width: 100%;
+
   display: flex;
-  flex-direction: column;
+ 
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  padding:  32px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   gap: 56px;
-  margin-bottom: 100px;
+  
 }
 
 .ctaTextContainer {
@@ -459,7 +416,7 @@ flex-direction: column;
 
 .ctaTextContainer span {
   width: 100%;
-
+font-size: 18px;
   max-width: 800px;
 }
 
@@ -474,6 +431,10 @@ flex-direction: column;
   transition: bottom 1s ease-in-out;
 }
 
+.btnContainer span{
+    font-size: 20px;
+}
+
 .btnContainer button img {
   width: 30px;
   height: 100%;
@@ -483,8 +444,8 @@ flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 100px;
+  width: fit-content;
+  height: 60px;
   gap: 8px;
 
   box-sizing: border-box;
@@ -492,7 +453,7 @@ flex-direction: column;
   transition: width 0.7s ease-in-out;
 }
 .btnContainer button span {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 @keyframes slideBtn {
@@ -503,29 +464,19 @@ flex-direction: column;
     transform: translateX(0);
   }
 }
-
-.scrolledBtn {
-  bottom: 300px;
+@media (max-width: 1920px) {
+ .serviceCard{
+    width: 320px;
+  }
 }
-
-.scrolledBtn span {
-  display: none;
-}
-
-.scrolledBtn button {
-  width: 80px;
-}
-
-.scrollEnd {
-  bottom: 300px;
-}
-
-.scrollEnd span {
-  display: flex;
-}
-
-.scrollEnd button {
-  width: 170px;
+@media (max-width: 1620px) {
+    .serviceCards{
+     gap: 16px;
+    }
+ .serviceCard{
+    width: 300px;
+    height: 330px;
+  }
 }
 
 @media (max-width: 1390px) {
@@ -540,25 +491,18 @@ flex-direction: column;
   .btnContainer button {
     font-size: 16px;
   }
+
+ 
 }
 
 @media (max-width: 1280px) {
   .serviceListRow {
     height: fit-content;
   }
-  .contactBar {
-    top: 104px;
-    bottom: 120px;
-    right: 4px;
-  }
-  .contactBar button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .contactBar button:hover {
-    width: 40px;
-    height: 40px;
+   .btnContainer {
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(0);
   }
 }
 
@@ -571,10 +515,10 @@ flex-direction: column;
     font-size: 16px;
   }
 
-  .btnContainer {
+ .ctaContainer{
     flex-direction: column;
-    transform: translateX(0);
-  }
+    text-align: center;
+ }
 
   .btnContainer button {
     font-size: 16px;
@@ -613,7 +557,7 @@ flex-direction: column;
   }
 
   .services {
-    margin-top: 60px;
+  
     padding: 30px;
   }
 }
@@ -656,12 +600,6 @@ flex-direction: column;
   }
 }
 
-@media (max-width: 670px) {
-  .contactBar {
-    top: 64px;
-  }
-}
-
 @media (max-width: 470px) {
   .service-headline h1 {
     font-size: 32px;
@@ -680,7 +618,7 @@ flex-direction: column;
     text-align: center;
   }
 
-  .processRow{
+  .processRow {
     gap: 8px;
   }
 }

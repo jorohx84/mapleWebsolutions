@@ -9,19 +9,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-items: center;
-    animation: show-content 3s ease;
     opacity: 1;
 }
 
-@keyframes show-content {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 .aboutmeHeadlineContainer {
     width: 100%;
@@ -71,22 +62,27 @@
 }
 
 .btnContainer {
+    width: 100%;
     margin-top: 120px;
     margin-bottom: 56px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 24px;
+    gap: 5px;
 }
+
+.btnContainer button{
+    width: 200px;
+    height:100px;
+    border-radius: 6px;
+}
+
 
 .profilePhoto {
     width: 100%;
     max-width: 960px;
     min-width: fit-content;
     height: 100%;
-    /* background-image: url(./../img/2025-04-14_11-48-45_06-removebg.webp);
-    background-size: cover;
-    background-position: center; */
 }
 
 .profilePhoto img {
@@ -137,10 +133,10 @@
     }
 
 
-    .btnContainer button {
+    /* .btnContainer button {
         font-size: 16px;
         width: 200px;
-    }
+    } */
     .headerlineText p{
         font-size: 16px;
     }
@@ -160,9 +156,9 @@
         font-size: 12px;
     }
 
-    .btnContainer button {
+    /* .btnContainer button {
         width: 180px;
-    }
+    } */
 
 
 }
@@ -206,13 +202,12 @@
         width: fit-content;
     }
 
-    .btnContainer button {
-        width: 200px;
-        font-size: 16px;
-        height: 60px;
-        content: "Kontakt";
+    .btnContainer  {
+  justify-content: center;
     }
-
+.btnContainer button{
+        width: 100%;
+    }
 
 }
 
@@ -221,7 +216,13 @@
         display: none;
     }
 }
+@media(max-width: 720px) {
+    .btnContainer{
+        flex-direction: column;
+    }
 
+    
+}
 @media(max-width: 600px) {
     .aboutmeHeadline h1 {
         font-size: 32px;
@@ -234,9 +235,7 @@
     .aboutmeHeadline span {
         font-size: 12px;
     }
-    .btnContainer{
-        flex-direction: column;
-    }
+
 }
 
 

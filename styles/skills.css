@@ -8,17 +8,11 @@
     flex: 1;
     box-sizing: border-box;
     padding: 56px;
-    animation: skills 3s ease;
     position: relative;
     gap: 56px;
 
 }
 
-@keyframes skills {
-    0% {
-        opacity: 0;
-    }
-}
 
 .skillContent {
     width: 100%;

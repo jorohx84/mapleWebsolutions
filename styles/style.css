@@ -453,6 +453,7 @@ footer img {
 }
 
 
+
 @media(hover: hover) {
 
     nav a:hover {
@@ -615,7 +616,11 @@ footer img {
         height: 60px;
     }
 }
-
+@media (max-width: 670px) {
+    .contactBar {
+        top: 64px;
+    }
+}
 @media (max-width: 550px) {
 
     .menu-resp {
@@ -717,6 +722,7 @@ footer img {
     }
 */
 }
+
 /*
 @media(max-height: 1000px){
 

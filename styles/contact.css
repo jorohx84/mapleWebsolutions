@@ -13,16 +13,11 @@
     border-bottom: solid;
     border-width: 1px;
     border-color: rgba(128, 128, 128, 0.595);
-    animation: contact 3s ease;
 }
 
 
 
-@keyframes contact {
-    0% {
-        opacity: 0;
-    }
-}
+
 
 
 textarea::-webkit-resizer{
