@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leistungen</title>
+  <link rel="icon" href="/logos/mapleIcon-bg.png" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/standards.css" />
+
+  <link rel="stylesheet" href="styles/overview.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="scripts/templates.js"></script>
+  <script src="scripts/data.js"></script>
+</head>
+
+<body id="body" onscroll="fixHeader()">
+  <header w3-include-html="/html/header.html"></header>
+
+  <div class="services" id="servicesContainer">
+    <div class="service-headline">
+      <p class="space">M E I N E</p>
+      <h1 class="space" id="headline">LEISTUNGEN</h1>
+      <p class="space">AUF EINEN BLICK</p>
+      <div class="dividerContainer">
+        <div class="divider" id="divider"></div>
+      </div>
+    </div>
+
+    <div class="mainContent">
+      <div class="services-content">
+        <div class="serviceContainer">
+          <div onclick="window.location.href='agencies.html'" class="serviceCard agencies">
+            <div class="cardOverlay"></div>
+            <p>Agenturen & Designer</p>
+          </div>
+          <div onclick="window.location.href='websites.html'" class="serviceCard website">
+            <div class="cardOverlay"></div>
+            <p>Website erstellen</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer w3-include-html="/html/footer.html"></footer>
+
+  <script src="/scripts/script.js"></script>
+  <script>
+    w3.includeHTML();
+  </script>
+</body>
+
+</html>

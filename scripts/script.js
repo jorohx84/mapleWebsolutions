@@ -169,16 +169,7 @@ function renderSkillIcons() {
 
 
 
-function renderServiceCards() {
-  const serviceRef = document.getElementById("serviceCards");
 
-  for (let index = 0; index < services.length; index++) {
-    const card = services[index];
-    const indexRef = services.length / 2;
-
-    serviceRef.innerHTML += getServiceCardsTemplate(card, index);
-  }
-}
 
 // function renderServices() {
 //   const serviceRef = document.getElementById("services");
@@ -239,12 +230,7 @@ function renderServiceCards() {
 //   }
 // }
 
-function renderContent() {
-  renderServiceCards();
-  //   renderServices();
-  //   renderAdvantages();
-  //   renderProcess();
-}
+
 
 // function rotateLogos() {
 //   const logos = document.getElementsByClassName("advantagesListImage");

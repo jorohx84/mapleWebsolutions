@@ -98,8 +98,8 @@ h1 {
   align-items: center;
 }
 
-.projectListContainer h2{
-font-size: 32px;
+.projectListContainer h2 {
+  font-size: 32px;
 }
 
 .projectList {
@@ -348,7 +348,7 @@ border-color: var(--main-color); */
     height: 30px;
   }
 
-  .projectList{
+  .projectList {
     justify-content: center;
   }
 }
@@ -448,16 +448,22 @@ border-color: var(--main-color); */
   }
 }
 
-@media (max-width: 500px) {
-    .projectsHeadlineContainer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@media(max-width:850px) {
+  .projectsHeadlineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .projectsHeadline{
-        align-items: center;
-    }
+  .projectsHeadline {
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+
+
+
   .projectsHeadline h1 {
     font-size: 32px;
   }

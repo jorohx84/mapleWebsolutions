@@ -315,7 +315,19 @@
         height: fit-content;
     }
 
+
+.skill-headline{
+    align-items: center;
+}
     .skillIcons {
+        align-items: center;
+    }
+
+    .headtext{
+        align-items: center;
+        text-align: center;
+    }
+    .content{
         align-items: center;
     }
 

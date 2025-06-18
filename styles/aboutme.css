@@ -72,23 +72,36 @@
 }
 
 .btnContainer button{
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height:100px;
     border-radius: 6px;
 }
 
 
-.profilePhoto {
+.profilePhotoContainer {
     width: 100%;
     max-width: 960px;
     min-width: fit-content;
     height: 100%;
+
+    
 }
 
-.profilePhoto img {
+.profilePhotoContainer img {
     width: auto;
     height: 100%;
 }
+
+.imageContainer{
+    width: 100%;
+    height: 100%;
+    background-image: url(./../img/2025-04-14_11-48-45_06-removebg.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 @media(max-width: 1690px) {
     .aboutmeHeadline h1 {
@@ -143,6 +156,12 @@
 
 }
 
+@media(max-width: 1300px) {
+.profilePhoto{
+
+}
+}
+
 @media(max-width: 1180px) {
     .aboutmeHeadline h1 {
         font-size: 32px;
@@ -164,6 +183,9 @@
 }
 
 @media(max-width: 1025px) {
+    .aboutmeHeadline{
+        text-align: center;
+    }
     .aboutmeHeadline h1 {
         font-size: 48px;
     }
@@ -184,7 +206,7 @@
         height: unset;
     }
 
-    .profilePhoto {
+    .profilePhotoContainer {
         margin-top: 20px;
         width: calc(100% - 40px);
 
@@ -193,9 +215,14 @@
         align-items: center;
     }
 
-    .profilePhoto img {
+    .profilePhotoContainer img {
         width: 100%;
         height: auto;
+    }
+
+    .imageContainer{
+        height: calc(100vh - 350px);
+       
     }
 
     .aboutmeHeadline {

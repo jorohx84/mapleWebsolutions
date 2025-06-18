@@ -4,11 +4,7 @@ function getVerticalBarPosition() {
   const top = firstDotRect.top - cardRect.top;
   const bottom = lastDotRect.bottom - cardRect.top;
   const currentParentHeight = getParentBarHeight(firstDotRect, lastDotRect);
-  const left =
-    firstDotRect.left +
-    firstDotRect.width / 2 -
-    cardRect.left -
-    barParentRect.width / 2;
+  const left = firstDotRect.left + firstDotRect.width / 2 - cardRect.left - barParentRect.width / 2;
   barParent.style.top = `${top}px`;
   barParent.style.bottom = `${bottom}px`;
   barParent.style.left = `${left}px`;
@@ -20,7 +16,7 @@ function getRects() {
   const dots = document.getElementsByClassName("dot");
   const firstDot = dots[0];
   const lastDot = dots[dots.length - 1];
-  const card = document.getElementById("serviceContainer");
+  const card = document.getElementById("process");
   const barParent = document.getElementById("verticalBar");
   const barParentRect = barParent.getBoundingClientRect();
   const cardRect = card.getBoundingClientRect();
@@ -52,7 +48,7 @@ function getVerticalHeight(currentParentHeight, barParentRect) {
 }
 
 function giveDotsHighlights() {
-  
+
   const barChild = document.getElementById("barInner");
   const barChildRect = barChild.getBoundingClientRect();
   const dots = document.getElementsByClassName("dot");
@@ -62,16 +58,28 @@ function giveDotsHighlights() {
     const overlay = overlays[index];
     const dotRect = dot.getBoundingClientRect();
     if (dotRect.top < barChildRect.bottom) {
-      dot.style.borderColor = "var(--secondary-color)";
+     
       overlay.style.transform = "scaleX(0)";
     } else {
       overlay.style.transform = "scaleX(1)";
-      dot.style.borderColor = "var(--main-color)";
+     
     }
   }
+
+}
+
+function giveSteptextHighlight(){
+
+
+
 }
 
 window.addEventListener("scroll", () => {
   getVerticalBarPosition();
   giveDotsHighlights();
+  giveSteptextHighlight();
+});
+window.addEventListener("resize", () => {
+  getVerticalBarPosition();
+ 
 });
