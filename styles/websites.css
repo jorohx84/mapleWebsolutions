@@ -290,7 +290,7 @@
     transition: opacity 0.8s ease-in-out;
 }
 
-.advantageContent img{
+.advantageContent img {
     width: 50px;
 }
 
@@ -404,16 +404,17 @@
 }
 
 .processHeadline {
-    font-size: 48px;
+    font-size: 72px;
     font-weight: 500;
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .stepContainer {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: fit-content;
     gap: 56px;
@@ -430,7 +431,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-      box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dot img {
@@ -452,32 +453,17 @@
 .stepHeadline {
     display: flex;
     align-items: center;
+    gap: 16px;
     width: 100%;
     max-width: 500px;
     height: 100%;
+  
     box-sizing: border-box;
-    padding: 32px 32px 32px 72px;
+    padding: 32px;
     border-radius: 12px;
-        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
     position: relative;
-}
 
-.number {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    width: 55px;
-    height: 35px;
-    background-color: var(--main-color);
-    border-radius: 12px 3px 12px 3px;
-    /* box-sizing: border-box;
-    padding: 5px 10px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
 }
 
 .stepHeadline h3 {
@@ -485,47 +471,47 @@
     font-weight: 400;
 }
 
+.stepHeadline img{
+    width: 40px;
+}
+
 .stepText {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    max-width: 700px;
     position: relative;
     height: 100%;
     box-sizing: border-box;
     padding: 32px;
     border-radius: 12px;
-     box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-.respNumber {
-    width: 40px;
-    height: 40px;
+
+.stepText h3{
+   
+    font-size: clamp(1.2rem, 1.7vw, 2rem);
     font-weight: 400;
-    box-sizing: border-box;
-    padding: 8px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    border-radius: 200px;
 }
+.stepText img{
+
+    width: 50px;
+}
+
+
 
 .bulletpoints {
     width: fit-content;
-
     display: flex;
     justify-content: space-between;
     gap: 8px;
 }
 
 .bulletpoint {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 5px;
     border-radius: 6px;
     background-color: var(--main-color);
     transition: width 0.5s ease-in-out;
@@ -550,11 +536,13 @@
     width: 100%;
     border-radius: 12px;
 }
+
 @media (max-width: 1400px) {
-    .advantageContent h3{
+    .advantageContent h3 {
         font-size: 24px;
     }
 }
+
 @media (max-width: 1390px) {
     .service-headline h1 {
         font-size: 64px;
@@ -568,17 +556,43 @@
         height: 800px;
     }
 }
+
 @media (max-width: 1300px) {
-    .advantageContainer{
+    .advantageContainer {
         height: 900px;
+    }
+
+    .stepHeadline {
+        display: none;
+    }
+
+    .bulletpoint {
+        width: 50px;
+        height: 5px;
+    }
+
+    .processHeadline {
+        font-size: 56px;
+    }
+
+}
+
+@media (min-width: 1300px) {
+
+    .stepText h3 {
+        display: none;
+    }
+    .stepText img{
+        display: none;
     }
 }
 
 @media (max-width: 1150px) {
     .advantageContainer {
-        height: 900px;
+        height: 1000px;
     }
-        .advantageContent h3{
+
+    .advantageContent h3 {
         font-size: 20px;
     }
 }
@@ -640,11 +654,12 @@
         left: 0;
     }
 
-    .advantageContent span{
+    .advantageContent span {
         opacity: 1;
         height: 100%;
     }
-        .advantageContent h3{
+
+    .advantageContent h3 {
         font-size: 32px;
     }
 }
@@ -664,29 +679,11 @@
         aspect-ratio: unset
     }
 
-    .stepHeadline {
-        display: none;
-    }
 
-    .bulletpoint {
-        width: 50px;
-        height: 5px;
-    }
-
-    .processHeadline {
-        justify-content: center;
-    }
 }
 
 @media(min-width: 990px) {
-    .respNumber {
-        display: none;
-
-    }
-
-    .stepText h3 {
-        display: none;
-    }
+ 
 }
 
 @media (max-width: 800px) {
@@ -700,15 +697,17 @@
 }
 
 @media(max-width: 700px) {
-    .advantageContainer{
+    .advantageContainer {
         height: 500px;
     }
-    .advantageTitle h2{
-    font-size: 56px;
-}
-.advantage:nth-child(5){
-    left: 70%;
-}
+
+    .advantageTitle h2 {
+        font-size: 56px;
+    }
+
+    .advantage:nth-child(5) {
+        left: 70%;
+    }
 }
 
 @media (max-width: 660px) {
@@ -739,6 +738,9 @@
         padding: 10px;
     }
 
+    .processHeadline {
+        font-size: 48px;
+    }
 
 }
 
@@ -772,23 +774,18 @@
 
     }
 
-    .respNumber {
-        top: -20px;
-        /* left:50%;
-        transform: translate(-50%, -50%); */
-        left: unset;
-        right: 20px;
-        /* width: 100px;
-        height: 30px;
-        border-radius: 6px; */
+
+    .advantageContainer {
+        margin-block: 100px;
+
     }
 
-    .advantageContainer{
-        margin-block:100px;
-       
-    }
-    .advantageContent h3{
+    .advantageContent h3 {
         font-size: 24px;
+    }
+
+    .processHeadline {
+        font-size: 48px;
     }
 }
 
@@ -804,9 +801,14 @@
     .services {
         padding: 24px 10px;
     }
-.advantageTitle h2{
-    font-size: 32px;
-}
+
+    .advantageTitle h2 {
+        font-size: 32px;
+    }
+
+    .processHeadline {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 370px) {
@@ -816,5 +818,9 @@
 
     .service-headline p {
         font-size: 12px;
+    }
+
+    .processHeadline {
+        font-size: 32px;
     }
 }

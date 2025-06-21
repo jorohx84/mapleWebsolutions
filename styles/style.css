@@ -193,11 +193,11 @@ header {
 }
 
 
-.noscroll {
+/* .noscroll {
     overflow-y: hidden;
     overflow-x: hidden;
 
-}
+} */
 
 .hide-menu {
     transform: translateX(120%);
@@ -271,6 +271,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
     width: 100%;
     flex: 1;
     max-width: 1920px;
@@ -278,12 +279,22 @@ header {
 
 
 }
-
+.startBtnContainer{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 56px;
+}
 
 .startBtnContainer button{
-    background-color: rgba(255, 255, 255, 0.276);
+ width: 250px;
+ height: 100px;
+    /* background-color: rgba(255, 255, 255, 0.276); */
+    background-color: rgba(255, 255, 255, 0.188);
+backdrop-filter: blur(10px);
 
 }
+
+
 
 .portrait {
     width: 50%;

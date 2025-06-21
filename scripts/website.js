@@ -43,11 +43,32 @@ function changeAdvntageContainerHeight() {
     const parentDiv = document.getElementById('advantageContainer');
     const { divRect, advantages, trigger } = getDivs();
     const inView = divRect.top < trigger && divRect.bottom > trigger;
-    const isSmaller = window.innerWidth < 1000;
-    if (inView && isSmaller) {
-        parentDiv.style.height = '2700px';
-    }else if(!isSmaller){
-    parentDiv.style.height = '';
+    if (!inView) {
+        parentDiv.style.height = '';
+        return
+    }
+    changeHeight(parentDiv)
+
+}
+
+function changeHeight(div) {
+    const parentDiv = div;
+    const width = window.innerWidth;
+        switch (true) {
+        case width < 370:
+            parentDiv.style.height = '3100px';
+            break;
+        case width < 450:
+            parentDiv.style.height = '2700px';
+            break;
+        case width < 770:
+            parentDiv.style.height = '2400px';
+            break;
+        case width < 1000:
+            parentDiv.style.height = '2000px';
+            break;
+        default:
+            parentDiv.style.height = '';
     }
 }
 
