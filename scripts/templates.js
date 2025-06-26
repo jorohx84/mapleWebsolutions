@@ -5,7 +5,7 @@
 function getServiceCardsTemplate(card, index) {
   return `    <div class="serviceCard">
        <img class="cardImage" src="${card.path}" alt="">
-       <h3>${card.title}</h3>
+       <h4>${card.title}</h4>
        <p class="serviceText">${card.text}</p>
     </div>`;
 }

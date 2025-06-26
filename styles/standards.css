@@ -1,4 +1,6 @@
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -9,11 +11,11 @@ body {
     width: 100%;
     color: black;
     overflow-x: hidden;
-    
+
     font-family: "Nunito", serif;
     font-weight: 200;
     scroll-behavior: smooth;
-    
+
 }
 
 footer a {
@@ -42,6 +44,23 @@ a:active {
     transform: scale(0.9);
 }
 
+h2{
+    font-size: 32px;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
 
 button {
     width: 200px;
@@ -54,11 +73,17 @@ button {
     border: none;
     color: white;
     cursor: pointer;
-
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out !important;
 }
 
 button:active {
     transform: scale(0.95);
+}
+
+button:hover {
+    background-color: white;
+    color: var(--main-color);
+    border: solid 1px;
 }
 
 input {
@@ -79,7 +104,7 @@ input:hover {
 }
 
 input:active {
-    border-color:var(--main-color);
+    border-color: var(--main-color);
 }
 
 textarea {
@@ -98,23 +123,14 @@ textarea:hover {
     border-color: #0c7b26;
 }
 
-h3{
 
-    margin-block: 0;
-}
+.space {
 
-.space{
-    
     letter-spacing: 0.3em;
 }
 
 
-@media(max-height: 450px){
-    body{
-        height: unset;
-        min-height: 100vh;
-    }
-}
+
 
 /*rgb(54,100,118)
 #366476*/
@@ -131,14 +147,14 @@ h3{
     background-color: var(--main-color);
 }
 
-.offerbutton-container{
+.offerbutton-container {
     width: 100%;
 }
 
-.offerbutton-container{
-width: calc(100% - 112px);
-max-width: 1440px;
-margin-block: 50px;
+.offerbutton-container {
+    width: calc(100% - 112px);
+    max-width: 1440px;
+    margin-block: 50px;
 }
 
 .offerbutton {
@@ -151,16 +167,31 @@ margin-block: 50px;
 
 }
 
-.offerbutton h2{
+.offerbutton h2 {
     font-weight: 300;
 }
 
-:root{
+:root {
 
-   /* --main-color: #366476;*/
+    /* --main-color: #366476;*/
     --main-color: #005477;
     --secondary-color: #2295DD;
-    --border-color:rgba(128, 128, 128, 0.317);
+    --border-color: rgba(128, 128, 128, 0.317);
+}
+
+@media(max-height: 450px) {
+    body {
+        height: unset;
+        min-height: 100vh;
+    }
+}
+
+
+
+@media(max-width: 550px) {
+    h3{
+     font-size: 20px !important;
+    }
 }
 
 @font-face {
@@ -171,6 +202,6 @@ margin-block: 50px;
 
 @font-face {
     font-display: swap;
-    font-family:'Montserrat' ;
+    font-family: 'Montserrat';
     src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
 }

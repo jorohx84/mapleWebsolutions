@@ -1,6 +1,6 @@
 function animateAdvantages() {
     const { divRect, advantages, trigger } = getDivs();
-    const inView = divRect.top < trigger && divRect.bottom > trigger;
+    const inView = divRect.top < trigger;
     for (let index = 0; index < advantages.length; index++) {
         const advantage = advantages[index];
         if (inView) {
@@ -17,7 +17,7 @@ function animateAdvantages() {
 function moveTitle() {
     const { divRect, advantages, trigger } = getDivs();
     const title = document.getElementById('title');
-    const inView = divRect.top < trigger && divRect.bottom > trigger;
+    const inView = divRect.top < trigger;
     if (inView) {
         title.classList.add('movetitle');
     } else {
@@ -29,12 +29,25 @@ function moveTitle() {
 
 }
 
+function stoppAnimation() {
+    const title = document.getElementById('title');
+    const advantages = document.getElementsByClassName('advantage');
+    if (window.innerWidth <= 1000) {
+        console.log('Start');
+        for (let index = 0; index < advantages.length; index++) {
+            const advantage = advantages[index];
+            advantage.classList.add('move');
+        }
+        title.classList.add('movetitle');
+    } 
+}
+
 function getDivs() {
     const advantageContainer = document.getElementById('advantages');
     const divRect = advantageContainer.getBoundingClientRect();
     const advantages = document.getElementsByClassName('advantage');
 
-    const trigger = window.innerWidth > 550 ? window.innerHeight * 0.4 : window.innerHeight * 0.4;
+    const trigger = window.innerWidth > 550 ? window.innerHeight * 0.3 : window.innerHeight * 0.4;
 
     return { divRect, advantages, trigger }
 }
@@ -43,10 +56,10 @@ function changeAdvntageContainerHeight() {
     const parentDiv = document.getElementById('advantageContainer');
     const { divRect, advantages, trigger } = getDivs();
     const inView = divRect.top < trigger && divRect.bottom > trigger;
-    if (!inView) {
-        parentDiv.style.height = '';
-        return
-    }
+    // if (!inView) {
+    //     parentDiv.style.height = '';
+    //     return
+    // }
     changeHeight(parentDiv)
 
 }
@@ -54,7 +67,7 @@ function changeAdvntageContainerHeight() {
 function changeHeight(div) {
     const parentDiv = div;
     const width = window.innerWidth;
-        switch (true) {
+    switch (true) {
         case width < 370:
             parentDiv.style.height = '3100px';
             break;
@@ -81,4 +94,5 @@ window.addEventListener('resize', () => {
     animateAdvantages();
     moveTitle();
     changeAdvntageContainerHeight();
+    stoppAnimation();
 })

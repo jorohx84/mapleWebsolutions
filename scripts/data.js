@@ -88,11 +88,11 @@ const services = [
     title: "Responsives Webdesign",
     text: "Ihre Website funktioniert und sieht auf allen Geräten optimal aus – vom Smartphone bis zum 4K-Monitor.",
   },
-  {
-    path: "icons/maintenance.svg",
-    title: "Sauberer & wartbarer Code",
-    text: "Ich schreibe strukturierten, gut dokumentierten Code, der langfristig wartbar und erweiterbar bleibt.",
-  },
+  // {
+  //   path: "icons/maintenance.svg",
+  //   title: "Sauberer & wartbarer Code",
+  //   text: "Ich schreibe strukturierten, gut dokumentierten Code, der langfristig wartbar und erweiterbar bleibt.",
+  // },
 
   {
     path: "icons/performance.svg",
@@ -114,6 +114,11 @@ const services = [
     title: "Cross-Browser-Kompatibilität",
     text: "Ich stelle sicher, dass Ihre Website in allen gängigen Browsern einheitlich funktioniert und professionell aussieht – inklusive sauberer Fallbacks bei Bedarf.",
   },
+{
+  path: "icons/shoppingcart_blue.svg", // Beispiel-Icon – ggf. Shopify-Logo verwenden
+  title: "Storefronts als Headless-Lösung",
+  text: "Ich entwickle individuelle Frontends für Shopify als Headless-Lösung mit modernen Frameworks und APIs, ganz nach Projektanforderung.",
+}
 ];
 
 

@@ -1,6 +1,8 @@
 // window.onbeforeunload = function () {
 //   window.scrollTo(0, 0);
 // };
+let toggleKey=false;
+
 
 function reloadWebsite() {
   if (performance.getEntriesByType("navigation")[0].type === "reload") {
@@ -165,7 +167,22 @@ function renderSkillIcons() {
   }
 }
 
-
+function toggleSidebarContent(key){
+console.log(key);
+const content=document.getElementById('sidebarContent');
+ toggleKey=!toggleKey;
+ if(toggleKey){
+content.classList.add('slidein');
+ }else{
+  content.classList.remove('slidein');
+ }
+ content.innerHTML='';
+if (key==='phone') {
+  content.innerHTML+='Phone';
+}else if (key==='mail') {
+  content.innerHTML+='Mail';
+}
+}
 
 
 

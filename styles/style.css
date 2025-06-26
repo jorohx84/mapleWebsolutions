@@ -464,6 +464,63 @@ footer img {
 }
 
 
+.sidebar{
+    position: fixed;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1;
+    width: 56px;
+    height:fit-content;
+
+
+}
+
+.sidebar button{
+  width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.sidebar button img{
+    width: 25px;
+}
+
+.sidebarContent{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+   transform: translate(120%, -50%);
+    border: solid 1px var(--main-color);
+    background-color: white;
+    
+    transition: transform 1s ease-in-out;
+}
+.sidebar button:hover .phone{
+content: url(./../icons/call_petrol.svg);
+}
+
+.sidebar button:hover .mail{
+content: url(./../icons/mail_petrol.svg);
+}
+
+.sidebar button:hover .arrowup{
+content: url(./../icons/arrow-up_petrol.svg);
+}
+.sidebar button:hover .leave{
+content: url(./../icons/leave_petrol.svg);
+}
+
+.slidein{
+    transform: translate(0, -50%);
+}
+
 
 @media(hover: hover) {
 

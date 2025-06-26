@@ -1,61 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leistungen</title>
-    <link rel="icon" href="/logos/mapleIcon-bg.png" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/standards.css" />
-    <link rel="stylesheet" href="/styles/agencies.css" />
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="scripts/templates.js"></script>
-    <script src="scripts/data.js"></script>
-  </head>
 
-  <body id="body" onscroll="fixHeader()" onload="renderServiceCards()">
-    <header w3-include-html="/html/header.html"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leistungen</title>
+  <link rel="icon" href="/logos/mapleIcon-bg.png" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/standards.css" />
+  <link rel="stylesheet" href="/styles/agencies.css" />
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="scripts/templates.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 
-    <div class="services" id="servicesContainer">
-      <div class="service-headline">
-        <p class="space">M E I N E</p>
-        <h1 class="space" id="headline">LEISTUNGEN</h1>
-        <p class="space">FÜR AGENTUREN & DESIGNER</p>
-        <div class="dividerContainer">
-          <div class="divider" id="divider"></div>
-        </div>
+</head>
+
+<body id="body" onscroll="fixHeader()" onload="renderServiceCards()">
+  <header w3-include-html="/html/header.html"></header>
+
+  <div class="services" id="servicesContainer">
+   <section w3-include-html="/html/sidebar.html"></section>
+    <div class="service-headline" id="service-headline">
+      <p class="space">M E I N E</p>
+      <h1 class="space" id="headline">LEISTUNGEN</h1>
+      <p class="space">FÜR AGENTUREN & DESIGNER</p>
+      <div class="dividerContainer">
+        <div class="divider" id="divider"></div>
       </div>
 
-      <div class="mainContent">
-        <div class="services-content">
-          <div class="serviceCards" id="serviceCards"></div>
-         
-          <div class="ctaContainer" id="ctaContainer">
-            <div class="ctaTextContainer">
-                <span>
-              Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen
-              und kreative Teams dabei, aus starken Designs ebenso starke
-              digitale Erlebnisse zu machen – präzise, schnell und zuverlässig.
-             
-            </span>
-            </div>
-            <div class="btnContainer" id="btnContainer">
-    
-              <button onclick="window.location.href='contact.html'">
-                <span>Lass uns über dein Projekt sprechen</span>
-              </button>
-            </div>
-          </div>
+    </div>
+    <div class="textContainer">
+      <h3>Frontend-Entwicklung für starke Designs</h3>
+      <span> Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei, aus starken
+        Designs ebenso starke digitale Erlebnisse zu machen.Ich übersetze visuelle Konzepte in sauberen, performanten
+        Code – präzise, responsiv und mit einem feinen Gespür
+        für Gestaltung und Nutzererlebnis. Im engen Austausch entstehen moderne Websites und Oberflächen, die nicht nur
+        technisch überzeugen, sondern sich
+        auch lebendig anfühlen.</span>
+    </div>
+    <div class="mainContent">
+      <!--  -->
+
+      <div class="serviceAnimation" id="serviceAnimation">
+        <div class="animationContainer">
+          <img src="icons/figma.svg" alt="">
+          <span>Dein Design</span>
+        </div>
+        <div class="animationContainer arrow">
+          <div class="arrowOverlay"></div>
+          <img src="icons/arrow-next.svg" alt="">
+        </div>
+        <div class="animationContainer">
+          <img src="logos/mapleIcon-bg.png" alt="">
+          <span>Mein Code</span>
+        </div>
+        <div class="animationContainer arrow ">
+          <div class="arrowOverlay"></div>
+          <img src="icons/arrow-next.svg" alt="">
+
+        </div>
+        <div class="animationContainer">
+          <img src="icons/user-heart.svg" alt="">
+          <span>Zufriedener Kunde</span>
+        </div>
+      </div>
+      <!--  -->
+      <div class="services-content" id="services-content">
+        <div class="serviceContentHeadline">
+          <h2>Kompetenzen für performante Webanwendungen</h2>
+        </div>
+
+        <div class="serviceCards" id="serviceCards"></div>
+
+        <div class="ctaContainer" id="ctaContainer">
+          <h3>Frontend-Verstärkung gesucht? Ich bringe Dein Design sauber ins Web.</h3>
+          <button onclick="window.location.href='contact.html'">
+            <span>Lass uns über dein Projekt sprechen</span>
+          </button>
+
         </div>
       </div>
     </div>
+  </div>
 
-    <footer w3-include-html="/html/footer.html"></footer>
+  <footer w3-include-html="/html/footer.html"></footer>
 
-    <script src="/scripts/script.js"></script>
-    <script src="scripts/agencies.js"></script>
-    <script>
-      w3.includeHTML();
-    </script>
-  </body>
+  <script src="/scripts/script.js"></script>
+  <script src="scripts/agencies.js"></script>
+  <script>
+    w3.includeHTML();
+  </script>
+</body>
+
 </html>

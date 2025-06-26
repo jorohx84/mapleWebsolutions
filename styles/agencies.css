@@ -45,26 +45,86 @@
   position: relative;
 }
 
-.mainContentFooter {
+/*  */
+.serviceAnimation {
   width: 100%;
+  height: calc(400px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid;
-  border-width: 0.3px;
-  border-color: var(--main-color);
-  border-radius: 30px;
-  box-sizing: border-box;
-  padding: 20px;
+  gap: 32px;
+  margin-bottom: 200px;
+
 }
+
+.animationContainer {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.animationContainer img {
+  width: 200px;
+  height: 200px;
+}
+
+.animationContainer span {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.serviceOpacity:not(.arrow) {
+  opacity: 1 !important;
+  transform: scale(1);
+}
+
+.arrowOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
+
+}
+
+.arrow {
+
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.arrow img {
+  width: 120px !important;
+  height: 60px !important;
+}
+
+.showArrow {
+  /* transition-delay: 1s; */
+  transform: scaleX(0);
+}
+
+
+/*  */
+
+
 
 .textContainer {
   width: 100%;
-  max-width: 710px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
   box-sizing: border-box;
+  padding: 0 56px;
+  margin-top: 56px;
   border-radius: 30px;
   background-color: white;
 }
@@ -114,21 +174,30 @@
   gap: 56px;
 }
 
+.serviceContentHeadline {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
 .serviceCards {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
   gap: 32px;
   margin-top: 48px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .serviceCard {
   width: 100%;
   max-width: 400px;
-  height: 280px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,19 +206,15 @@
   box-sizing: border-box;
   padding: 24px;
   border-radius: 12px;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
   background-color: white;
-  animation: scaleCards 1s ease;
+
 }
 
-@keyframes scaleCards{
-    0%{
-        transform: scale(0.5);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
+
+/* .transformCards{
+  transform: scale(1);
+} */
+
 
 .cardImage {
   width: 60px;
@@ -159,323 +224,68 @@
   width: 100%;
   text-align: center;
   font-weight: 400;
+  margin: 0;
 }
 
 .serviceText {
   text-align: center;
 }
 
-.serviceContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
 
-.serviceContainer h2 {
-  font-size: 48px;
-  text-align: center;
-}
-.serviceContainer h3 {
-  font-size: 24px;
-}
-
-.serviceList {
-  
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  box-sizing: border-box;
-  padding: 32px 0;
-}
-
-.serviceListHeadline {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.serviceListHeadline img {
-  width: 80px;
-}
-
-.serviceListRow {
-  width: 100%;
-  max-width: 700px;
-  height: 180px;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.serviceListRow h4 {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.serviceTextContainer {
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
-
-  border-radius: 12px;
-  box-sizing: border-box;
-  padding: 16px 32px;
-  width: 100%;
-  height: 100%;
-}
-
-.blueCheckbox {
-  height: 100%;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.checkboxOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  border-radius: 6px;
-  width: 100%;
-  background-color: white;
-  transform: scaleX(1);
-  transform-origin: right;
-  transition: transform 0.4s ease-in-out;
-}
-
-.checkImg {
-  width: 40px;
-  height: 40px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  background-color: var(--secondary-color);
-  opacity: 1;
-
-  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
-    height 0.5s ease-in-out, top 0.3s ease-in-out;
-}
-
-.checkImg img {
-  width: 15px;
-}
-
-.advantagesContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  /* border: solid 1px var(--main-color); */
-
-  box-sizing: border-box;
-  padding: 8px;
-}
-.advantagesContainer h2 {
-  font-size: 48px;
-}
-.advantages {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 32px;
-  padding: 32px 0;
-}
-
-.advantagesListCard {
-  width: 100%;
-  max-width: 300px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 8px;
-  text-align: center;
-  border-radius: 12px;
-  padding: 32px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-}
-.advantagesListCard h4 {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.advantagesListImage {
-  width: 40px;
-
-  transition: transform 1s ease-in-out;
-}
-
-.logoanimation {
-  transform: scale(1.1);
-}
-.processRow {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.dot {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  background-color: white;
-}
-
-.dot img {
-  width: 30px;
-}
-
-.dotOverlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border-radius: 6px;
-  transform-origin: right;
-  transition: transform 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.stepCard {
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  min-height: 180px;
-  box-sizing: border-box;
-  padding: 24px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  gap: 16px;
-}
-.stepCard h4 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.verticalBar {
-  position: absolute;
-  width: 3px;
-  border-radius: 100px;
-}
-
-.barInner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--secondary-color);
-  border-radius: 100px;
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.5);
-  }
-}
 .ctaContainer {
   width: 100%;
-
   display: flex;
- 
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding:  32px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   gap: 56px;
-  
+
 }
 
-.ctaTextContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.ctaTextContainer span {
+.ctaContainer span {
   width: 100%;
-font-size: 18px;
+  font-size: 18px;
   max-width: 800px;
 }
 
-.btnContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  transform: translateX(200%);
-  animation: slideBtn 1s ease-in-out forwards;
-  z-index: 1;
-  transition: bottom 1s ease-in-out;
-}
 
-.btnContainer span{
-    font-size: 20px;
-}
-
-.btnContainer button img {
+.ctaContainer button img {
   width: 30px;
   height: 100%;
 }
 
-.btnContainer button {
+.ctaContainer button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
-  height: 60px;
+  min-width: fit-content;
+  height: 120px;
   gap: 8px;
 
   box-sizing: border-box;
   padding: 8px 32px;
-  transition: width 0.7s ease-in-out;
+  transition: width 0.7s ease-in-out, ;
 }
+
 .btnContainer button span {
   font-size: 18px;
 }
 
-@keyframes slideBtn {
-  0% {
-    transform: translateX(200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+
+
 @media (max-width: 1920px) {
- .serviceCard{
+  .serviceCard {
     width: 320px;
   }
 }
+
 @media (max-width: 1620px) {
-    .serviceCards{
-     gap: 16px;
-    }
- .serviceCard{
+  .serviceCards {
+    gap: 16px;
+  }
+
+  .serviceCard {
     width: 300px;
     height: 330px;
   }
@@ -494,17 +304,33 @@ font-size: 18px;
     font-size: 16px;
   }
 
- 
+  .serviceAnimation {
+    height: 400px;
+  }
 }
 
 @media (max-width: 1280px) {
   .serviceListRow {
     height: fit-content;
   }
-   .btnContainer {
+
+  .btnContainer {
     flex-direction: column;
     align-items: center;
     transform: translateX(0);
+  }
+
+  .serviceAnimation {
+    height: 200px;
+  }
+
+  .serviceAnimation img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .mainContent {
+    padding: 24px 56px;
   }
 }
 
@@ -517,10 +343,10 @@ font-size: 18px;
     font-size: 16px;
   }
 
- .ctaContainer{
+  .ctaContainer {
     flex-direction: column;
     text-align: center;
- }
+  }
 
   .btnContainer button {
     font-size: 16px;
@@ -547,6 +373,10 @@ font-size: 18px;
   .cardBtn {
     justify-content: center;
   }
+
+  .animationContainer span {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -559,17 +389,47 @@ font-size: 18px;
   }
 
   .services {
-  
+
     padding: 30px;
   }
+
+  .serviceAnimation {
+    flex-direction: column;
+    height: fit-content;
+    gap: 64px;
+  }
+
+  .arrow {
+    transform: rotate(90deg) !important;
+
+  }
+
+  .arrow img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  
+  .textContainer{
+
+    align-items: center;
+    text-align: center;
+  }
+ .serviceAnimation{
+  margin-bottom: 50px;
+ }
+ .serviceCards{
+  margin: 0;
+ }
 }
 
 @media (max-width: 660px) {
-  .service-headline{
+  .service-headline {
     width: 100%;
     align-items: center;
     text-align: center;
   }
+
   .service-headline {
     padding: 10px;
   }
@@ -590,9 +450,9 @@ font-size: 18px;
     padding: 10px;
   }
 
-  .btnContainer {
+  /* .btnContainer {
     padding: 10px;
-  }
+  } */
 
   .btnContainer span {
     font-size: 16px;

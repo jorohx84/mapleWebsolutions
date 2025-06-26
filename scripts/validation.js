@@ -20,7 +20,7 @@ function checkFieldInput(inputField, validate) {
     let errorMessage = document.getElementById(`${inputField.name}`)
     if (inputField.value.trim() === "") {
         inputField.classList.add('error');
-        errorMessage.innerHTML = `Bitte ${inputField.name} angeben`;
+        errorMessage.innerHTML = `Bitte ${inputField.name} eingeben`;
         validate = false;
         scrollToDiv(errorMessage);
     } else {
@@ -50,7 +50,7 @@ function checkFieldType(inputField, errorMessage, validate) {
 
 function scrollToDiv(errorMessage) {
     errorMessage.scrollIntoView({
-
+        behavior: 'smooth',
         block: 'center'
 
 
