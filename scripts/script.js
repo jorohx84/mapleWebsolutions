@@ -1,8 +1,11 @@
 // window.onbeforeunload = function () {
 //   window.scrollTo(0, 0);
+
+
+
 // };
 let toggleKey=false;
-
+let sidebarBtnIndex;
 
 function reloadWebsite() {
   if (performance.getEntriesByType("navigation")[0].type === "reload") {
@@ -167,24 +170,72 @@ function renderSkillIcons() {
   }
 }
 
-function toggleSidebarContent(key){
-console.log(key);
-const content=document.getElementById('sidebarContent');
+function toggleSidebarContent(index){
+sidebarBtnIndex=index;
+const sidebar=document.getElementById('sidebar');
  toggleKey=!toggleKey;
  if(toggleKey){
-content.classList.add('slidein');
+sidebar.classList.add('slidein');
  }else{
-  content.classList.remove('slidein');
+  sidebar.classList.remove('slidein');
  }
- content.innerHTML='';
-if (key==='phone') {
-  content.innerHTML+='Phone';
-}else if (key==='mail') {
-  content.innerHTML+='Mail';
-}
-}
 
 
+hideBtns(index)
+renderSidebarContent(index);
+}
+
+function hideBtns(index){
+ const currentIndex=index;
+  const buttons = document.getElementsByClassName('sidebarBtn');
+  for (let index = 0; index < buttons.length; index++) {
+    const btn = buttons[index];
+    if (currentIndex !== index) {
+              btn.classList.add('showBtns');
+    } else{
+     
+              btn.classList.remove('showBtns');
+      
+ 
+    }
+
+
+  }
+}
+
+function closeSidebar(){
+ const buttons = document.getElementsByClassName('sidebarBtn');
+ const sidebar=document.getElementById('sidebar');
+
+ toggleKey=false;
+  sidebar.classList.remove('slidein');
+  
+     for (let index = 0; index < buttons.length; index++) {
+    const btn = buttons[index];
+     btn.classList.remove('showBtns');
+}
+
+}
+
+function renderSidebarContent(index){
+console.log(index);
+const content=document.getElementById('sidebarContent');
+content.innerHTML='';
+if (index===0){
+ content.innerHTML+=`<div>
+ <p>Rückruf-Service</p>
+ <span>Geben Sie Ihre Telefonnummer ein, dann rufe ich Sie schnellstmöglich zurück d</span>
+ <input class="required" type="tel" placeholder="Telefonnummer" name="phone">
+ <button>Senden</button>
+                      </div>`
+}
+if (index===1){
+ content.innerHTML+=`<div>
+ <p>Nachricht</p>
+                      </div>`
+}
+
+}
 
 
 
