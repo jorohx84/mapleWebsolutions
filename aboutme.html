@@ -9,22 +9,35 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/standards.css">
     <link rel="stylesheet" href="/styles/aboutme.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="scripts/sidebar.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 
 </head>
 
-<body id="body" onscroll="fixHeader()">
+<body id="body" onscroll="fixHeader(); closeSidebar()" onclick="closeSidebar()">
 
     <header w3-include-html="/html/header.html"></header>
 
     <section class="aboutmeContainer">
-           <section w3-include-html="/html/sidebar.html"></section>
-        <div class="aboutmeHeadlineContainer">
+        <section w3-include-html="/html/sidebar.html"></section>
+        <div class="aboutmeContent">
             <div class=" textContainer">
-                <div class="aboutmeHeadline">
-                    <p class="space">PROFITIEREN SIE VON MEINEN</p>
-                    <h1 class="space">ERFAHRUNGEN</h1>
-                   
+                <div class="mainHeadlineContainer aboutmeMainHeadline">
+                    <div class="mainHeadline">
+                        <p class="space">MEINE</p>
+                        <h1 class="space" id="headline">LEIDENSCHAFT</h1>
+                        <p class="space">FÜR DIGITALE ERLEBNISSE</p>
+                        <div class="dividerContainer">
+                            <div class="divider" id="divider"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="profilePhotoContainer hide">
+                    <div class="imageContainer"></div>
                 </div>
                 <div class="headerlineText">
                     <p>
@@ -40,37 +53,13 @@
 
 
                 <div class="btnContainer">
+
                     <button onclick="window.location.href='./skills.html'">FÄHIGKEITEN</button>
-                    <button onclick="window.location.href='./overview.html'">LEISTUNGEN</button>
-                    <button onclick="window.location.href='./contact.html'">KONTAKT</button>
                 </div>
             </div>
 
-            <div class="profilePhotoContainer">
-                <div class="aboutmeHeadline hide">
-                    <p class="space">PROFITIEREN SIE VON MEINEN</p>
-                    <h1 class="space">ERFAHRUNGEN</h1>
-                
-                </div>
+            <div class="profilePhotoContainer hideResp">
                 <div class="imageContainer"></div>
-                <!-- <img src="/img/2025-04-14_11-48-45_06-removebg.webp" loading="lazy" alt=""> -->
-                <div class="headerlineText hide">
-                    <p>
-                        Als Frontend-Entwickler liegt meine Leidenschaft darin, Webseiten und Webanwendungen zu
-                        gestalten, die nicht nur funktional, sondern auch benutzerfreundlich und ästhetisch ansprechend
-                        sind. Es ist die Freude daran, mit Code zu arbeiten, Lösungen zu erschaffen und komplexe
-                        Herausforderungen anzugehen, die mich in der Softwareentwicklung antreiben. Besonders die enge
-                        Zusammenarbeit mit Webdesignern, um ihre Designs in eine nahtlose Benutzererfahrung zu
-                        verwandeln, motiviert mich. Der kontinuierliche Lernprozess und die Möglichkeit, echten Mehrwert
-                        zu schaffen, treiben mich an, immer weiter zu wachsen und neue Herausforderungen zu meistern.
-                    </p>
-
-                </div>
-                  <div class="btnContainer hide">
-                    <button onclick="window.location.href='./skills.html'">FÄHIGKEITEN</button>
-                    <button onclick="window.location.href='./services.html'">LEISTUNGEN</button>
-                    <button onclick="window.location.href='./contact.html'">KONTAKT</button>
-                </div>
             </div>
 
 

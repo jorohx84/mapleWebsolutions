@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>projects</title>
-    <link rel="icon" href="/logos/mapleIcon-bg.png" />
-    <link rel="stylesheet" href="styles/projects.css" />
-    <link rel="stylesheet" href="styles/standards.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <script src="scripts/data.js"></script>
-    <script src="scripts/templates.js"></script>
-    <script src="scripts/projects.js"></script>
-    <script src="scripts/script.js"></script>
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-  </head>
 
-  <body id="body" onload="renderprojects()" onscroll="fixHeader()">
-    <div onclick="closeOverlay()" class="projectsOverlay dnone" id="projectsOverlay"></div>
-    <header w3-include-html="/html/header.html"></header>
-    <div class="projectsContent" id="projectsContent">
-   <section w3-include-html="/html/sidebar.html"></section>
-      <div class="projectsHeadlineContainer">
-        <div class="projectsHeadline">
-          <p class="space">MEINE</p>
-          <h1 class="space">PROJEKTE</h1>
-          <p class="space">WILLKOMMEN IM SHOWROOM</p>
-          <div class="dividerContainer">
-            <div class="divider" id="divider"></div>
-          </div>
-        </div>
-      </div>
-     
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>projects</title>
+  <link rel="icon" href="/logos/mapleIcon-bg.png" />
+  <link rel="stylesheet" href="styles/projects.css" />
+  <link rel="stylesheet" href="styles/standards.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/sidebar.css">
+   <link rel="stylesheet" href="styles/header.css">
+           <link rel="stylesheet" href="styles/footer.css">
+  <script src="scripts/sidebar.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/templates.js"></script>
+  <script src="scripts/projects.js"></script>
+  <script src="scripts/script.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
 
-      <div class="projects">
-        <div class="projectListContainer">
-          <h2>APPS</h2>
-          <div class="projectList" id="apps"></div>
+<body id="body" onscroll="fixHeader()" onload="renderProjects('Applications')">
+  <div onclick="closeOverlay()" class="projectsOverlay dnone" id="projectsOverlay"></div>
+  <header w3-include-html="/html/header.html"></header>
+  <section w3-include-html="/html/sidebar.html"></section>
+  <div class="projectsContent" id="projectsContent">
+    <div class="mainHeadlineContainer projectMainHeadline">
+      <div class="mainHeadline" id="service-headline">
+        <p class="space">MEINE</p>
+        <h1 class="space" id="headline">PROJEKTE</h1>
+        <p class="space">WILLKOMMEN IM SHOWROOM</p>
+        <div class="dividerContainer">
+          <div class="divider" id="divider"></div>
         </div>
-        <div class="projectListContainer">
-          <h2>WEBSITES</h2>
-          <div class="projectList" id="websites"></div>
-        </div>
+
       </div>
     </div>
-    <footer w3-include-html="/html/footer.html"></footer>
-    <script>
-      w3.includeHTML();
-    </script>
-  </body>
+
+    <div class="projects">
+      <div class="selectionContainer">
+        <div class="selectionCard" onclick="renderProjects('Websites');   giveCardsHighlight(0)">
+          <p>Websites</p>
+
+        </div>
+        <div class="selectionCard" onclick="renderProjects('Webshops');   giveCardsHighlight(1)">
+          <p>Webshops</p>
+        </div>
+        <div class="selectionCard" onclick="renderProjects('Applications');   giveCardsHighlight(2)">
+          <p>Applications</p>
+        </div>
+      </div>
+        <h3 class="space listHeadline" id="listHeadline"></h3>
+      <div class="projectsList" id="projectsList"></div>
+    
+
+
+
+
+    </div>
+
+
+
+  </div>
+  <footer w3-include-html="/html/footer.html"></footer>
+  <script>
+    w3.includeHTML();
+  </script>
+</body>
+
 </html>

@@ -7,9 +7,9 @@
     max-width: 1920px;
     flex: 1;
     box-sizing: border-box;
-    padding: 56px;
+    padding: 0 72px;
     position: relative;
-    gap: 56px;
+
 
 }
 
@@ -31,6 +31,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+    margin-top: 56px;
 }
 
 
@@ -77,7 +78,7 @@
 }
 
 .imageContainer {
-    height: 100%;
+    height: fit-content;
     width: 50%;
     min-height: calc(100vh - 156px);
     max-height: calc(100vh - 156px);
@@ -87,6 +88,7 @@
     background-size: contain;
     object-fit: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 
@@ -104,18 +106,18 @@
 
 .iconContainer {
     width: 100%;
-    max-width: 800px;
+    max-width: 500px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
-  
+
 }
 
 .flipCard {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     gap: 5px;
     transition: transform 0.6s ease-in-out;
     perspective: 1000px;
@@ -174,7 +176,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -187,7 +189,36 @@
 }
 
 .flipCard img {
-    width: 70px;
+    width: 50px;
+}
+
+.imageContainerContent {
+    width: 100%;
+    height: fit-content;
+}
+
+.iconContainerResp {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 100px;
+    left: 00px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    z-index: -1;
+}
+
+.cardRespSize {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardRespSize img {
+    width: 40px;
 }
 
 
@@ -200,9 +231,6 @@
         font-size: 20px;
     }
 
-    .iconContainer {
-        margin-top: 40px;
-    }
 
 }
 
@@ -219,18 +247,12 @@
         font-size: 16px;
     }
 
-    .iconContainer {
-        margin-top: 20px;
-        max-width: 600px;
-    }
-
-    .flipCard {
-        width: 90px;
-        height: 90px;
-    }
-
     .flipCard img {
         width: 50px;
+    }
+
+    .flipCardBack span {
+        font-size: 14px;
     }
 }
 
@@ -266,19 +288,6 @@
 
     }
 
-    .iconContainer {
-        margin-top: 0;
-        gap: 10px;
-    }
-
-    .flipCard {
-        width: 90px;
-        height: 90px;
-    }
-
-    .flipCard img {
-        width: 50px;
-    }
 
     .flipCardBack span {
         font-size: 16px;
@@ -289,21 +298,15 @@
     }
 }
 
-
-@media(max-width: 1050px) {
-
-    .flipCard {
-        width: 80px;
-        height: 80px;
+@media(max-width: 1100px) {
+  .flipCard {
+        width: 90px;
+        height: 90px;
     }
-
-    .flipCard img {
-        width: 40px;
-    }
-
 }
 
-@media(max-width: 995px) {
+
+@media(max-width: 1030px) {
     .skills {
         height: fit-content;
         padding: 20px;
@@ -315,30 +318,61 @@
         height: fit-content;
     }
 
+    .content {
+        margin: 0;
+    }
 
-.skill-headline{
-    align-items: center;
-}
+    .skill-headline {
+        align-items: center;
+    }
+
     .skillIcons {
         align-items: center;
     }
 
-    .headtext{
+    .headtext {
         align-items: center;
-        text-align: center;
+
     }
-    .content{
+
+    .content {
         align-items: center;
     }
 
     .iconContainer {
-        max-width: 500px;
-        justify-content: center;
+        display: none;
     }
 
     .imageContainer {
         width: 100%;
+        max-width: 720px;
+        min-height: unset;
+        max-height: unset;
+
     }
+
+    .skillIcons {
+        display: none;
+    }
+}
+
+
+@media(min-width: 1030px) {
+    .iconContainerResp {
+        display: none;
+    }
+}
+
+@media(max-width: 780px) {
+    .cardRespSize {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cardRespSize img {
+        width: 40px;
+    }
+
 }
 
 
@@ -346,6 +380,16 @@
 
     .skill-headline h1 {
         font-size: 32px;
+    }
+
+
+    .cardRespSize {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cardRespSize img {
+        width: 30px;
     }
 }
 
@@ -359,5 +403,21 @@
 
     .headtext h2 {
         font-size: 16px;
+    }
+
+    .iconContainerResp {
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 420px) {
+
+    .cardRespSize {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cardRespSize img {
+        width: 20px;
     }
 }

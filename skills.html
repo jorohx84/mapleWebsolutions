@@ -9,23 +9,34 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/standards.css">
     <link rel="stylesheet" href="/styles/skills.css">
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-<script src="scripts/data.js"></script>
+    <link rel="stylesheet" href="styles/sidebar.css">
+      <link rel="stylesheet" href="styles/header.css">
+           <link rel="stylesheet" href="styles/footer.css">
+    <script src="scripts/sidebar.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/skills.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
 
 </head>
 
-<body id="body" onload="renderSkillIcons()" onscroll="fixHeader()">
+<body id="body" onload="renderSkillIcons(); renderSkillIconsResp()" onscroll="fixHeader()">
     <header w3-include-html="/html/header.html"></header>
 
     <section class="skills">
-           <section w3-include-html="/html/sidebar.html"></section>
+        <section w3-include-html="/html/sidebar.html"></section>
         <div class="skillContent">
             <div class="content">
-                <div class="skill-headline">
-                    <p class="space">MEINE</p>
-                    <h1 class="space">FÄHIGKEITEN</h1>
-                    <p class="space">AUF EINEN BLICK</p>
+                <div class="mainHeadlineContainer skillMainHeadline">
+                    <div class="mainHeadline" id="service-headline">
+                        <p class="space">MEINE</p>
+                        <h1 class="space" id="headline">FÄHIGKEITEN</h1>
+                        <p class="space">AUF EINEN BLCK</p>
+                        <div class="dividerContainer">
+                            <div class="divider" id="divider"></div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="headtext">
@@ -43,18 +54,26 @@
                 <div class="skillIcons">
                     <div class="iconContainer" id="skillIcons"></div>
                 </div>
-     
-           
+
+
             </div>
-            <div class="imageContainer"></div>
+            <div class="imageContainer">
+                <div class="imageContainerContent">
+                    <div class="iconContainerResp" id="skillIconsResp"></div>
+                    <div class="placeholder"></div>
+                </div>
+
+
+            </div>
+        </div>
 
         </div>
 
     </section>
 
     <footer w3-include-html="/html/footer.html"></footer>
-    
-   
+
+
 
 
     <script>w3.includeHTML();</script>

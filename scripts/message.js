@@ -13,7 +13,7 @@ function sendMessage() {
     formData.append('message', message);
 
     // Sende die Daten mit fetch an das PHP-Skript
-    fetch('/php/db.php', {
+    fetch('/php/mail.php', {
         method: 'POST',
         body: formData
     })

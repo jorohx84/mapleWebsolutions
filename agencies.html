@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="/styles/style.css" />
   <link rel="stylesheet" href="/styles/standards.css" />
   <link rel="stylesheet" href="/styles/agencies.css" />
+  <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/header.css">
+      <link rel="stylesheet" href="styles/footer.css">
+  <script src="scripts/sidebar.js"></script>
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   <script src="scripts/templates.js"></script>
   <script src="scripts/data.js"></script>
@@ -19,66 +23,57 @@
 
 <body id="body" onscroll="fixHeader()" onload="renderServiceCards()">
   <header w3-include-html="/html/header.html"></header>
-
+  <section w3-include-html="/html/sidebar.html"></section>
   <div class="services" id="servicesContainer">
-   <section w3-include-html="/html/sidebar.html"></section>
-    <div class="service-headline" id="service-headline">
-      <p class="space">M E I N E</p>
-      <h1 class="space" id="headline">LEISTUNGEN</h1>
-      <p class="space">FÜR AGENTUREN & DESIGNER</p>
-      <div class="dividerContainer">
-        <div class="divider" id="divider"></div>
-      </div>
+    <div class="mainHeadlineContainer serviceMainHeadline">
+      <div class="mainHeadline" id="service-headline">
+        <p class="space">MEINE</p>
+        <h1 class="space" id="headline">LEISTUNGEN</h1>
+        <p class="space">FÜR AGENTUREN & DESIGNER</p>
+        <div class="dividerContainer">
+          <div class="divider" id="divider"></div>
+        </div>
 
+      </div>
     </div>
     <div class="textContainer">
       <h3>Frontend-Entwicklung für starke Designs</h3>
       <span> Als spezialisierter Frontend-Entwickler unterstütze ich Agenturen und kreative Teams dabei, aus starken
-        Designs ebenso starke digitale Erlebnisse zu machen.Ich übersetze visuelle Konzepte in sauberen, performanten
+        Designs ebenso starke digitale Erlebnisse zu machen.Ich übersetze visuelle Konzepte in sauberen,
+        performanten
         Code – präzise, responsiv und mit einem feinen Gespür
-        für Gestaltung und Nutzererlebnis. Im engen Austausch entstehen moderne Websites und Oberflächen, die nicht nur
+        für Gestaltung und Nutzererlebnis. Im engen Austausch entstehen moderne Websites und Oberflächen, die nicht
+        nur
         technisch überzeugen, sondern sich
         auch lebendig anfühlen.</span>
     </div>
+
+
+
     <div class="mainContent">
-      <!--  -->
 
-      <div class="serviceAnimation" id="serviceAnimation">
-        <div class="animationContainer">
-          <img src="icons/figma.svg" alt="">
-          <span>Dein Design</span>
-        </div>
-        <div class="animationContainer arrow">
-          <div class="arrowOverlay"></div>
-          <img src="icons/arrow-next.svg" alt="">
-        </div>
-        <div class="animationContainer">
-          <img src="logos/mapleIcon-bg.png" alt="">
-          <span>Mein Code</span>
-        </div>
-        <div class="animationContainer arrow ">
-          <div class="arrowOverlay"></div>
-          <img src="icons/arrow-next.svg" alt="">
-
-        </div>
-        <div class="animationContainer">
-          <img src="icons/user-heart.svg" alt="">
-          <span>Zufriedener Kunde</span>
-        </div>
-      </div>
-      <!--  -->
       <div class="services-content" id="services-content">
-        <div class="serviceContentHeadline">
-          <h2>Kompetenzen für performante Webanwendungen</h2>
+        <div class="serviceCards">
+          <div class="serviceCardsRow" id="serviceCardsRow1"></div>
+          <div class="serviceCardsRow" id="serviceCardsRow2"></div>
         </div>
 
-        <div class="serviceCards" id="serviceCards"></div>
+
+
 
         <div class="ctaContainer" id="ctaContainer">
           <h3>Frontend-Verstärkung gesucht? Ich bringe Dein Design sauber ins Web.</h3>
-          <button onclick="window.location.href='contact.html'">
-            <span>Lass uns über dein Projekt sprechen</span>
-          </button>
+          <div class="ctaBtns">
+            <button onclick="window.location.href='contact.html'">
+              <span>Kontakt</span>
+            </button>
+            <button onclick="window.location.href='projects.html'">
+              <span>Projekte</span>
+            </button>
+          </div>
+
+
+
 
         </div>
       </div>

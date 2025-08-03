@@ -1,4 +1,4 @@
-<div class="sidebar" id="sidebar" onmouseleave="closeSidebar()">
+<!-- <div class="sidebar" id="sidebar" onmouseleave="closeSidebar()">
     <div class="sidebarbtns">
         <button class="sidebarBtn" onclick="toggleSidebarContent(0)">
             <img class="phone" src="icons/call_white.svg" alt="">
@@ -16,6 +16,33 @@
 
     <div class="sidebarContent" id="sidebarContent"><div>
 
-        </div>
+        </div> -->
 
-       
+           <div class="sidebar" id="sidebar">
+    
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(0, event)"><img class="phone" src="icons/sidebar/phone.svg" alt=""></button>
+            <a class="sidebarLink" href="tel:0151 41292919">0151 41292919</a>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button  onclick="moveSidebar(1, event)"><img class="mail" src="icons/sidebar/mail.svg" alt=""></button>
+            <a class="sidebarLink" href="mailto:info@maple-websolutions.de">info@maple-websolutions.de</a>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button  onclick="moveSidebar(2, event)"><img class="social" src="icons/sidebar/socialmedia.svg" alt=""></button>
+            <div class="socialmedia">
+                <button><img src="icons/socialmedia/linkedin_black.svg" alt=""></button>
+                <button><img src="icons/socialmedia/facebook_black.svg" alt=""></button>
+                   <button><img src="icons/socialmedia/instagram_black.svg" alt=""></button>
+                      <button><img src="icons/socialmedia/github_black.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button  onclick="window.scrollTo(0,0), moveSidebar()"><img class="arrow_up" src="icons/sidebar/arrow_up.svg" alt=""></button>
+        </div>
+    </div>
+
+
+        <div class="sidebarOpenBtn" id="sidebarOpenBtn">
+        <button onclick="toggleSidebar(event)"><img src="icons/sidebar/dots.svg" alt=""></button>
+    </div>

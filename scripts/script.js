@@ -79,49 +79,6 @@ function changeHeaderColor(idKey, classKey) {
   }
 }
 
-// function slideOutBoxes(idKey) {
-//   let container = document.getElementsByClassName(`${idKey}`);
-//   for (let index = 0; index < container.length; index++) {
-//     const cont = container[index];
-//     if (index % 2 === 0) {
-//       cont.classList.add("right");
-//     } else {
-//       cont.classList.add("left");
-//     }
-//   }
-// }
-
-// function handleScroll(idKey) {
-//   const childBoxes = document.querySelectorAll(`${idKey}`);
-//   const parent = document.getElementById("advantages");
-//   const windowHeight = window.innerHeight;
-//   const triggerPoint = windowHeight * 0.4;
-//   let boxTop;
-//   childBoxes.forEach((box) => {
-//     if (window.innerWidth < 1062) {
-//       boxTop = box.getBoundingClientRect().top;
-//     } else {
-//       boxTop = parent.getBoundingClientRect().top;
-//     }
-//     if (boxTop <= triggerPoint) {
-//       if (!box.classList.contains("hover")) {
-//         setTimeout(() => {
-//           box.classList.remove("nohover");
-//           box.classList.add("hover");
-//         }, 100);
-//       }
-//     } else if (box.classList.contains("hover")) {
-//       box.classList.remove("hover");
-//       box.classList.add("nohover");
-//     }
-//   });
-// }
-
-// function slideInOffer() {
-//   let offer = document.getElementById("offer");
-//   offer.classList.remove("offerslideout");
-//   offer.classList.add("offerslide");
-// }
 
 function changeBodySize() {
   landingpageHeight();
@@ -150,25 +107,6 @@ function hideWelcome() {
   }, 7000);
 }
 
-
-
-function renderSkillIcons() {
-  let skillIcon = document.getElementById("skillIcons");
-  skillIcon.innerHTML = "";
-  for (let index = 0; index < icons.length; index++) {
-    const ICON = icons[index];
-    skillIcon.innerHTML += ` <div class="flipCard" id="skillIcon${index}">
-        <div class="flipCardInner">
-        <div class="flipCardFront">
-          <img src="${ICON.path}" loading="lazy" alt="">
-        </div>
-         <div class="flipCardBack">
-         <span>${ICON.name}</span>
-         </div>
-      </div>
-    </div>`;
-  }
-}
 
 function toggleSidebarContent(index){
 sidebarBtnIndex=index;

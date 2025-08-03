@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 1920px;
     box-sizing: border-box;
-    padding: 0 56px;
+    padding: 0 72px;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -14,7 +14,7 @@
 
 
 
-.aboutmeHeadlineContainer {
+.aboutmeContent {
     width: 100%;
     height: calc(100vh - 100px);
     display: flex;
@@ -27,27 +27,11 @@
 .textContainer {
     width: 100%;
     max-width: 960px;
-    margin-top: 112px;
+    margin-top: 56px;
     display: flex;
     flex-direction: column;
 }
 
-
-.aboutmeHeadline {
-    width: 100%;
-
-}
-
-.aboutmeHeadline h1 {
-    font-size: 72px;
-    font-weight: 500;
-    margin-block: 0;
-}
-
-.aboutmeHeadline p {
-    font-size: 28px;
-    margin-block: 0;
-}
 
 .headerlineText {
     margin-top: 50px;
@@ -57,25 +41,18 @@
     justify-content: flex-start;
 }
 
-.headerlineText p{
+.headerlineText p {
     font-size: 18px;
 }
 
 .btnContainer {
     width: 100%;
-    margin-top: 120px;
-    margin-bottom: 56px;
+    margin-top: 56px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
-}
-
-.btnContainer button{
-    width: 100%;
-    max-width: 200px;
-    height:100px;
-    border-radius: 6px;
 }
 
 
@@ -85,7 +62,7 @@
     min-width: fit-content;
     height: 100%;
 
-    
+
 }
 
 .profilePhotoContainer img {
@@ -93,7 +70,7 @@
     height: 100%;
 }
 
-.imageContainer{
+.imageContainer {
     width: 100%;
     height: 100%;
     background-image: url(./../img/2025-04-14_11-48-45_06-removebg.webp);
@@ -103,136 +80,58 @@
 }
 
 
-@media(max-width: 1690px) {
-    .aboutmeHeadline h1 {
-        font-size: 56px;
-    }
-
-    .aboutmeHeadline p {
-        font-size: 20px;
-    }
-
-    .aboutmeHeadline span {
-        font-size: 16px;
-    }
-}
 
 
 @media(max-width: 1520px) {
-    .aboutmeHeadline h1 {
-        font-size: 48px;
-    }
 
-    .aboutmeHeadline p {
-        font-size: 18px;
-    }
-
-    .aboutmeHeadline span {
+    .headerlineText p {
         font-size: 16px;
     }
-}
-
-@media(max-width: 1520px) {
-    .aboutmeHeadline h1 {
-        font-size: 40px;
-    }
-
-    .aboutmeHeadline p {
-        font-size: 16px;
-    }
-
-    .aboutmeHeadline span {
-        font-size: 14px;
-    }
-
-
-    /* .btnContainer button {
-        font-size: 16px;
-        width: 200px;
-    } */
-    .headerlineText p{
-        font-size: 16px;
-    }
-
-}
-
-@media(max-width: 1300px) {
-.profilePhoto{
-
-}
-}
-
-@media(max-width: 1180px) {
-    .aboutmeHeadline h1 {
-        font-size: 32px;
-    }
-
-    .aboutmeHeadline p {
-        font-size: 14px;
-    }
-
-    .aboutmeHeadline span {
-        font-size: 12px;
-    }
-
-    /* .btnContainer button {
-        width: 180px;
-    } */
-
 
 }
 
 @media(max-width: 1025px) {
-    .aboutmeHeadline{
-        text-align: center;
-    }
-    .aboutmeHeadline h1 {
-        font-size: 48px;
+
+    .aboutmeContent {
+        flex-direction: column;
     }
 
-    .aboutmeHeadline p {
-        font-size: 16px;
+    .aboutmeContainer {
+        padding: 20px;
     }
 
-    .aboutmeHeadline span {
-        font-size: 16px;
+    .textContainer{
+        margin-top: 0;
     }
 
-    .textContainer {
-        display: none;
-    }
 
-    .aboutmeHeadlineContainer {
+    .aboutmeContent {
         height: unset;
     }
 
     .profilePhotoContainer {
-        margin-top: 20px;
-        width: calc(100% - 40px);
-
+        width: calc(100%);
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: calc(100vh - 320px);
     }
 
     .profilePhotoContainer img {
         width: 100%;
-        height: auto;
+
     }
 
-    .imageContainer{
-        height: calc(100vh - 350px);
-       
+    .hideResp {
+        display: none;
     }
 
-    .aboutmeHeadline {
-        width: fit-content;
+    .btnContainer {
+        align-items: center;
+        text-align: center;
     }
 
-    .btnContainer  {
-  justify-content: center;
-    }
-.btnContainer button{
+    .btnContainer button {
         width: 100%;
     }
 
@@ -240,30 +139,18 @@
 
 @media(min-width: 1025px) {
     .hide {
-        display: none;
+        display: none !important;
     }
 }
+
 @media(max-width: 720px) {
-    .btnContainer{
+    .btnContainer {
         flex-direction: column;
     }
 
-    
-}
-@media(max-width: 600px) {
-    .aboutmeHeadline h1 {
-        font-size: 32px;
-    }
-
-    .aboutmeHeadline p {
-        font-size: 12px;
-    }
-
-    .aboutmeHeadline span {
-        font-size: 12px;
-    }
 
 }
+
 
 
 @media(max-width: 460px) {
@@ -271,34 +158,22 @@
         padding: 20px;
     }
 
-    .aboutmeHeadline p {
-        font-size: 14px;
-    }
+
 }
 
-@media(max-width: 400px) {
-    .aboutmeHeadline h1 {
-        font-size: 28px;
-    }
 
-    .aboutmeHeadline p {
-        font-size: 12px;
-    }
 
-    .aboutmeHeadline span {
-        font-size: 12px;
-    }
-}
-
-@media(max-height: 830px) {
-    .textContainer {
+@media(max-height: 470px) {
+    /* .textContainer {
         margin-top: 60px;
     }
 
     .btnContainer {
         margin-top: 60px;
-    }
+    } */
 
-
+.profilePhotoContainer{
+height: 500px;
+}
 
 }
