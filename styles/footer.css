@@ -25,6 +25,7 @@ footer {
 
 .front-footer {
     background-color: rgba(0, 0, 0, 0.332);
+    
     border: none;
 }
 
@@ -37,7 +38,7 @@ footer {
 }
 
 .front-footer a:not(.legalLink) {
-    filter: invert(100%);
+    /* filter: invert(100%); */
 }
 
 .front-footer p {

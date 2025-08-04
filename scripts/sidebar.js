@@ -1,4 +1,7 @@
+let isOpen = false;
+
 function moveSidebar(currentIndex, event) {
+
     const elements = document.getElementsByClassName('sidebarContainer');
     removeSidebar(elements)
     if (currentIndex === undefined) {
@@ -23,6 +26,7 @@ function removeSidebar(elements) {
 }
 
 function toggleSidebar(event) {
+    isOpen = true
     const sidebar = document.getElementById('sidebar');
     const openBtn = document.getElementById('sidebarOpenBtn');
     sidebar.classList.toggle('showSidebar');
@@ -30,7 +34,7 @@ function toggleSidebar(event) {
     event.stopPropagation();
 }
 
-function closeSidebar() {    
+function closeSidebar() {
     const sidebar = document.getElementById('sidebar');
     const openBtn = document.getElementById('sidebarOpenBtn');
     sidebar.classList.remove('showSidebar');
@@ -38,9 +42,9 @@ function closeSidebar() {
     const elements = document.getElementsByClassName('sidebarContainer');
     for (let index = 0; index < elements.length; index++) {
         const element = elements[index];
-            element.classList.remove('moveSidebar');
+        element.classList.remove('moveSidebar');
     }
 }
 
 window.addEventListener('scroll', closeSidebar);
-window.addEventListener('click', closeSidebar);
+// window.addEventListener('click', closeSidebar);

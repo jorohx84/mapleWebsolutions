@@ -23,8 +23,11 @@
 
 <body id="body" onscroll="fixHeader()" onload="renderServiceCards()">
   <header w3-include-html="/html/header.html"></header>
+  <div class="sidebarOpenBtn" id="sidebarOpenBtn">
+    <button onclick="toggleSidebar(event)"><img src="icons/sidebar/menu.svg" alt=""></button>
+</div>
   <section w3-include-html="/html/sidebar.html"></section>
-  <div class="services" id="servicesContainer">
+  <section class="services" id="servicesContainer">
     <div class="mainHeadlineContainer serviceMainHeadline">
       <div class="mainHeadline" id="service-headline">
         <p class="space">MEINE</p>
@@ -61,7 +64,7 @@
 
 
 
-        <div class="ctaContainer" id="ctaContainer">
+        <!-- <div class="ctaContainer" id="ctaContainer">
           <h3>Frontend-Verstärkung gesucht? Ich bringe Dein Design sauber ins Web.</h3>
           <div class="ctaBtns">
             <button onclick="window.location.href='contact.html'">
@@ -75,10 +78,21 @@
 
 
 
-        </div>
+        </div> -->
       </div>
     </div>
-  </div>
+        <div class="navigation" id="navigation">
+            <div class="navBtns">
+                 <img style="transform: rotate(180deg);" src="icons/arrow-next.svg" alt="">
+                <a href="skills.html">Fähigkeiten</a>
+            </div>
+            <div class="navBtns">
+                <a href="projects.html">Projekte</a>
+                <img src="icons/arrow-next.svg" alt="">
+            </div>
+
+        </div>
+  </section>
 
   <footer w3-include-html="/html/footer.html"></footer>
 

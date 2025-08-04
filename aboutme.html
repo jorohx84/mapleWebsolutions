@@ -20,7 +20,9 @@
 <body id="body" onscroll="fixHeader(); closeSidebar()" onclick="closeSidebar()">
 
     <header w3-include-html="/html/header.html"></header>
-
+    <div class="sidebarOpenBtn" id="sidebarOpenBtn">
+        <button onclick="toggleSidebar(event)"><img src="icons/sidebar/menu.svg" alt=""></button>
+    </div>
     <section class="aboutmeContainer">
         <section w3-include-html="/html/sidebar.html"></section>
         <div class="aboutmeContent">
@@ -51,23 +53,76 @@
                     </p>
                 </div>
 
+                <div class="softskills">
+                    <div class="softskillsCardContainer">
+                        <div class="softskillsCard">
+                            <img src="icons/aboutme/brain.svg" alt="Analytisch denkend Icon">
+                            <div class="softskillsDescription">
+                                <h3>Analytisch</h3>
+                                <span>Komplexe Anforderungen schnell erfassen und in durchdachte Lösungen
+                                    übersetzen.</span>
+                            </div>
+                        </div>
 
-                <div class="btnContainer">
+                        <div class="softskillsCard">
+                            <img src="icons/aboutme/communication.svg" alt="Kommunikativ & teamfähig Icon">
+                            <div class="softskillsDescription">
+                                <h3>Kommunikativ</h3>
+                                <span>Klare, offene Kommunikation – besonders wichtig in der Zusammenarbeit mit
+                                    Designern
+                                    und Agenturen.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="softskillsCardContainer">
+                        <div class="softskillsCard">
+                            <img src="icons/aboutme/structure.svg" alt="Strukturiert & lösungsorientiert Icon">
+                            <div class="softskillsDescription">
+                                <h3>Strukturiert</h3>
+                                <span>Ich arbeite fokussiert, effizient und verliere auch bei komplexen Projekten nie
+                                    das
+                                    Ziel aus den Augen.</span>
+                            </div>
+                        </div>
+
+                        <div class="softskillsCard">
+                            <img src="icons/aboutme/solution.svg" alt="Lösungsorientiert">
+                            <div class="softskillsDescription">
+                                <h3>Lösungsorientiert</h3>
+                                <span>Ich entwickle pragmatische Lösungen, die den Projekterfolg sicherstellen.</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+                <!-- <div class="btnContainer">
 
                     <button onclick="window.location.href='./skills.html'">FÄHIGKEITEN</button>
-                </div>
+                </div> -->
             </div>
 
             <div class="profilePhotoContainer hideResp">
                 <div class="imageContainer"></div>
             </div>
-
+        </div>
+        <div class="navigation" id="navigation">
+            <div class="navBtns">
+                 <img style="transform: rotate(180deg);" src="icons/arrow-next.svg" alt="">
+                <a href="index.html">Startseite</a>
+            </div>
+           
+            <div class="navBtns">
+                <a href="skills.html">Fähigkeiten</a>
+                <img src="icons/arrow-next.svg" alt="">
+            </div>
 
         </div>
-
-
-
-
 
     </section>
 

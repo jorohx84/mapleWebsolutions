@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="styles/standards.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/sidebar.css">
-   <link rel="stylesheet" href="styles/header.css">
-           <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/footer.css">
   <script src="scripts/sidebar.js"></script>
   <script src="scripts/data.js"></script>
   <script src="scripts/templates.js"></script>
@@ -21,10 +21,13 @@
 </head>
 
 <body id="body" onscroll="fixHeader()" onload="renderProjects('Applications')">
-  <div onclick="closeOverlay()" class="projectsOverlay dnone" id="projectsOverlay"></div>
+  <!-- <div onclick="closeOverlay()" class="projectsOverlay dnone" id="projectsOverlay"></div> -->
   <header w3-include-html="/html/header.html"></header>
+  <div class="sidebarOpenBtn" id="sidebarOpenBtn">
+    <button onclick="toggleSidebar(event)"><img src="icons/sidebar/menu.svg" alt=""></button>
+  </div>
   <section w3-include-html="/html/sidebar.html"></section>
-  <div class="projectsContent" id="projectsContent">
+  <section class="projectsContent" id="projectsContent">
     <div class="mainHeadlineContainer projectMainHeadline">
       <div class="mainHeadline" id="service-headline">
         <p class="space">MEINE</p>
@@ -50,9 +53,9 @@
           <p>Applications</p>
         </div>
       </div>
-        <h3 class="space listHeadline" id="listHeadline"></h3>
+      <h3 class="space listHeadline" id="listHeadline"></h3>
       <div class="projectsList" id="projectsList"></div>
-    
+
 
 
 
@@ -60,8 +63,23 @@
     </div>
 
 
+    <div class="navigation" id="navigation">
+            <div class="navBtns">
+                 <img style="transform: rotate(180deg);" src="icons/arrow-next.svg" alt="">
+                <a href="agencies.html">Leistungen</a>
+            </div>
+              <!-- <div class="navBtns">
+                   <img src="icons/sidebar/mail_petrol.svg" alt="">
+                <a href="contact.html">Kontakt</a>
+             
+            </div> -->
+            <div class="navBtns">
+                <a href="contact.html">Kontakt</a>
+                <img src="icons/arrow-next.svg" alt="">
+            </div>
 
-  </div>
+        </div>
+  </section>
   <footer w3-include-html="/html/footer.html"></footer>
   <script>
     w3.includeHTML();

@@ -21,7 +21,6 @@
 }
 
 
-
 .selectionContainer{
 width: 100%;
 display: flex;
@@ -29,8 +28,6 @@ justify-content: flex-start;
 gap: 16px;
 
 }
-
-
 
 .selectionCard{
   width: 250px;
@@ -57,7 +54,7 @@ gap: 16px;
 }
 
 .listHeadline{
-  font-size: 64px;
+  font-size: clamp(1.7rem, 5vw, 3.8rem) !important;
   border-bottom: solid var(--main-color);
 }
 
@@ -108,7 +105,8 @@ gap: 16px;
 .projectInfoContainer h2{
   margin: 0;
   margin-bottom: 8px;
-  font-size: clamp(1.4rem, 4vw, 2.5rem);
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  font-weight: 300;
 }
 
 .projectInfoContainer p{

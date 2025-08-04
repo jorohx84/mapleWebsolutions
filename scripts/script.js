@@ -108,72 +108,76 @@ function hideWelcome() {
 }
 
 
-function toggleSidebarContent(index){
-sidebarBtnIndex=index;
-const sidebar=document.getElementById('sidebar');
- toggleKey=!toggleKey;
- if(toggleKey){
-sidebar.classList.add('slidein');
- }else{
-  sidebar.classList.remove('slidein');
- }
 
 
-hideBtns(index)
-renderSidebarContent(index);
-}
+window.addEventListener('load', renderNavigations)
 
-function hideBtns(index){
- const currentIndex=index;
-  const buttons = document.getElementsByClassName('sidebarBtn');
-  for (let index = 0; index < buttons.length; index++) {
-    const btn = buttons[index];
-    if (currentIndex !== index) {
-              btn.classList.add('showBtns');
-    } else{
+// function toggleSidebarContent(index){
+// sidebarBtnIndex=index;
+// const sidebar=document.getElementById('sidebar');
+//  toggleKey=!toggleKey;
+//  if(toggleKey){
+// sidebar.classList.add('slidein');
+//  }else{
+//   sidebar.classList.remove('slidein');
+//  }
+
+
+// hideBtns(index)
+// renderSidebarContent(index);
+// }
+
+// function hideBtns(index){
+//  const currentIndex=index;
+//   const buttons = document.getElementsByClassName('sidebarBtn');
+//   for (let index = 0; index < buttons.length; index++) {
+//     const btn = buttons[index];
+//     if (currentIndex !== index) {
+//               btn.classList.add('showBtns');
+//     } else{
      
-              btn.classList.remove('showBtns');
+//               btn.classList.remove('showBtns');
       
  
-    }
+//     }
 
 
-  }
-}
+//   }
+// }
 
-function closeSidebar(){
- const buttons = document.getElementsByClassName('sidebarBtn');
- const sidebar=document.getElementById('sidebar');
+// function closeSidebar(){
+//  const buttons = document.getElementsByClassName('sidebarBtn');
+//  const sidebar=document.getElementById('sidebar');
 
- toggleKey=false;
-  sidebar.classList.remove('slidein');
+//  toggleKey=false;
+//   sidebar.classList.remove('slidein');
   
-     for (let index = 0; index < buttons.length; index++) {
-    const btn = buttons[index];
-     btn.classList.remove('showBtns');
-}
+//      for (let index = 0; index < buttons.length; index++) {
+//     const btn = buttons[index];
+//      btn.classList.remove('showBtns');
+// }
 
-}
+// }
 
-function renderSidebarContent(index){
-console.log(index);
-const content=document.getElementById('sidebarContent');
-content.innerHTML='';
-if (index===0){
- content.innerHTML+=`<div>
- <p>Rückruf-Service</p>
- <span>Geben Sie Ihre Telefonnummer ein, dann rufe ich Sie schnellstmöglich zurück d</span>
- <input class="required" type="tel" placeholder="Telefonnummer" name="phone">
- <button>Senden</button>
-                      </div>`
-}
-if (index===1){
- content.innerHTML+=`<div>
- <p>Nachricht</p>
-                      </div>`
-}
+// function renderSidebarContent(index){
+// console.log(index);
+// const content=document.getElementById('sidebarContent');
+// content.innerHTML='';
+// if (index===0){
+//  content.innerHTML+=`<div>
+//  <p>Rückruf-Service</p>
+//  <span>Geben Sie Ihre Telefonnummer ein, dann rufe ich Sie schnellstmöglich zurück d</span>
+//  <input class="required" type="tel" placeholder="Telefonnummer" name="phone">
+//  <button>Senden</button>
+//                       </div>`
+// }
+// if (index===1){
+//  content.innerHTML+=`<div>
+//  <p>Nachricht</p>
+//                       </div>`
+// }
 
-}
+// }
 
 
 

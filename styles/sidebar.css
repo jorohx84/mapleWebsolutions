@@ -5,9 +5,9 @@
     transform: translate(calc(100% - 56px), -50%);
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    z-index: 1;
+    gap: 2px;
     transition: transform 0.5s ease-in-out;
+    z-index: 2;
 }
 
 .sidebarContainer {
@@ -16,11 +16,14 @@
     justify-content: flex-start;
     align-items: center;
     gap: 8px;
-    transition: transform 0.5s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.091);
-    backdrop-filter: blur(10px);
+    transition: transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    /* background-color: rgba(0, 0, 0, 0.091); */
+    background-color: rgba(255, 255, 255, 0.208);
+    backdrop-filter: blur(5px);
     border-radius: 10px;
-    
+   border: solid 0.5px white;
+
+
 
 }
 
@@ -32,39 +35,46 @@
     align-items: center;
 }
 
-.sidebarContainer button img {
-    width: 24px;
-    height: 24px;
+.sidebarSocialmediaLink {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebarSocialmediaLink img {
+    width: 32px;
+    height: 32px;
 }
 
 .sidebarOpenBtn {
     position: fixed;
     right: 0;
-    /* top: 50%;
-    transform: translateY(-50%); */
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 1s ease-in-out, opacity 0.6s ease-in-out;
     z-index: 1;
-    transition: opacity 0.6s ease-in-out;
 }
 
 .sidebarOpenBtn button {
-    width: 20px !important;
+    width: 10px !important;
     height: fit-content;
     border-radius: 5px 0 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding-block: 12px;
+    padding: 40px 12px ;
 }
 
 .sidebarOpenBtn button img {
-    width: 40px;
+    width: 20px;
 }
 
-.sidebarOpenBtn button:hover{
+.sidebarOpenBtn button:hover {
     background-color: var(--main-color);
-    border:none;
+    border: none;
 }
 
 .showSidebar {
@@ -73,7 +83,7 @@
 
 .slideSidebarBtn {
     opacity: 0;
-transform: translateX(100%);
+    transform: translateX(100%, -50%);
 }
 
 .socialmedia {
@@ -81,7 +91,9 @@ transform: translateX(100%);
     display: flex;
     justify-content: center;
     align-items: center;
-  gap: 8px;
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 0 16px;
 }
 
 .socialmedia button {
@@ -103,6 +115,8 @@ transform: translateX(100%);
 
 .moveSidebar {
     transform: translateX(calc(-100% + 56px)) !important;
+     border: solid 0.5px var(--main-color);
+   
 }
 
 .sidebarLink {
@@ -145,24 +159,30 @@ transform: translateX(100%);
 }
 
 
-.sidebarContainer button:hover .phone{
-    content:url(../icons/sidebar/phone_petrol.svg) ;
+.sidebarContainer button:hover .phone {
+    content: url(../icons/sidebar/phone_petrol.svg);
 }
-.sidebarContainer button:hover .mail{
-    content:url(../icons/sidebar/mail_petrol.svg) ;
+
+.sidebarContainer button:hover .mail {
+    content: url(../icons/sidebar/mail_petrol.svg);
 }
-.sidebarContainer button:hover .social{
-    content:url(../icons/sidebar/socialmedia_petrol.svg) ;
+
+.sidebarContainer button:hover .social {
+    content: url(../icons/sidebar/socialmedia_petrol.svg);
 }
-.sidebarContainer button:hover .arrow_up{
-    content:url(../icons/sidebar/arrow_up_petrol.svg) ;
+
+.sidebarContainer button:hover .arrow_up {
+    content: url(../icons/sidebar/arrow_up_petrol.svg);
 }
 
 @media(max-width:1050px) {
-   .sidebarContainer button {
+    .sidebarContainer button {
         width: 40px;
         height: 40px;
     }
+    .sidebarContainer button img {
+    width: 20px;
+}
 
     .sidebar {
         transform: translate(calc(100% - 40px), -50%);
@@ -183,6 +203,7 @@ transform: translateX(100%);
     }
 
 }
+
 @media(min-width:850px) {
     .sidebarOpenBtn {
         display: none;

@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="styles/sidebar.css">
       <link rel="stylesheet" href="styles/header.css">
            <link rel="stylesheet" href="styles/footer.css">
-    <script src="scripts/sidebar.js"></script>
+   
     <script src="scripts/data.js"></script>
     <script src="scripts/skills.js"></script>
     <script src="scripts/script.js"></script>
+     <script src="scripts/sidebar.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 
 
@@ -23,9 +24,12 @@
 
 <body id="body" onload="renderSkillIcons(); renderSkillIconsResp()" onscroll="fixHeader()">
     <header w3-include-html="/html/header.html"></header>
-
+      <section w3-include-html="/html/sidebar.html"></section>
+<div class="sidebarOpenBtn" id="sidebarOpenBtn">
+    <button onclick="toggleSidebar(event)"><img src="icons/sidebar/menu.svg" alt=""></button>
+</div>
     <section class="skills">
-        <section w3-include-html="/html/sidebar.html"></section>
+      
         <div class="skillContent">
             <div class="content">
                 <div class="mainHeadlineContainer skillMainHeadline">
@@ -68,7 +72,18 @@
         </div>
 
         </div>
+     <div class="navigation" id="navigation">
+            <div class="navBtns">
+                 <img style="transform: rotate(180deg);" src="icons/arrow-next.svg" alt="">
+                <a href="aboutme.html">Über mich</a>
+            </div>
+        
+            <div class="navBtns">
+                <a href="agencies.html">Leistungen</a>
+                <img src="icons/arrow-next.svg" alt="">
+            </div>
 
+        </div>
     </section>
 
     <footer w3-include-html="/html/footer.html"></footer>
