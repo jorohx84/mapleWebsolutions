@@ -69,7 +69,7 @@ button {
     max-width: 200px;
     height: 60px;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 6px;
 
     background-color: var(--main-color);
 
@@ -81,13 +81,13 @@ button {
 
 }
 
-button img{
+button img {
     width: 30px;
 }
 
 button span {
     font-size: 16px;
-    font-weight:300;
+    font-weight: 300;
 }
 
 button:active {
@@ -111,13 +111,14 @@ input {
     box-sizing: border-box;
     border-style: solid;
     padding-left: 12px;
-font-family: "Montserrat";
-font-weight: 300;
+    font-family: "Montserrat";
+    font-weight: 300;
 }
+
 input:focus {
-  outline: none;          
-   
-  box-shadow: none;      
+    outline: none;
+
+    box-shadow: none;
 }
 
 
@@ -138,8 +139,8 @@ textarea {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     box-sizing: border-box;
-padding: 12px;
- 
+    padding: 12px;
+
 }
 
 
@@ -198,9 +199,12 @@ textarea:hover {
 :root {
 
     /* --main-color: #366476;*/
-    --main-color: #005477;
+    /* --main-color: #005477; */
+    /* --main-color:#0484B9; */
+    --main-color: #04729F;
     --secondary-color: #2295DD;
     --border-color: rgba(128, 128, 128, 0.317);
+    --header-black: rgba(0, 0, 0, 0.821);
 }
 
 @media(max-height: 450px) {

@@ -16,11 +16,11 @@
 
 .skillContent {
     width: 100%;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
+margin-bottom: 112px;
 
 }
 
@@ -133,7 +133,7 @@
     transition: transform 0.6s ease-in-out;
     transform-style: preserve-3d;
     box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 6px;
     box-sizing: border-box;
 
     background-color: transparent;
@@ -354,11 +354,19 @@
     .skillIcons {
         display: none;
     }
+
+    .noneRespCta{
+        display: none;
+    }
 }
 
 
 @media(min-width: 1030px) {
     .iconContainerResp {
+        display: none;
+    }
+
+    .respCta {
         display: none;
     }
 }

@@ -17,7 +17,7 @@
     <script src="scripts/sidebar.js"></script>
     <script src="/scripts/validation.js"></script>
     <script src="scripts/message.js"></script>
-    <link rel="preload" href="/img/contact-head-small.webp" as="image">
+    <script src="scripts/templates.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -25,12 +25,12 @@
 <body class="contactbody" id="body" onscroll="fixHeader()">
 
     <header w3-include-html="/html/header.html"></header>
-
+    <div class="contactHeadImage"></div>
     <section class="contact" id="center">
-        <div class="contactHeadImage"></div>
+
 
         <div class="contactform-container">
-
+            <h1>KONTAKT</h1>
             <div class="contact-content">
 
                 <div class="contact-data">
@@ -47,26 +47,26 @@
                     </div>
                     <div class="contact-numbers">
                         <div class="number">
-                            <img src="icons/sidebar/phone_petrol.svg" alt="">
+                            <img src="icons/sidebar/phone_blue.svg" alt="">
                             <a href="tel: 015141292919">0151-41292919</a>
                         </div>
                         <div class="number">
-                            <img src="icons/sidebar/mail_petrol.svg" alt="">
+                            <img src="icons/sidebar/mail_blue.svg" alt="">
                             <a href="mailto: info@maple-websolutions.de">info@maple-websolutions.de</a>
                         </div>
                     </div>
 
                     <div class="socialmediaContact">
                         <span>Folgen Sie mir auf Social Media</span>
-                        <div class="socialmedialinks">
+                        <div class="socialmedialinksContact">
                             <a href="https://www.linkedin.com/in/maple-websolutions-b0833334b"><img
-                                    src="/icons/socialmedia/linkedin_petrol.svg" loading="lazy" alt=""></a>
+                                    src="/icons/socialmedia/linkedin_blue.svg" loading="lazy" alt=""></a>
                             <!-- <a href="https://www.xing.com/profile/Johannes_Roth31"><img class="border" src="/icons/xing.svg" loading="lazy" alt=""></a> -->
                             <a href="https://www.facebook.com/share/15dtUyyNRZ/?mibextid=wwXIfr"><img
-                                    src="/icons/socialmedia/facebook_petrol.svg" loading="lazy" alt=""></a>
+                                    src="/icons/socialmedia/facebook_blue.svg" loading="lazy" alt=""></a>
                             <a href="https://www.instagram.com/maple.websolutions/"><img
-                                    src="/icons/socialmedia/instagram_petrol.svg" loading="lazy" alt=""></a>
-                            <a href="https://github.com/jorohx84"><img src="/icons/socialmedia/github_petrol.svg"
+                                    src="/icons/socialmedia/instagram_blue.svg" loading="lazy" alt=""></a>
+                            <a href="https://github.com/jorohx84"><img src="/icons/socialmedia/github_blue.svg"
                                     loading="lazy" alt=""></a>
                         </div>
                     </div>
@@ -118,22 +118,7 @@
             </div>
         </div>
 
-      <div class="navigation" id="navigation">
-            <div class="navBtns">
-                 <img style="transform: rotate(180deg);" src="icons/arrow-next.svg" alt="">
-                <a href="projects.html">Projekte</a>
-            </div>
-          <!-- <div class="navBtns">
-                   <img src="icons/sidebar/mail_petrol.svg" alt="">
-                <a href="contact.html">Kontakt</a>
-             
-            </div> -->
-            <!-- <div class="navBtns">
-                <a href="skills.html">Fähigkeiten</a>
-                <img src="icons/arrow-next.svg" alt="">
-            </div> -->
-
-        </div>
+        <!-- <div class="navigation" id="navigation"></div> -->
     </section>
     <div class="confirm " id="confirm">
         <h2>Nachricht versendet</h2>

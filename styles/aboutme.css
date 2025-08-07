@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
+margin-bottom: 112px;
 
 }
 
@@ -64,7 +64,11 @@
 }
 
 .softskillsCard img{
-    width: 50px;
+    width: 60px;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px;
 }
 
 .softskillsDescription {

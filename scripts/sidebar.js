@@ -35,6 +35,9 @@ function toggleSidebar(event) {
 }
 
 function closeSidebar() {
+    const path = window.location.pathname;
+    const skipPages = ['index.html', 'contact.html', 'datenschutz.html', 'impressum.html'];
+    if (skipPages.some(page => path.includes(page))) return;
     const sidebar = document.getElementById('sidebar');
     const openBtn = document.getElementById('sidebarOpenBtn');
     sidebar.classList.remove('showSidebar');

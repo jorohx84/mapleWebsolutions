@@ -6,9 +6,28 @@
     width: 100vw;
 }
 
+.front-header .logo{
+    content: url(../logos/mapleLogo-ohne-Slogan-BlackBlue-bg.png);
+}
+
 .front-header a {
     color: white !important;
 
+}
+
+.front-header .burger-line{
+    background-color: white;
+}
+
+.front-header .headerPhoneLink{
+content: url(./../icons/sidebar/phone.svg);
+}
+
+.front-header .headerMailLink{
+    content: url(./../icons/sidebar/mail.svg) !important;
+}
+.front-header .respNavDivider{
+    background-color: white;
 }
 
 .burgerline {
@@ -67,18 +86,22 @@ header {
     align-items: center;
     width: 100vw;
     border-width: 1px;
-    background-color: rgba(0, 0, 0, 0.821);
-    color: white;
+   background-color: rgba(0, 0, 0, 0.8);
+   /* background-color: rgba(255, 255, 255, 0.765); */
+   /* background-color: rgba(34, 149, 221, 0.4); */
+
     position: fixed;
     height: 100px;
     top: 0;
 
 }
 
-.header-container-scroll a {
+
+
+
+.header-container-scroll a{
     color: white;
 }
-
 .hide-header {
     transform: translateY(-100%);
     transition: transform 0.7s ease-out;
@@ -124,7 +147,23 @@ header {
     max-width: 300px;
 
 }
+.respLogo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
+.respLogo img{
+    width: 50px;
+    height: 50px;
+}
+.navBarContainer{
+    display: flex;
+    align-items: flex-end;
+    width: fit-content;
+    gap: 36px;
+    height: 80%;
+}
 
 .menubar {
     display: flex;
@@ -172,6 +211,45 @@ header {
     font-weight: 500;
 }
 
+.respNav{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 16px;
+}
+.respNavLinks{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    
+}
+
+.linkContainer{
+display: flex;
+align-items: center;
+gap: 36px;
+}
+
+.linkContainer a{
+    height: 25px;
+}
+.linkContainer img{
+width: 25px;
+height: 25px;
+
+}
+
+.respNavDivider{
+    height: 100%;
+    min-width: 2px;
+    background-color: var(--main-color);
+}
+
+.header-container-scroll .respNavDivider{
+    background-color: white;
+}
+
 .hide-menu {
     transform: translateX(120%);
     transition: transform 0.7s ease-in-out;
@@ -202,7 +280,7 @@ header {
 .burger-line {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--main-color);
     transition: all 0.3s ease;
     border-radius: 5px;
 }
@@ -327,10 +405,16 @@ header {
     .menubar {
         display: none;
     }
+.navBarContainer{
+    align-items: center;
+}
+     .respNavLinks{
+        align-items: center;
+     }
 
-     
-
-   
+   .linkContainer{
+    gap: 16px;
+   }
 }
 @media (min-width: 1400px) {
    .burger-landingpage {
@@ -342,12 +426,7 @@ header {
 
         display: none;
     }
-}
-
-
-
-@media (min-width: 1400px) {
-    .burger {
+        .burger {
         display: none;
 
     }
@@ -355,8 +434,14 @@ header {
     .menu-resp {
         display: none;
     }
-
+    .respNavDivider{
+        display: none;
+    }
 }
+
+
+
+
 
 @media (max-width: 750px) {
     .logo {
@@ -387,6 +472,16 @@ header {
     .header-container-scroll {
         height: 60px;
     }
+
+    .logo{
+        display: none;
+    }
+}
+
+@media (min-width: 670px) {
+.respLogo{
+    display: none;
+}
 }
 
 @media (max-width: 550px) {
@@ -409,6 +504,7 @@ header {
         width: 100vw;
         align-items: center;
     }
+
 }
 
 

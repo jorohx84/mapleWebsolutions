@@ -12,19 +12,20 @@
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <script src="scripts/sidebar.js"></script>
+    <script src="scripts/templates.js"></script>
+
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 
 </head>
 
-<body id="body" onscroll="fixHeader(); closeSidebar()" onclick="closeSidebar()">
+<body id="body" onscroll="fixHeader()">
 
     <header w3-include-html="/html/header.html"></header>
-    <div class="sidebarOpenBtn" id="sidebarOpenBtn">
+    <!-- <div class="sidebarOpenBtn" id="sidebarOpenBtn">
         <button onclick="toggleSidebar(event)"><img src="icons/sidebar/menu.svg" alt=""></button>
-    </div>
+    </div> -->
     <section class="aboutmeContainer">
-        <section w3-include-html="/html/sidebar.html"></section>
+        <!-- <section w3-include-html="/html/sidebar.html"></section> -->
         <div class="aboutmeContent">
             <div class=" textContainer">
                 <div class="mainHeadlineContainer aboutmeMainHeadline">
@@ -105,25 +106,22 @@
 
                     <button onclick="window.location.href='./skills.html'">FÄHIGKEITEN</button>
                 </div> -->
+                <div class="ctaBtnContainer">
+                    <span>Überzeuge dich von meinen Fähigkeiten</span>
+                    <button onclick="window.location.href='skills.html'">Fähigkeiten</button>
+                </div>
             </div>
 
             <div class="profilePhotoContainer hideResp">
                 <div class="imageContainer"></div>
             </div>
-        </div>
-        <div class="navigation" id="navigation">
-            <div class="navBtns">
-                 <img style="transform: rotate(180deg);" src="icons/arrow-next.svg" alt="">
-                <a href="index.html">Startseite</a>
-            </div>
-           
-            <div class="navBtns">
-                <a href="skills.html">Fähigkeiten</a>
-                <img src="icons/arrow-next.svg" alt="">
-            </div>
 
         </div>
+        <!-- <div class="navigation" id="navigation"></div> -->
 
+        <!-- <div onclick="window.scrollTo(0,0)" class="arrowContainer">
+    <img src="icons/sidebar/arrow_up.svg" alt="">
+</div> -->
     </section>
 
 

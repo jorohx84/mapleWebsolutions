@@ -2,7 +2,7 @@
     position: fixed;
     right: 4px;
     top: 50%;
-    transform: translate(calc(100% - 56px), -50%);
+    transform: translate(calc(100% - 48px), -50%);
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -12,40 +12,50 @@
 
 .sidebarContainer {
     width: fit-content;
+    height: 48px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 8px;
-    transition: transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
-    /* background-color: rgba(0, 0, 0, 0.091); */
-    background-color: rgba(255, 255, 255, 0.208);
-    backdrop-filter: blur(5px);
+    gap: 4px;
+    transition: transform 0.5s ease-in-out, gap 0.5s ease-in;
     border-radius: 10px;
-   border: solid 0.5px white;
+    color: black
 
+}
 
-
+.sidebarContainerContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00547733;
+    backdrop-filter: blur(5px);
+    border-radius: 0 8px 8px 0;
 }
 
 .sidebarContainer button {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border-radius 0.5s ease-in !important;
+  
 }
 
 .sidebarSocialmediaLink {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .sidebarSocialmediaLink img {
-    width: 32px;
-    height: 32px;
+    width: 25px;
+    height: 25px;
 }
 
 .sidebarOpenBtn {
@@ -65,7 +75,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 40px 12px ;
+    padding: 40px 12px;
 }
 
 .sidebarOpenBtn button img {
@@ -78,7 +88,7 @@
 }
 
 .showSidebar {
-    transform: translate(calc(100% - 56px), -50%) !important;
+    transform: translate(calc(100% - 48px), -50%) !important;
 }
 
 .slideSidebarBtn {
@@ -114,10 +124,14 @@
 
 
 .moveSidebar {
-    transform: translateX(calc(-100% + 56px)) !important;
-     border: solid 0.5px var(--main-color);
-   
+    transform: translateX(calc(-100% + 48px)) !important;
+       gap:1px;
+} 
+
+.moveSidebar button{
+    border-radius: 8px 0 0 8px;
 }
+
 
 .sidebarLink {
     color: var(--primary);
@@ -176,13 +190,18 @@
 }
 
 @media(max-width:1050px) {
+    .sidebarContainer{
+height: 40px;
+    }
+  
     .sidebarContainer button {
         width: 40px;
         height: 40px;
     }
+
     .sidebarContainer button img {
-    width: 20px;
-}
+        width: 20px;
+    }
 
     .sidebar {
         transform: translate(calc(100% - 40px), -50%);

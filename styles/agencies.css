@@ -85,7 +85,7 @@
 .serviceCard {
   width: 100%;
 
-  height: 325px;
+  height: 380px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -93,7 +93,7 @@
   box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: white;
   position: relative;
   transition: transform 0.4s ease-in-out;
@@ -111,7 +111,7 @@
   top: 24px;
   left: 24px; */
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
@@ -267,17 +267,21 @@
 
 
 
-@media (max-width: 1800px) {
+@media (max-width: 1880px) {
   .serviceCard h4 {
     min-height: 56px;
     text-align: start;
   }
 
   .serviceCard {
-    height: 372px;
+    height: 420px;
   }
 }
-
+@media (max-width: 1700px) {
+.serviceCard {
+    height: 440px;
+  }
+}
 
 @media (max-width: 1600px) {
   .serviceCards {
@@ -325,7 +329,9 @@
   .serviceListRow {
     height: fit-content;
   }
-
+.serviceCard{
+  height:380px;
+}
   .btnContainer {
     flex-direction: column;
     align-items: center;
@@ -391,14 +397,17 @@
   }
 }
 
+@media (max-width: 930px) {
+.serviceCard{
+  height: 440px;
+}
+}
 @media (max-width: 880px) {
   .serviceCard h4 {
     min-height: 50px;
   }
 
-  .serviceCard {
-    height: 360px;
-  }
+  
 }
 
 @media (max-width: 800px) {
@@ -506,6 +515,10 @@
   .servieList {
     padding: 24px;
   }
+
+  .serviceCard{
+    height: 380px;
+  }
 }
 
 @media (max-width: 470px) {
@@ -531,11 +544,11 @@
   }
 
   .serviceCard {
-    height: 360px;
+    height: 420px;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 390px) {
   .service-headline h1 {
     font-size: 28px;
   }
@@ -545,6 +558,6 @@
   }
 
   .serviceCard {
-    height: 380px;
+    height: 470px;
   }
 }

@@ -107,10 +107,53 @@ function hideWelcome() {
   }, 7000);
 }
 
+const locations=[
+  {
+    name:'Startseite',
+path: '/index.html',
+  },
+    {
+    name:'Über mich',
+    path:  '/aboutme.html',
+  },
+    {
+    name:'Fähigkeiten',
+    path:  '/skills.html',
+  },
+    {
+    name:'Leistungen',
+    path:  '/agencies.html',
+  },
+    {
+    name:'Projekte',
+    path:  '/projects.html',
+  },
+      {
+    name:'Kontakt',
+    path:  '/contact.html',
+  },
+
+]
 
 
 
-window.addEventListener('load', renderNavigations)
+
+// function renderNavigations(){
+// const locationPath=window.location.pathname
+// const skipPages = ['index.html', 'datenschutz.html', 'impressum.html'];
+// if (skipPages.some(page => locationPath.includes(page))) return;
+//   const index=locations.findIndex(site=>site.path===locationPath);
+//  let lastIndex =index <=0? 0 : index-1;
+//   let nextIndex=index>=locations.length-1? 0:index+1;
+//   const lastStep=locations[lastIndex];
+//    const nextStep=locations[nextIndex];
+//   const navigationRef=document.getElementById('navigation');
+//   navigationRef.innerHTML='';
+//   navigationRef.innerHTML=getNavigationTemplate(lastStep,nextStep);
+// }
+
+
+// window.addEventListener('load', renderNavigations)
 
 // function toggleSidebarContent(index){
 // sidebarBtnIndex=index;
@@ -255,7 +298,6 @@ window.addEventListener('load', renderNavigations)
 //     }
 //   }
 // }
-
 
 
 // window.addEventListener("scroll", () => {
