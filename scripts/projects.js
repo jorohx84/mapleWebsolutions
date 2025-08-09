@@ -10,9 +10,9 @@ function renderProjects() {
   for (let index = 0; index < projects.length; index++) {
     const project = projects[index];
     projectsRef.innerHTML += `  <div class="projectRow">
-                                    <div class="dot" id="dot">
+                                   <!-- <div class="dot" id="dot">
                                     <div class="dotInner" id="dotInner"></div>
-                                    </div>
+                                    </div>-->
                                     <div class="projectCard">
 
                                       <div class="projectInfoContainer">
@@ -25,12 +25,12 @@ function renderProjects() {
                                               <span>Bearbeitungszeit:</span>
                                               <span> ${project.duration}</span>
                                            </div>
-                                          
+                                          <div class="stack" id="stack${index}"></div>
                                       </div>
                                   
                                     
                                     </div>
-                                       <div class="stack" id="stack${index}"></div>
+                                       
                                        <div class="projectCardBtn">
                                         <button onclick="window.location.href='${project.link}'">zum Projekt</button>
                                        </div>
@@ -125,30 +125,36 @@ function giveDotsHighlight(barInnerRect) {
         const innerDot=dotsInner[index]
         const dotRect = dot.getBoundingClientRect().top;
         if (dotRect < barInnerRect.bottom) {
-            // dot.classList.add('changeColor');
-            // dot.classList.add('animateImage');
-            // changeLine(index, 'add');
             innerDot.classList.add('animateDot');
         } else {
-            // dot.classList.remove('changeColor');
-            // dot.classList.remove('animateImage');
-            // changeLine(index, 'remove');
             innerDot.classList.remove('animateDot');
         }
 
     }
 }
 
-window.addEventListener('load', ()=>{scrollVerticalBar()});
-window.addEventListener('scroll', ()=>{scrollVerticalBar(); getScrollbarPosition();})
-window.addEventListener('resize', getScrollbarPosition);
+// window.addEventListener('load', ()=>{scrollVerticalBar()});
+// window.addEventListener('scroll', ()=>{scrollVerticalBar(); getScrollbarPosition();})
+// window.addEventListener('resize', getScrollbarPosition);
 
 
 
 // function renderprojects() {
 //   renderProjectList("apps");
 //   renderProjectList("websites");
-// }
+//   const projects = buildProjectsList();
+//   const div = document.getElementById('projectList');
+//    div.innerHTML = "";
+//   console.log(projects);
+//   for (let index = 0; index < projects.length; index++) {
+//     const project = projects[index];
+//       div.innerHTML += `<div onclick="openOverlay(${index})" class="projectCard">
+//             <img src="${project.imagePath}" alt="">
+
+//                             </div>`;
+//     }
+//   }
+
 
 // function renderProjectList(divID) {
 //   const projectArray = projects[divID];
@@ -168,24 +174,24 @@ window.addEventListener('resize', getScrollbarPosition);
 //   }
 // }
 
-// function openOverlay(index, divID) {
+// function openOverlay(index) {
 //   const overlay = document.getElementById("projectsOverlay");
 //   overlay.classList.remove("dnone");
-//   renderOverlayView(index, divID, overlay);
+//   renderOverlayView(index, overlay);
 //   document.getElementById("body").style.overflowY = "hidden";
 // }
 
-// function renderOverlayView(index, divID, overlay) {
-//   const projectArray = projects[divID];
+// function renderOverlayView(index, overlay) {
+//   const projectArray = buildProjectsList();
 //   console.log(projectArray);
 //   overlay.innerHTML = "";
 //   const project = projectArray[index];
 //   console.log(project);
-//   overlay.innerHTML += getProjectsTemplate(project, index, divID);
+//   overlay.innerHTML += getProjectsTemplate(project, index);
 // }
 
-// function renderStack(index, divID) {
-//   const projectArray = projects[divID];
+// function renderStack(index) {
+//   const projectArray = buildProjectsList();
 //   const project = projectArray[index];
 //   const stack = project.stack;
 
@@ -198,9 +204,9 @@ window.addEventListener('resize', getScrollbarPosition);
 //   return stackHTML;
 // }
 
-// function step(index, divID, step, event) {
+// function step(index, step, event) {
 //   let stepIndex = step === "back" ? index - 1 : index + 1;
-//   const projectArray = projects[divID];
+//   const projectArray = buildProjectsList();
 //   console.log(stepIndex);
 //   if (stepIndex < 0) {
 //     stepIndex = projectArray.length - 1;

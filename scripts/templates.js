@@ -20,7 +20,7 @@ function getProjectCardTemplate(project, index){
 
 
 
-function getProjectsTemplate(project, index, divID){
+function getProjectsTemplate(project, index){
     return`
                         <div class="viewContainer">
                         <button class="closeBtn"><img src="icons/global/close_blue.svg"></button>
@@ -39,10 +39,7 @@ function getProjectsTemplate(project, index, divID){
                             <span>${project.description}</span>
                             <span>Dauer: ${project.duration}</span>
                          
-                             <div class="stack">${renderStack(
-                               index,
-                               divID
-                             )}</div>
+                             <div class="stack">${renderStack(index)}</div>
                          </div>
                         
                      
@@ -52,8 +49,8 @@ function getProjectsTemplate(project, index, divID){
       
                          <div class="btnContainer">
                             <div class="navigation">
-                              <button class="navibtn" onclick="step(${index}, '${divID}','back', event)"><img class="navileft" src="icons/global/arrow_left_blue.svg"></button>
-                              <button class="navibtn" onclick="step(${index}, '${divID}','forward', event)"><img class="naviright" src="icons/global/arrow_right_blue.svg"</button>
+                              <button class="navibtn" onclick="step(${index},'back', event)"><img class="navileft" src="icons/global/arrow_left_blue.svg"></button>
+                              <button class="navibtn" onclick="step(${index},'forward', event)"><img class="naviright" src="icons/global/arrow_right_blue.svg"</button>
                             </div>
                         
                             <button onclick="window.open('${project.link}', '_blank')" class="liveBtn">zum Projekt </button>
