@@ -42,18 +42,20 @@ margin-bottom: 112px;
 
 .softskills {
     display: flex;
-    gap: 16px;
+    gap: 72px;
   
 }
 .softskillsCardContainer{
+    width: 100%;
     display: flex;
     flex-direction: column;
+  
 
   
 }
 .softskillsCard {
     width: 100%;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     
@@ -194,9 +196,12 @@ margin-bottom: 112px;
 .softskills{
     flex-direction: column;
     align-items: center;
+    gap: 0px;
 }
+
 .softskillsCard{
     max-width: 320px;
+    height: 220px;
 }
 .textContainer{
     align-items: center;
