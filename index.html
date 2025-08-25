@@ -10,8 +10,8 @@
     <meta name="keywords"
         content="Frontend Entwicklung, Webentwicklung, Freelancer, JavaScript, TypeScript, React, HTML, CSS, Figma to Code, responsive Webdesign, Web App Entwicklung" />
     <meta name="author" content="maple Websolutions" />
-    <title>maple Websolutions - Professionelle Webentwicklung</title>
-    <link rel="icon" href="/logos/mapleIcon-bg.png">
+    <title>CodRed - Webentwicklung</title>
+    <link rel="icon" href="/logos/codred/logo.svg">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/standards.css">
     <link rel="stylesheet" href="styles/landingpage.css">
@@ -24,86 +24,30 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body class="body-back" id="body">
-    <!-- <div class="body-cover" id="body-cover"> -->
-
-        <!-- <header class="front-header">
-            <div class="header-container" id="header">
-                <div class="header-content">
-
-                    <a class="logo nav" href="/index.html"><img class="frontLogo"
-                            src="/logos/mapleLogo-ohne-Slogan-BlackBlue-bg.png" alt=""></a>
-                    <nav class="menubar">
-
-                        <a href="aboutme.html">Über mich</a>
-                        <a href="skills.html">Fähigkeiten</a>
-                        <a href="agencies.html">Leistungen</a>
-                        <a href="projects.html">Projekte</a>
-                        <a href="contact.html">Kontakt</a>
-
-
-                    </nav>
-
-                    <div onclick="toogleHideMenu(); burgerAnimation()" class="burger-landingpage" id="burger">
-
-                        <div class="burgerline"></div>
-                        <div class="burgerline"></div>
-                        <div class="burgerline"></div>
-
-                    </div>
-
+<body id="body" onscroll="fixHeader()">
+       <div class="bgImage"></div>
+    <section class="landingpageCenter">
+        <header w3-include-html="/html/header.html"></header>
+        <div class="landingpageContent">
+         
+            <div class="titleContainer">
+                <div>
+                    <img class="mainLogo" src="logos/codred/logo_black_title.svg" alt="">
                 </div>
+                <h1>Professionelle Frontend-Entwicklung für Agenturen und Designer</h1>
 
-
-                <div class="menu-resp-landingpage hide-menu" id="menu-resp">
-
-
-
-                    <a href="aboutme.html">ÜBER MICH</a>
-                    <a href="skills.html">FÄHIGKEITEN</a>
-                    <a href="agencies.html">LEISTUNGEN</a>
-                    <a href="projects.html">PROJEKTE</a>
-                    <a href="contact.html">KONTAKT</a>
-
-
-                </div>
-            </div>
-        </header> -->
-
-
-        <!-- <section class="slider" id="slider">
-            <div class="sliderContent">
-                <img src="/logos/mapleIcon-bg.png" alt="">
-                <h1 class="space" style="font-size: 96px;">MAPLE WEBSOLUTIONS</h1>
-            </div>
-        </section> -->
-
-
-        <section class="center">
-            <header class="front-header" w3-include-html="/html/header.html"></header>
-            <div class="landingpageContent">
-                <!-- <img src="logos/mapleLogo-ohne-Slogan-BlackBlue-bg.png" alt=""> -->
-                <div class="headline" id="landingpage-headline">
-                    <h1 class="space">WEBDEVELOPMENT</h1>
-                    <h5 class="space">That Works for You</h5>
-
-                </div>
-                <!-- <div class="landingpageBtnContainer">
-                    <a href="aboutme.html" class="landingpageBtn">
-                        <span >Start</span>
-                    
-                    </a>
-
-                </div> -->
             </div>
 
 
+        </div>
 
 
 
 
-        </section>
-        <footer id="footer" class="front-footer" w3-include-html="/html/footer.html"></footer>
+
+
+    </section>
+    <footer id="footer" w3-include-html="/html/footer.html"></footer>
     </div>
     <script src="scripts/script.js"></script>
     <script>w3.includeHTML();</script>

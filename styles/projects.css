@@ -1,15 +1,15 @@
-.projectsContent {
+/* .projectsContent {
   width: 100%;
   height: fit-content;
   flex: 1;
   max-width: 1920px;
   box-sizing: border-box;
-  padding: 56px;
+  padding: 56px calc(100vw/10);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 56px;
-}
+} */
 
 .closeBtn {
   position: absolute;
@@ -110,9 +110,10 @@ h1 {
 
 .projectListContainer {
   width: 100%;
-display: grid;
-grid-template-columns: repeat(3, auto);
-justify-content: start;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
   gap: 56px;
 
 
@@ -147,6 +148,7 @@ justify-content: start;
 
 .projectRow {
   width: fit-content;
+  height: 100%;
   display: flex;
   align-items: center;
   gap: 32px;
@@ -179,7 +181,7 @@ justify-content: start;
 
 .projectCard {
   width: 100%;
-max-width: 600px;
+
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -192,11 +194,12 @@ max-width: 600px;
   animation: fade 1.5s ease;
 }
 
-@keyframes fade{
-  0%{
+@keyframes fade {
+  0% {
     transform: scale(0.5);
   }
-  100%{
+
+  100% {
     transform: scale(1);
   }
 }
@@ -216,11 +219,15 @@ max-width: 600px;
 
 .projectInfos {
   width: 100%;
- 
+
   display: flex;
   flex-direction: column;
   gap: 6px;
 
+}
+
+.projectInfos p {
+  height: clamp(100px, calc(500px - 15vw), 220px);
 }
 
 .stackImage {
@@ -235,15 +242,45 @@ max-width: 600px;
   border-radius: 4px;
 }
 
+
+
+.projectCard a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 150px;
+  height: 30px;
+  padding: 8px 16px;
+  border-radius: 6px;
+
+  background-color: var(--main-color);
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out !important;
+
+
+}
+
 .projectCardBtn {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-.projectCardBtn button {
-  width: 160px;
-  height: 40px;
+
+.projectCard a:active {
+  transform: scale(0.95);
+}
+
+.projectCard a:hover {
+  background-color: white;
+  color: var(--main-color);
+  border: solid 1px;
 }
 
 /*  */
@@ -504,10 +541,14 @@ max-width: 600px;
 }
 
 
-@media (max-width: 1800px) {
-.projectListContainer{
-grid-template-columns: repeat(2, auto);
-}
+@media (max-width: 1600px) {
+  .projectListContainer {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  /* .projectsContent{
+  max-width: 1440px;
+} */
 }
 
 @media (max-width: 1550px) {
@@ -531,10 +572,10 @@ grid-template-columns: repeat(2, auto);
     height: fit-content;
   }
 
-.projectListContainer{
-grid-template-columns: repeat(1, auto);
-justify-content: center;
-}
+  .projectListContainer {
+    gap: 16px;
+  }
+
 
   .stacks {
     width: 30px;
@@ -551,7 +592,7 @@ justify-content: center;
   }
 
   .projectsContent {
-    padding: 56px 10px;
+    padding: 20px 10px;
   }
 
   .viewContent {
@@ -559,6 +600,15 @@ justify-content: center;
     align-items: flex-start;
     height: fit-content;
     max-width: 562px;
+  }
+
+  .projectListContainer{
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    gap: 112px;
+  }
+  .projectCard{
+    max-width: 600px;
   }
 
   .projectDetails {
@@ -603,7 +653,7 @@ justify-content: center;
     right: 15px;
   }
 
-    .projectCard{
+  .projectCard {
     animation: none;
   }
 }
@@ -752,7 +802,7 @@ justify-content: center;
   .projectCard {
     position: relative !important;
     box-sizing: border-box;
-    padding: 0 25px;
+    padding: 0;
     align-items: center;
     box-shadow: unset;
   }

@@ -2,6 +2,7 @@
 //   apps: apps,
 //   websites: websites,
 // };
+const textList = [];
 
 function renderProjects() {
   const projects = buildProjectsList()
@@ -9,38 +10,11 @@ function renderProjects() {
   projectsRef.innerHTML = '';
   for (let index = 0; index < projects.length; index++) {
     const project = projects[index];
-    projectsRef.innerHTML += `  <div class="projectRow">
-                                   <!-- <div class="dot" id="dot">
-                                    <div class="dotInner" id="dotInner"></div>
-                                    </div>-->
-                                    <div class="projectCard">
-
-                                      <div class="projectInfoContainer">
-                                         <h3 class="projectRespTitle">${project.title}</h3>
-                                          <img class="mockup" src="${project.imagePath}">
-                                          <div class="projectInfos">
-                                              <h3 class="projectTitle">${project.title}</h3>
-                                              <p>${project.description}</p>
-                                              <div class="duration">
-                                              <span>Bearbeitungszeit:</span>
-                                              <span> ${project.duration}</span>
-                                           </div>
-                                          <div class="stack" id="stack${index}"></div>
-                                      </div>
-                                  
-                                    
-                                    </div>
-                                       
-                                       <div class="projectCardBtn">
-                                        <button onclick="window.location.href='${project.link}'">zum Projekt</button>
-                                       </div>
-                                        
-                                    </div>
-                                    
-                                  </div>`
+    projectsRef.innerHTML += getProjectsTemplate(project, index);
 
     renderStack(projects, index);
   }
+
 
 }
 
@@ -52,7 +26,7 @@ function renderStack(projects, index) {
     const stackImage = stack[index];
     stackRef.innerHTML += `<img class="stackImage" src="${stackImage}">`
   }
-  
+
 }
 
 function buildProjectsList() {
@@ -71,67 +45,105 @@ function pushToArray(list, projectArray) {
 }
 
 
-function getScrollbarPosition() {
-  if (window.innerWidth<500) return
-  const dots = document.getElementsByClassName('dot');
-  const scrollbar = document.getElementById('verticalBar');
-  const scrollbarRect = scrollbar.getBoundingClientRect();
-  const divRef = document.getElementById('projects');
-  const divRect = divRef.getBoundingClientRect();
-  const lastIndex = dots.length - 1;
-  const startDot = dots[0];
-  const finalDot = dots[lastIndex];
-  const startDotRect = startDot.getBoundingClientRect();
-  const finalDotRect = finalDot.getBoundingClientRect();
-  const currentHeight = finalDotRect.bottom - startDotRect.top;
-  scrollbar.style.top = `${startDotRect.top - divRect.top}px`;
-  const scrollbarPosition = startDotRect.left + (startDotRect.width / 2) - divRect.left - (scrollbarRect.width / 2);
-  scrollbar.style.left = `${scrollbarPosition}px`
-  scrollbar.style.height = `${currentHeight}px`;
-}
+// function getCardHeight() {
+//   const textRefs = document.getElementsByClassName('text');
+//   const textList = [];
+//   for (let index = 0; index < textRefs.length; index++) {
+//     const text = textRefs[index];
+//     text.style.minHeight = `100px`;
+//     const textRect = text.getBoundingClientRect();
+//     textList.push(textRect);
+//   }
+//   const sortedList = sortByHeight(textList);
 
-function scrollVerticalBar() {
-   if (window.innerWidth<500) return
-  const startpoint = window.innerHeight * 0.5;
-  const barInner = document.getElementById('verticalBarInner');
-  const bar = document.getElementById('verticalBar');
-  const barInnerRect = barInner.getBoundingClientRect();
-  const barRect = bar.getBoundingClientRect();
-  let currentHeight = getCurrentHeight(startpoint, barRect, barInnerRect);
-  barInner.style.height = `${currentHeight}%`;
-  giveDotsHighlight(barInnerRect);
-}
+//   setHeight(sortedList, textRefs)
 
-function getCurrentHeight(startpoint, barRect, barInnerRect) {
-  let currentHeight;
-  const barHeight = barRect.bottom - barRect.top;
-  const innerHeight = startpoint - barInnerRect.top
-  if (startpoint < barRect.top) {
-    currentHeight = 0;
-  } else if (startpoint > barRect.top && startpoint < barRect.bottom) {
-    currentHeight = (innerHeight / barHeight) * 100;
-  } else if (startpoint > barRect.bottom) {
-    currentHeight = 100;
-  }
-  return currentHeight
-}
+// }
 
-function giveDotsHighlight(barInnerRect) {
-    const dots = document.getElementsByClassName('dot');
-    const dotsInner= document.getElementsByClassName('dotInner');
-    
-    for (let index = 0; index < dots.length; index++) {
-        const dot = dots[index];
-        const innerDot=dotsInner[index]
-        const dotRect = dot.getBoundingClientRect().top;
-        if (dotRect < barInnerRect.bottom) {
-            innerDot.classList.add('animateDot');
-        } else {
-            innerDot.classList.remove('animateDot');
-        }
+// function setHeight(sortedList, textRefs) {
+//   const heightRef = sortedList[0].height;
+//   for (let index = 0; index < textRefs.length; index++) {
+//     const text = textRefs[index];
+//     text.style.minHeight = `${heightRef}px`;
+//   }
+// }
 
-    }
-}
+// function sortByHeight(textList) {
+//   const sortedList = [...textList].sort((a, b) => b.height - a.height);
+//   return sortedList;
+// }
+
+
+// window.addEventListener('load',()=>{
+
+// renderProjects();
+
+
+// } );
+// window.addEventListener('resize', getCardHeight);
+
+
+// function getScrollbarPosition() {
+//   if (window.innerWidth < 500) return
+//   const dots = document.getElementsByClassName('dot');
+//   const scrollbar = document.getElementById('verticalBar');
+//   const scrollbarRect = scrollbar.getBoundingClientRect();
+//   const divRef = document.getElementById('projects');
+//   const divRect = divRef.getBoundingClientRect();
+//   const lastIndex = dots.length - 1;
+//   const startDot = dots[0];
+//   const finalDot = dots[lastIndex];
+//   const startDotRect = startDot.getBoundingClientRect();
+//   const finalDotRect = finalDot.getBoundingClientRect();
+//   const currentHeight = finalDotRect.bottom - startDotRect.top;
+//   scrollbar.style.top = `${startDotRect.top - divRect.top}px`;
+//   const scrollbarPosition = startDotRect.left + (startDotRect.width / 2) - divRect.left - (scrollbarRect.width / 2);
+//   scrollbar.style.left = `${scrollbarPosition}px`
+//   scrollbar.style.height = `${currentHeight}px`;
+// }
+
+// function scrollVerticalBar() {
+//   if (window.innerWidth < 500) return
+//   const startpoint = window.innerHeight * 0.5;
+//   const barInner = document.getElementById('verticalBarInner');
+//   const bar = document.getElementById('verticalBar');
+//   const barInnerRect = barInner.getBoundingClientRect();
+//   const barRect = bar.getBoundingClientRect();
+//   let currentHeight = getCurrentHeight(startpoint, barRect, barInnerRect);
+//   barInner.style.height = `${currentHeight}%`;
+//   giveDotsHighlight(barInnerRect);
+// }
+
+// function getCurrentHeight(startpoint, barRect, barInnerRect) {
+//   let currentHeight;
+//   const barHeight = barRect.bottom - barRect.top;
+//   const innerHeight = startpoint - barInnerRect.top
+//   if (startpoint < barRect.top) {
+//     currentHeight = 0;
+//   } else if (startpoint > barRect.top && startpoint < barRect.bottom) {
+//     currentHeight = (innerHeight / barHeight) * 100;
+//   } else if (startpoint > barRect.bottom) {
+//     currentHeight = 100;
+//   }
+//   return currentHeight
+// }
+
+// function giveDotsHighlight(barInnerRect) {
+//   const dots = document.getElementsByClassName('dot');
+//   const dotsInner = document.getElementsByClassName('dotInner');
+
+//   for (let index = 0; index < dots.length; index++) {
+//     const dot = dots[index];
+//     const innerDot = dotsInner[index]
+//     const dotRect = dot.getBoundingClientRect().top;
+//     if (dotRect < barInnerRect.bottom) {
+//       innerDot.classList.add('animateDot');
+//     } else {
+//       innerDot.classList.remove('animateDot');
+//     }
+
+//   }
+// }
 
 // window.addEventListener('load', ()=>{scrollVerticalBar()});
 // window.addEventListener('scroll', ()=>{scrollVerticalBar(); getScrollbarPosition();})

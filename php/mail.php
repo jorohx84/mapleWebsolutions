@@ -56,13 +56,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.strato.de'; // Dein SMTP-Server
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@maple-websolutions.de'; // Deine E-Mail-Adresse
+        $mail->Username   = 'info@codred.de'; // Deine E-Mail-Adresse
         $mail->Password   = 'r0TH#+8432!#+192188';           // Passwort deiner E-Mail
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
-        $mail->setFrom('info@maple-websolutions.de', 'Neue Projektanfrage'); // Absenderadresse
-        $mail->addAddress('info@maple-websolutions.de'); // Empfängeradresse
+        $mail->setFrom('info@codred.de', 'Neue Projektanfrage'); // Absenderadresse
+        $mail->addAddress('info@codred.de'); // Empfängeradresse
         $mail->addReplyTo($email, $name); // Antwortadresse
 
         $mail->isHTML(false);

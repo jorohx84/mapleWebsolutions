@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-.contact {
+/* .contact {
 
     display: flex;
     flex-direction: column;
@@ -13,11 +13,11 @@
     flex: 1;
     width: 100vw;
     box-sizing: border-box;
-    /* padding: 0 72px; */
+    padding: 0 calc(100vw/10);
     border-bottom: solid;
     border-width: 1px;
     border-color: rgba(128, 128, 128, 0.595);
-}
+} */
 
 textarea::-webkit-resizer {
     display: none;
@@ -54,13 +54,13 @@ textarea {
     max-height: fit-content;
     box-sizing: border-box;
     padding: 0 72px;
-    margin-block: 50px;
+  
 
 }
 
 .contactform-container h1 {
     margin-block: 0;
-    font-weight: 300;
+    font-weight: 600;
     font-size: clamp(1.5rem, 4vw, 2.2rem);
     margin-bottom: 32px;
 }
@@ -90,7 +90,7 @@ textarea {
 
 .contactText {
     font-weight: 200 !important;
-    font-size: 18px;
+   
     max-width: 600px;
 }
 
@@ -184,6 +184,7 @@ textarea {
 
 .inputfield p {
     margin: 0;
+    font-size: 16px;
 }
 
 
@@ -380,7 +381,7 @@ textarea {
 
 
     .contact {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .confirm {

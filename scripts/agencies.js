@@ -4,19 +4,19 @@
 
 
 function renderServiceCards() {
-    const serviceRef1 = document.getElementById("serviceCardsRow1");
+    const serviceRef = document.getElementById("serviceCardsRow");
     const serviceRef2 = document.getElementById("serviceCardsRow2");
     for (let index = 0; index < services.length; index++) {
         const card = services[index];
         const cardColor = colorClasses[index]
         console.log(cardColor);
 
-        const indexRef = services.length / 2;
-        if (index < indexRef) {
-            serviceRef1.innerHTML += getServiceCardsTemplate(card, cardColor, index);
-        } else {
-            serviceRef2.innerHTML += getServiceCardsTemplate(card, cardColor, index);
-        }
+        // const indexRef = services.length / 2;
+        // if (index < indexRef) {
+            serviceRef.innerHTML += getServiceCardsTemplate(card, cardColor, index);
+        // } else {
+            // serviceRef2.innerHTML += getServiceCardsTemplate(card, cardColor, index);
+        // }
 
 
     }

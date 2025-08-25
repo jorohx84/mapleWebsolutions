@@ -194,7 +194,7 @@ const apps = [
     ],
     description:
       "Join ist eine intuitive Multi-Device-Anwendung zur Aufgabenverwaltung im Stil eines Kanban-Boards. Aufgaben lassen sich per Drag & Drop zwischen den Bearbeitungsphasen verschieben. Jeder Task kann gezielt einzelnen Nutzern zugewiesen werden – ideal für Teamarbeit und strukturierte Workflows.",
-    link: "https://www.maple-websolutions.de/join",
+    link: "https://www.codred.de/join",
     duration: "3 Wochen",
     show: true,
   },
@@ -210,7 +210,7 @@ const apps = [
     ],
     description:
       "DABubble ist ein Slack-Klon. Mit einer intuitiven Benutzeroberfläche, Echtzeitnachrichten und leistungsstarker Kanalorganisation fördert sie effizientes Arbeiten in Gruppen. Entwickelt wurde die Anwendung mit Angular und TypeScript – für maximale Performance und Skalierbarkeit im modernen Web.",
-    link: "https://www.maple-websolutions.de/dabubble",
+    link: "https://www.codred.de/dabubble",
     duration: "5 Wochen",
     show: true,
   },
@@ -225,7 +225,7 @@ const apps = [
     ],
     description:
       "Mit dieser Desktop-Anwendung kannst du deine Aufgaben einfach anlegen, verwalten und priorisieren. Die App wurde mit React und TypeScript entwickelt und bietet eine übersichtliche Benutzeroberfläche für strukturierte Tagesplanung. Ob Termine, Notizen oder Prioritäten – behalte alles im Blick und steigere deine Produktivität.",
-    link: "https://www.maple-websolutions.de/todoapp",
+    link: "https://www.codred.de/todoapp",
     duration: "3 Tage",
     show: true,
   },
@@ -241,7 +241,7 @@ const apps = [
     ],
     description:
       "Mit dem Bewerbungsmanager kannst du Bewerbungen erfassen, Stellenanzeigen auf eine Merkliste setzen und jederzeit den aktuellen Status deiner Bewerbungen und Termine im Blick behalten. Einfach, übersichtlich und ideal für deine Jobsuche.",
-    link: "https://www.maple-websolutions.de/applications",
+    link: "https://www.codred.de/applications",
     duration: "2 Wochen",
     show: true,
   },

@@ -14,49 +14,40 @@ function getServiceCardsTemplate(card, cardColor, index) {
 }
 
 
-function getProjectCardTemplate(project, index){
-  return ` <img onclick="showProjectInfos(${index})" class="mockup" src="${project.imagePath}">`;
-}
+// function getProjectCardTemplate(project, index) {
+//   return ` <img onclick="showProjectInfos(${index})" class="mockup" src="${project.imagePath}">`;
+// }
 
 
 
-function getProjectsTemplate(project, index){
-    return`
-                        <div class="viewContainer">
-                        <button class="closeBtn"><img src="icons/global/close_blue.svg"></button>
-                        <h1 class="space">PROJEKTDETAILS</h1>
-                        <div class="viewContent">
-                        <img class="projectImage" src="${
-                          project.imagePath
-                        }" alt="">
-                        
-                           <div class="projectDetails">
-                           <div class="detailsHeadline">
-                             <h2>${project.title}</h2>
-                             <div class="underline"></div>
-                           </div>
-                           
-                            <span>${project.description}</span>
-                            <span>Dauer: ${project.duration}</span>
-                         
-                             <div class="stack">${renderStack(index)}</div>
-                         </div>
-                        
-                     
-                        
-                        </div>
-       
-      
-                         <div class="btnContainer">
-                            <div class="navigation">
-                              <button class="navibtn" onclick="step(${index},'back', event)"><img class="navileft" src="icons/global/arrow_left_blue.svg"></button>
-                              <button class="navibtn" onclick="step(${index},'forward', event)"><img class="naviright" src="icons/global/arrow_right_blue.svg"</button>
-                            </div>
-                        
-                            <button onclick="window.open('${project.link}', '_blank')" class="liveBtn">zum Projekt </button>
-                       
-                        </div>
-                        </div>
-                        
-                       `
+function getProjectsTemplate(project, index) {
+  return `  <div class="projectRow">
+                                   <!-- <div class="dot" id="dot">
+                                    <div class="dotInner" id="dotInner"></div>
+                                    </div>-->
+                                    <div class="projectCard">
+
+                                      <div class="projectInfoContainer">
+                                         <h3 class="projectRespTitle">${project.title}</h3>
+                                          <img class="mockup" src="${project.imagePath}">
+                                          <div class="projectInfos">
+                                              <h3 class="projectTitle">${project.title}</h3>
+                                              <p class="text">${project.description}</p>
+                                              <div class="duration">
+                                              <span>Bearbeitungszeit:</span>
+                                              <span> ${project.duration}</span>
+                                           </div>
+                                          <div class="stack" id="stack${index}"></div>
+                                      </div>
+                                  
+                                    
+                                    </div>
+                                       
+                                       <div class="projectCardBtn">
+                                                                  <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="liveBtn">zum Projekt</a>
+                                       </div>
+                                        
+                                    </div>
+                                    
+                                  </div>`
 }

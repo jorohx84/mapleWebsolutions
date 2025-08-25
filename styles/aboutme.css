@@ -1,8 +1,9 @@
-.aboutmeContainer {
+/* .aboutmeContainer {
     width: 100%;
     max-width: 1920px;
     box-sizing: border-box;
-    padding: 0 72px;
+    padding-left: clamp(20px, 8vw, 160px);
+    padding-right: clamp(20px, 8vw, 160px);
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -10,7 +11,7 @@
     align-items: flex-start;
     align-items: center;
     opacity: 1;
-}
+} */
 
 
 
@@ -21,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-margin-bottom: 112px;
+    margin-bottom: 112px;
 
 }
 
@@ -36,36 +37,44 @@ margin-bottom: 112px;
 
 }
 
-.headerlineText p{
+.headerlineText p {
     font-size: 18px;
 }
 
 .softskills {
     display: flex;
-    gap: 72px;
-  
+    gap: 56px;
+
 }
-.softskillsCardContainer{
+
+.softskillsCardContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
-  
+    gap: 56px;
 
-  
+
 }
+
 .softskillsCard {
     width: 100%;
-    height: 250px;
+
     display: flex;
     flex-direction: column;
-    
+
     gap: 16px;
-   
+
     box-sizing: border-box;
-  
+
 }
 
-.softskillsCard img{
+.softskillsCardTitle {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.softskillsCard img {
     width: 60px;
     box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -73,15 +82,9 @@ margin-bottom: 112px;
     padding: 12px;
 }
 
-.softskillsDescription {
-    display: flex;
-    flex-direction: column;
-  
-    gap: 8px;
-    
-}
 
-.softskillsDescription h3 {
+
+.softskillsCardTitle h3 {
     font-size: 20px;
     margin: 0;
 }
@@ -122,24 +125,36 @@ margin-bottom: 112px;
 
 
 
+@media(max-width: 1800px) {
 
-@media(max-width: 1520px) {
-
+    /* .aboutmeContainer{
+    max-width: 1440px;
+} */
     .headerlineText p {
         font-size: 16px;
     }
 
 }
 
+@media(max-width: 1400px) {
+    .textContainer {
+        max-width: 500px;
+
+    }
+.softskills{
+    flex-direction: column;
+}
+}
+
+
 @media(max-width: 1025px) {
 
     .aboutmeContent {
         flex-direction: column;
+        align-items: center;
     }
 
-    .aboutmeContainer {
-        padding: 20px;
-    }
+
 
     .textContainer {
         margin-top: 0;
@@ -193,28 +208,25 @@ margin-bottom: 112px;
 }
 
 @media(max-width: 570px) {
-.softskills{
-    flex-direction: column;
-    align-items: center;
-    gap: 0px;
-}
+    .softskills {
+        flex-direction: column;
+        align-items: center;
 
-.softskillsCard{
-    max-width: 320px;
-    height: 220px;
-}
-.textContainer{
-    align-items: center;
-}
-.headerlineText{
-    max-width: 320px;
-}
+    }
+
+ 
+
+    .textContainer {
+        align-items: center;
+    }
+
+   
 }
 
 @media(max-width: 460px) {
-    .aboutmeContainer {
-        padding: 20px;
-    }
+    /* .aboutmeContainer {
+          padding: 20px calc(100vw/10);
+    } */
 
 
 }

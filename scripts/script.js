@@ -83,16 +83,17 @@ function changeHeaderColor(idKey, classKey) {
 function changeBodySize() {
   landingpageHeight();
   window.addEventListener("resize", landingpageHeight);
+   window.addEventListener("load", landingpageHeight);
 }
 
 function landingpageHeight() {
   let body = document.getElementById("body");
-  let bodyCover = document.getElementById("body-cover");
+  // let bodyCover = document.getElementById("body-cover");
   let footer = document.getElementById("footer");
   let footerRect = footer.getBoundingClientRect();
   let footerHeight = footerRect.height;
   body.style.height = `calc(100vh + ${footerHeight}px )`;
-  bodyCover.style.height = `calc(100vh + ${footerHeight}px )`;
+  // bodyCover.style.height = `calc(100vh + ${footerHeight}px )`;
 }
 
 function hideWelcome() {
